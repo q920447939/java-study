@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
  * @date 2019年05月13日
  */
 @Service
-public class UserSevice {
+public class UserService {
 
     @MyAopAnno
     public User findUser(User user){
@@ -22,4 +22,7 @@ public class UserSevice {
         //假设查询
         return User.builder().id(2).name("王大锤").build();
     }
+
+
+
 }
