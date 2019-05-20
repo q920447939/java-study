@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f1244d88-eaa8-4ace-b741-78530c5e1cc1" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/dubbo-governance.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/java-base/debug/DebugDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/target/classes/application.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/target/classes/spring/start/demo/Message.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/target/classes/spring/start/demo/MessageImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/target/classes/spring/start/demo/SpringMain.class" beforeDir="false" />
-    </list>
+    <list default="true" id="f1244d88-eaa8-4ace-b741-78530c5e1cc1" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/spring-boot-study/target/" />
@@ -61,11 +54,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DubboAdminApplication.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DubboAdminApplication.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spring-boot/incubator-dubbo-admin/dubbo-admin/src/main/java/com/alibaba/dubboadmin/DubboAdminApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+            <state relative-caret-position="46">
+              <caret line="17" column="31" lean-forward="true" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="141">
+              <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -247,11 +249,6 @@
             <path>
               <item name="java-study" type="b2602c69:ProjectViewProjectNode" />
               <item name="java-study" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="java-study" type="b2602c69:ProjectViewProjectNode" />
-              <item name="java-study" type="462c0819:PsiDirectoryNode" />
-              <item name="spring" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="java-study" type="b2602c69:ProjectViewProjectNode" />
@@ -524,7 +521,7 @@
       <workItem from="1557741760351" duration="1768000" />
       <workItem from="1557817768132" duration="15707000" />
       <workItem from="1557911111359" duration="231000" />
-      <workItem from="1558317246161" duration="1842000" />
+      <workItem from="1558317246161" duration="1966000" />
     </task>
     <task id="LOCAL-00001" summary="dubbo admin">
       <created>1558319640442</created>
@@ -569,10 +566,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40739000" />
+    <option name="totallyTimeSpent" value="40863000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -582,8 +580,8 @@
       <window_info anchor="bottom" id="JRebel Console" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" visible="true" weight="0.32995737" />
       <window_info anchor="bottom" id="JRebel Executor" order="7" />
-      <window_info anchor="bottom" id="Version Control" order="7" visible="true" weight="0.3297062" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.4047878" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.3297062" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.4047878" />
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Designer" order="2" />
@@ -1200,13 +1198,17 @@
     <entry file="file://$PROJECT_DIR$/dubbo-governance.log">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/spring-boot/incubator-dubbo-admin/dubbo-admin/src/main/java/com/alibaba/dubboadmin/DubboAdminApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+        <state relative-caret-position="46">
+          <caret line="17" column="31" lean-forward="true" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
         </state>
       </provider>
     </entry>
