@@ -6,10 +6,22 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/spring-boot/spring-boot-aop/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot/spring-boot-dubbo-provider/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot/spring-boot-dubbo-consume/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot/incubator-dubbo-admin/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot/incubator-dubbo-admin/dubbo-admin/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot/incubator-dubbo-admin/dubbo-monitor-simple/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot/incubator-dubbo-admin/dubbo-registry-simple/pom.xml" />
       </list>
     </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/spring-boot/incubator-dubbo-admin/dubbo-admin-distribution/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot/incubator-dubbo-admin/dubbo-admin-ui/pom.xml" />
+      </set>
+    </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_9" project-jdk-name="12" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_9" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

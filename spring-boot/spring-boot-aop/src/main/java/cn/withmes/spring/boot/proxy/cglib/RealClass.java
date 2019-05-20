@@ -1,4 +1,6 @@
-package cn.withmes.spring.boot.proxy;
+package cn.withmes.spring.boot.proxy.cglib;
+
+import cn.withmes.spring.boot.proxy.jdk.Request;
 
 public class RealClass implements  Request
 {

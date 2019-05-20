@@ -1,4 +1,4 @@
-package cn.withmes.spring.boot.proxy;
+package cn.withmes.spring.boot.proxy.jdk;
 
 import java.lang.reflect.Proxy;
 

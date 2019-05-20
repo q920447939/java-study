@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/spring-boot/incubator-dubbo-admin/dubbo-admin-server/dubbo-admin-server.iml" filepath="$PROJECT_DIR$/spring-boot/incubator-dubbo-admin/dubbo-admin-server/dubbo-admin-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/java-base/java-base.iml" filepath="$PROJECT_DIR$/java-base/java-base.iml" />
     </modules>
   </component>

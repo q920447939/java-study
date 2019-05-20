@@ -11,5 +11,6 @@
 
     <modules>
         <module>spring-boot</module>
+        <module>spring</module>
     </modules>
 </project>

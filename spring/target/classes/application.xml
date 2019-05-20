@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd" default-autowire="byName">
+
+    <bean id="messageImpl" class="spring.start.demo.MessageImpl" init-method="init" destroy-method="destory"/>
+
+    <bean class="com.giraffe.spring.service.CustomerBeanPostProcessor"/>
+
+
+
+</beans>

@@ -6,10 +6,28 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="dubbo-admin" />
+        <module name="dubbo-monitor-simple" />
+        <module name="dubbo-registry-simple" />
+        <module name="spring" />
         <module name="spring-boot" />
         <module name="spring-boot-aop" />
+        <module name="spring-boot-dubbo-consume" />
+        <module name="spring-boot-dubbo-provider" />
+      </profile>
+      <profile name="Annotation profile for dubbo-admin" enabled="true">
+        <sourceOutputDir name="../target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="dubbo-admin-server" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="dubbo-admin-distribution" target="1.8" />
+      <module name="dubbo-admin-server" target="1.8" />
+      <module name="dubbo-admin-ui" target="1.8" />
+      <module name="spring-boot-study" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
