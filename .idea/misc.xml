@@ -12,6 +12,9 @@
         <option value="$PROJECT_DIR$/spring-boot/incubator-dubbo-admin/dubbo-admin/pom.xml" />
         <option value="$PROJECT_DIR$/spring-boot/incubator-dubbo-admin/dubbo-monitor-simple/pom.xml" />
         <option value="$PROJECT_DIR$/spring-boot/incubator-dubbo-admin/dubbo-registry-simple/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot/spring-boot-web-demo01/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot/spring-boot-mybatis-interceptor/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-cloud/spring-cloud-sentinel/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

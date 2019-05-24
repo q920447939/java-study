@@ -14,18 +14,17 @@
         <module name="spring-boot-aop" />
         <module name="spring-boot-dubbo-consume" />
         <module name="spring-boot-dubbo-provider" />
-      </profile>
-      <profile name="Annotation profile for dubbo-admin" enabled="true">
-        <sourceOutputDir name="../target/generated-sources/annotations" />
-        <sourceTestOutputDir name="../target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <module name="dubbo-admin-server" />
+        <module name="spring-boot-mybatis-interceptor" />
+        <module name="spring-boot-web-demo01" />
+        <module name="spring-cloud" />
+        <module name="spring-cloud-sentinel" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="dubbo-admin-distribution" target="1.8" />
       <module name="dubbo-admin-server" target="1.8" />
       <module name="dubbo-admin-ui" target="1.8" />
+      <module name="spring-boot-dubbo-and-hystrix" target="1.8" />
       <module name="spring-boot-study" target="1.8" />
     </bytecodeTargetLevel>
   </component>

@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f1244d88-eaa8-4ace-b741-78530c5e1cc1" name="Default" comment="" />
+    <list default="true" id="f1244d88-eaa8-4ace-b741-78530c5e1cc1" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/java-base/src/debug/DebugDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-base/src/main/java/debug/DebugDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/spring-boot-study/target/" />
@@ -14,6 +17,11 @@
     <ignored path="$PROJECT_DIR$/spring-boot/incubator-dubbo-admin/dubbo-admin/target/" />
     <ignored path="$PROJECT_DIR$/spring-boot/incubator-dubbo-admin/dubbo-monitor-simple/target/" />
     <ignored path="$PROJECT_DIR$/spring-boot/incubator-dubbo-admin/dubbo-registry-simple/target/" />
+    <ignored path="$PROJECT_DIR$/spring-boot/spring-boot-web-demo01/target/" />
+    <ignored path="$PROJECT_DIR$/spring-boot/spring-boot-mybatis-interceptor/target/" />
+    <ignored path="$PROJECT_DIR$/spring-boot/spring-boot-dubbo-and-hystrix/target/" />
+    <ignored path="$PROJECT_DIR$/spring-cloud/target/" />
+    <ignored path="$PROJECT_DIR$/spring-cloud/spring-cloud-sentinel/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,20 +31,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="HelloController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spring-boot/spring-boot-dubbo-consume/src/main/java/cn/withmes/spring/boot/dubbo/consume/HelloController.java">
+      <file leaf-file-name="WaitAndNotify.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/java-base/src/main/java/thread/WaitAndNotify.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="22" column="38" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SpringBootDubboProviderApplication.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spring-boot/spring-boot-dubbo-provider/src/main/java/cn/withmes/spring/boot/dubbo/provider/SpringBootDubboProviderApplication.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="1794">
+              <caret line="82" column="1" lean-forward="true" selection-start-line="6" selection-end-line="82" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -44,68 +43,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spring-boot/incubator-dubbo-admin/pom.xml">
-          <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+      <file leaf-file-name="WriterAndRead.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/java-base/src/main/java/thread/WriterAndRead.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="17" column="67" selection-start-line="17" selection-start-column="67" selection-end-line="17" selection-end-column="67" />
+            <state relative-caret-position="23">
+              <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DubboAdminApplication.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spring-boot/incubator-dubbo-admin/dubbo-admin/src/main/java/com/alibaba/dubboadmin/DubboAdminApplication.java">
+      <file leaf-file-name="WaitAndNotify2.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/java-base/src/main/java/thread/WaitAndNotify2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="17" column="31" lean-forward="true" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spring-boot/incubator-dubbo-admin/dubbo-admin/src/main/resources/application.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-244" />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SpringBootDubboConsumeApplication.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spring-boot/spring-boot-dubbo-consume/src/main/java/cn/withmes/spring/boot/dubbo/consume/SpringBootDubboConsumeApplication.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            <state relative-caret-position="308">
+              <caret line="20" column="16" lean-forward="true" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
               <folding>
-                <element signature="e#384#385#0" expanded="true" />
-                <element signature="e#468#469#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spring-boot/spring-boot-dubbo-provider/src/main/resources/application.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HelloServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spring-boot/spring-boot-dubbo-provider/src/main/java/cn/withmes/spring/boot/dubbo/provider/HelloServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -122,21 +76,44 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>before</find>
-      <find>before execution....</find>
-      <find>PropertyUtils</find>
-      <find>进入新增方法</find>
-      <find>obj</find>
-      <find>obj222222222222222</find>
-      <find>parsePropertyElements</find>
       <find>getAutowireCapableBeanFactory</find>
       <find>serializableFactories</find>
       <find>re</find>
       <find>Loading XML bean definitions from class path resource</find>
+      <find>ListNode</find>
+      <find>Segment</find>
+      <find>factor</find>
+      <find>lom</find>
+      <find>my</find>
+      <find>\　public static void main\(String\[\] args\) \{\n\　\　\　\　String s \= null\;\n\　\　\　\　assert s\!\=null\?true\:false\;\n\　\　\　\　assert false\;\n\　\　\　\　System\.out\.println\(\&quot;end\&quot;\)\;\n\　\　\}</find>
+      <find>　\</find>
+      <find>　</find>
+      <find>拦截器ResultInterceptor</find>
+      <find>sql</find>
+      <find>Mybatis 拦截器获取SQL</find>
+      <find>bbbbbbbbbb</find>
+      <find>limit2</find>
+      <find>sqlCommandType</find>
+      <find>dele</find>
+      <find>delegate</find>
+      <find>--</find>
+      <find>bbbbbbbbbbbb</find>
+      <find>dubb</find>
+      <find>Hystrix</find>
+      <find>reliable</find>
+      <find>handleException</find>
+      <find>helloFallback</find>
+      <find>guava-</find>
+      <find>error</find>
+      <find>put</find>
     </findStrings>
     <replaceStrings>
       <replace />
+      <replace>Node</replace>
     </replaceStrings>
+    <dirStrings>
+      <dir>D:\repos\com\google\guava\guava\16.0.1\guava-16.0.1.jar</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -152,51 +129,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/spring-boot-study/src/main/java/cn/withme/springbootstudy/controller/controllerTest.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/spring-boot/pom.xml" />
-        <option value="$PROJECT_DIR$/spring-boot/spring-boot-aop/src/main/java/cn/withmes/spring/boot/aop/UserSevice.java" />
-        <option value="$PROJECT_DIR$/spring-boot/spring-boot-aop/src/main/java/cn/withmes/spring/boot/aop/MyAopAnno.java" />
-        <option value="$PROJECT_DIR$/spring-boot/spring-boot-aop/src/main/java/cn/withmes/spring/boot/aop/User.java" />
-        <option value="$PROJECT_DIR$/spring-boot/spring-boot-aop/src/main/java/cn/withmes/spring/boot/aop/CheckUserService.java" />
-        <option value="$PROJECT_DIR$/spring-boot/spring-boot-aop/src/test/java/cn/withmes/spring/boot/aop/SpringBootAopApplicationTests.java" />
-        <option value="$USER_HOME$/Desktop/1.html" />
-        <option value="$PROJECT_DIR$/spring-boot/spring-boot-aop/src/main/java/cn/withmes/spring/boot/proxy/cglib/RealClass.java" />
-        <option value="$PROJECT_DIR$/spring-boot/spring-boot-aop/src/main/java/cn/withmes/spring/boot/proxy/jdk/ProxyMain.java" />
-        <option value="$PROJECT_DIR$/spring-boot/spring-boot-aop/src/main/java/cn/withmes/spring/boot/proxy/jdk/CglibInteceptor.java" />
-        <option value="$PROJECT_DIR$/spring-boot/spring-boot-aop/src/main/java/cn/withmes/spring/boot/proxy/cglib1/CglibInteceptor.java" />
-        <option value="$PROJECT_DIR$/spring-boot/spring-boot-aop/src/main/java/cn/withmes/spring/boot/proxy/cglib/CglibInteceptor.java" />
-        <option value="$PROJECT_DIR$/spring-boot/spring-boot-aop/src/main/java/cn/withmes/spring/boot/proxy/cglib/ProxyMain.java" />
-        <option value="$PROJECT_DIR$/spring-boot/spring-boot-aop/src/main/java/cn/withmes/spring/boot/chain/Process.java" />
-        <option value="$PROJECT_DIR$/spring-boot/spring-boot-aop/src/main/java/cn/withmes/spring/boot/chain/Chain.java" />
-        <option value="$PROJECT_DIR$/java-base/src/debug/DebugDemo.java" />
-        <option value="$PROJECT_DIR$/spring-boot/spring-boot-aop/src/main/java/cn/withmes/spring/boot/aop/Aop.java" />
-        <option value="$USER_HOME$/AppData/Local/Temp/360zip$Temp/360$6/DatalogAspect.java" />
-        <option value="$PROJECT_DIR$/spring-boot/spring-boot-aop/src/main/java/cn/withmes/spring/boot/aop/work/Product.java" />
-        <option value="$PROJECT_DIR$/spring-boot/spring-boot-aop/src/main/java/cn/withmes/spring/boot/aop/work/FakerDataBase.java" />
-        <option value="$PROJECT_DIR$/spring-boot/spring-boot-aop/src/main/java/cn/withmes/spring/boot/aop/work/DatalogAspect.java" />
-        <option value="$PROJECT_DIR$/spring-boot/spring-boot-aop/src/main/java/cn/withmes/spring/boot/aop/work/ProductService.java" />
-        <option value="$PROJECT_DIR$/spring-boot/spring-boot-aop/src/test/java/cn/withmes/spring/boot/aop/SpringBootWorkTest.java" />
-        <option value="$PROJECT_DIR$/spring-boot/spring-boot-aop/src/main/java/cn/withmes/spring/boot/aop/work/ProductAOP.java" />
-        <option value="$PROJECT_DIR$/spring-boot/spring-boot-aop/src/main/java/cn/withmes/spring/boot/aop/work/A.java" />
-        <option value="$PROJECT_DIR$/spring/pom.xml" />
-        <option value="$PROJECT_DIR$/spring/src/main/java/SpringMain.java" />
-        <option value="$PROJECT_DIR$/spring/src/main/java/Message.java" />
         <option value="$PROJECT_DIR$/spring/src/main/java/MessageImpl.java" />
         <option value="$PROJECT_DIR$/spring/src/main/java/spring/start/demo/MessageImpl.java" />
         <option value="$PROJECT_DIR$/spring/src/main/java/spring/start/demo/SpringMain.java" />
         <option value="$PROJECT_DIR$/spring/src/main/resources/application.xml" />
         <option value="$PROJECT_DIR$/spring/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/spring-boot/spring-boot-dubbo-provider/src/main/java/cn/withmes/spring/boot/dubbo/provider/HelloService.java" />
-        <option value="$PROJECT_DIR$/spring-boot/spring-boot-dubbo-provider/src/main/java/cn/withmes/spring/boot/dubbo/provider/HelloServiceImpl.java" />
         <option value="$PROJECT_DIR$/spring-boot/spring-boot-dubbo-provider/src/main/java/cn/withmes/spring/boot/dubbo/provider/SpringBootDubboProviderApplication.java" />
         <option value="$PROJECT_DIR$/spring-boot/spring-boot-dubbo-consume/src/main/java/cn/withmes/spring/boot/dubbo/consume/SpringBootDubboConsumeApplication.java" />
         <option value="$PROJECT_DIR$/spring-boot/spring-boot-dubbo-consume/pom.xml" />
         <option value="$PROJECT_DIR$/spring-boot/spring-boot-dubbo-consume/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/spring-boot/spring-boot-dubbo-provider/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/spring-boot/spring-boot-dubbo-provider/pom.xml" />
         <option value="$PROJECT_DIR$/spring-boot/spring-boot-dubbo-consume/src/main/java/cn/withmes/spring/boot/dubbo/consume/HelloController.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/java-base/src/thread/CallableDemo.java" />
+        <option value="$PROJECT_DIR$/java-base/src/thread/writerAndRead.java" />
+        <option value="$PROJECT_DIR$/java-base/src/thread/WriterAndRead.java" />
+        <option value="$PROJECT_DIR$/java-base/src/thread/Demo01.java" />
+        <option value="$PROJECT_DIR$/java-base/src/reflect/Demo01.java" />
+        <option value="$PROJECT_DIR$/java-base/src/arithmetic/ReLink.java" />
+        <option value="$PROJECT_DIR$/java-base/src/main/java/arithmetic/ReLink.java" />
+        <option value="$PROJECT_DIR$/java-base/src/main/java/syn/Demo01.java" />
+        <option value="$PROJECT_DIR$/spring-boot/spring-boot-web-demo01/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot/spring-boot-web-demo01/src/main/java/cn/withme/springboot/web/demo/pojo/Student.java" />
+        <option value="$PROJECT_DIR$/spring-boot/spring-boot-web-demo01/src/main/java/cn/withme/springboot/web/demo/controller/MyController.java" />
+        <option value="$PROJECT_DIR$/spring-boot/spring-boot-mybatis-interceptor/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot/spring-boot-mybatis-interceptor/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/spring-boot/spring-boot-mybatis-interceptor/src/test/java/cn/withmes/springboot/mybatis/interceptor/SpringBootMybatisInterceptorApplicationTests.java" />
+        <option value="$PROJECT_DIR$/spring-boot/spring-boot-mybatis-interceptor/src/main/java/cn/withmes/springboot/mybatis/interceptor/pojo/PageBase.java" />
+        <option value="$PROJECT_DIR$/spring-boot/spring-boot-mybatis-interceptor/src/main/java/cn/withmes/springboot/mybatis/interceptor/pojo/User.java" />
+        <option value="$PROJECT_DIR$/spring-boot/spring-boot-mybatis-interceptor/src/main/java/cn/withmes/springboot/mybatis/interceptor/SpringBootMybatisInterceptorApplication.java" />
+        <option value="$PROJECT_DIR$/spring-boot/spring-boot-dubbo-and-hystrix/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/spring-boot/spring-boot-dubbo-provider/src/main/java/cn/withmes/spring/boot/dubbo/provider/HelloService.java" />
+        <option value="$PROJECT_DIR$/spring-boot/spring-boot-dubbo-provider/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot/spring-boot-dubbo-and-hystrix/src/main/java/cn/withmes/springboot/dubboandhystrix/controller/MyController.java" />
+        <option value="$PROJECT_DIR$/spring-boot/spring-boot-dubbo-and-hystrix/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot/spring-boot-dubbo-and-hystrix/src/main/java/cn/withmes/springboot/dubboandhystrix/SpringBootDubboAndHystrixApplication.java" />
+        <option value="$PROJECT_DIR$/spring-boot/spring-boot-dubbo-provider/src/main/java/cn/withmes/spring/boot/dubbo/provider/HelloServiceImpl.java" />
+        <option value="$PROJECT_DIR$/spring-cloud/spring-cloud-sentinel/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/spring-cloud/spring-cloud-sentinel/src/main/java/cn/withmes/springcloudsentinel/controller/TestApplication.java" />
+        <option value="$PROJECT_DIR$/spring-cloud/spring-cloud-sentinel/src/main/java/cn/withmes/springcloudsentinel/controller/DemoController.java" />
+        <option value="$PROJECT_DIR$/spring-cloud/spring-cloud-sentinel/src/main/java/cn/withmes/springcloudsentinel/controller/TestService.java" />
+        <option value="$PROJECT_DIR$/spring-cloud/spring-cloud-sentinel/src/main/java/cn/withmes/springcloudsentinel/service/TestServiceImpl.java" />
+        <option value="$PROJECT_DIR$/spring-cloud/spring-cloud-sentinel/src/main/java/cn/withmes/springcloudsentinel/controller/MyException.java" />
+        <option value="$PROJECT_DIR$/spring-cloud/spring-cloud-sentinel/src/main/java/cn/withmes/springcloudsentinel/service/ExceptionUtil.java" />
+        <option value="$PROJECT_DIR$/spring-cloud/spring-cloud-sentinel/src/main/java/cn/withmes/springcloudsentinel/SpringCloudSentinelApplication.java" />
+        <option value="$PROJECT_DIR$/spring-cloud/spring-cloud-sentinel/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-cloud/spring-cloud-sentinel/src/main/java/cn/withmes/springcloudsentinel/config/AopConfiguration.java" />
+        <option value="$PROJECT_DIR$/spring-boot/spring-boot-mybatis-interceptor/src/main/java/cn/withmes/springboot/mybatis/interceptor/config/ExecutorInterceptor.java" />
+        <option value="$PROJECT_DIR$/spring-boot/spring-boot-mybatis-interceptor/src/main/java/cn/withmes/springboot/mybatis/interceptor/mapper/UserMapper.java" />
+        <option value="$PROJECT_DIR$/java-base/src/main/java/thread/ProduceConsumeVersion2.java" />
+        <option value="$PROJECT_DIR$/java-base/src/main/java/thread/WaitAndNotify2.java" />
+        <option value="$PROJECT_DIR$/java-base/src/main/java/thread/WaitAndNotify.java" />
       </list>
     </option>
   </component>
@@ -228,10 +211,10 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="201" />
-    <option name="y" value="45" />
-    <option name="width" value="1449" />
-    <option name="height" value="832" />
+    <option name="x" value="22" />
+    <option name="y" value="24" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -241,8 +224,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -252,51 +235,82 @@
             </path>
             <path>
               <item name="java-study" type="b2602c69:ProjectViewProjectNode" />
+              <item name="java-study" type="462c0819:PsiDirectoryNode" />
+              <item name="java-base" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="java-study" type="b2602c69:ProjectViewProjectNode" />
+              <item name="java-study" type="462c0819:PsiDirectoryNode" />
+              <item name="java-base" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="java-study" type="b2602c69:ProjectViewProjectNode" />
+              <item name="java-study" type="462c0819:PsiDirectoryNode" />
+              <item name="java-base" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="java-study" type="b2602c69:ProjectViewProjectNode" />
+              <item name="java-study" type="462c0819:PsiDirectoryNode" />
+              <item name="java-base" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="java-study" type="b2602c69:ProjectViewProjectNode" />
+              <item name="java-study" type="462c0819:PsiDirectoryNode" />
+              <item name="java-base" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="thread" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="java-study" type="b2602c69:ProjectViewProjectNode" />
+              <item name="java-study" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="java-study" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
             <path>
               <item name="java-study" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-beans:5.1.6.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="Maven: com.google.guava:guava:16.0.1" type="70bed36:NamedLibraryElementNode" />
             </path>
             <path>
               <item name="java-study" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-beans:5.1.6.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-beans-5.1.6.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="Maven: com.google.guava:guava:16.0.1" type="70bed36:NamedLibraryElementNode" />
+              <item name="guava-16.0.1.jar" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="java-study" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-beans:5.1.6.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-beans-5.1.6.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="beans" type="462c0819:PsiDirectoryNode" />
+              <item name="Maven: com.google.guava:guava:16.0.1" type="70bed36:NamedLibraryElementNode" />
+              <item name="guava-16.0.1.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="google" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="java-study" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-beans:5.1.6.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-beans-5.1.6.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="beans" type="462c0819:PsiDirectoryNode" />
-              <item name="factory" type="462c0819:PsiDirectoryNode" />
+              <item name="Maven: com.google.guava:guava:16.0.1" type="70bed36:NamedLibraryElementNode" />
+              <item name="guava-16.0.1.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="google" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="java-study" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-beans:5.1.6.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-beans-5.1.6.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="beans" type="462c0819:PsiDirectoryNode" />
-              <item name="factory" type="462c0819:PsiDirectoryNode" />
-              <item name="support" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="java-study" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-beans:5.1.6.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-beans-5.1.6.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="beans" type="462c0819:PsiDirectoryNode" />
-              <item name="factory" type="462c0819:PsiDirectoryNode" />
-              <item name="xml" type="462c0819:PsiDirectoryNode" />
+              <item name="Maven: com.google.guava:guava:16.0.1" type="70bed36:NamedLibraryElementNode" />
+              <item name="guava-16.0.1.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="google" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="concurrent" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -309,7 +323,7 @@
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
-    <property name="SearchEverywhereHistoryKey" value="BeanFactory&#9;PSI&#9;JAVA://org.springframework.beans.factory.BeanFactory&#10;AutowireCapableBeanFactory &#9;PSI&#9;JAVA://org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory&#10;XmlBeanFactory&#9;FILE&#9;jar://D:/repos/org/springframework/spring-beans/5.1.6.RELEASE/spring-beans-5.1.6.RELEASE.jar!/org/springframework/beans/factory/xml/XmlBeanFactory.class" />
+    <property name="SearchEverywhereHistoryKey" value="HashMap&#9;FILE&#9;jrt://C:/Program Files/Java/jdk-11.0.3!/java.base/java/util/HashMap.class&#10;BeanFactory&#9;PSI&#9;JAVA://org.springframework.beans.factory.BeanFactory&#10;AutowireCapableBeanFactory &#9;PSI&#9;JAVA://org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory&#10;XmlBeanFactory&#9;FILE&#9;jar://D:/repos/org/springframework/spring-beans/5.1.6.RELEASE/spring-beans-5.1.6.RELEASE.jar!/org/springframework/beans/factory/xml/XmlBeanFactory.class" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="ignore_missing_gitignore" value="true" />
@@ -322,6 +336,9 @@
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.runner" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\my-project\java-study\java-base\src\main\java" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="cn.withmes.spring.boot.proxy.jdk" />
     </key>
@@ -342,47 +359,47 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.DubboAdminApplication">
-    <configuration name="DubboAdminApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.alibaba.dubboadmin.DubboAdminApplication" />
-      <module name="dubbo-admin" />
+  <component name="RunManager" selected="Application.WaitAndNotify2">
+    <configuration name="ProduceConsumeVersion2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="thread.ProduceConsumeVersion2" />
+      <module name="java-base" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.alibaba.dubboadmin.*" />
+          <option name="PATTERN" value="thread.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
     </configuration>
-    <configuration name="SpringBootDubboConsumeApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="cn.withmes.spring.boot.dubbo.consume.SpringBootDubboConsumeApplication" />
-      <module name="spring-boot-dubbo-consume" />
+    <configuration name="SpringCloudSentinelApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cn.withmes.springcloudsentinel.SpringCloudSentinelApplication" />
+      <module name="spring-cloud-sentinel" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="cn.withmes.spring.boot.dubbo.consume.*" />
+          <option name="PATTERN" value="cn.withmes.springcloudsentinel.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
     </configuration>
-    <configuration name="SpringBootDubboProviderApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="cn.withmes.spring.boot.dubbo.provider.SpringBootDubboProviderApplication" />
-      <module name="spring-boot-dubbo-provider" />
+    <configuration name="WaitAndNotify" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="thread.WaitAndNotify" />
+      <module name="java-base" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="cn.withmes.spring.boot.dubbo.provider.*" />
+          <option name="PATTERN" value="thread.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
     </configuration>
-    <configuration name="SpringMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="spring.start.demo.SpringMain" />
-      <module name="spring" />
+    <configuration name="WaitAndNotify2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="thread.WaitAndNotify2" />
+      <module name="java-base" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="spring.start.demo.*" />
+          <option name="PATTERN" value="thread.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -393,19 +410,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SpringBootWorkTest.addTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="spring-boot-aop" />
+    <configuration name="SpringBootMybatisInterceptorApplicationTests.findByName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-boot-mybatis-interceptor" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="cn.withmes.spring.boot.aop.*" />
+          <option name="PATTERN" value="cn.withmes.springboot.mybatis.interceptor.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="cn.withmes.spring.boot.aop" />
-      <option name="MAIN_CLASS_NAME" value="cn.withmes.spring.boot.aop.SpringBootWorkTest" />
-      <option name="METHOD_NAME" value="addTest" />
+      <option name="PACKAGE_NAME" value="cn.withmes.springboot.mybatis.interceptor" />
+      <option name="MAIN_CLASS_NAME" value="cn.withmes.springboot.mybatis.interceptor.SpringBootMybatisInterceptorApplicationTests" />
+      <option name="METHOD_NAME" value="findByName" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="PARAMETERS" />
@@ -449,6 +466,10 @@
       <module name="spring-boot-aop" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="cn.withmes.spring.boot.aop.SpringBootAopApplication" />
     </configuration>
+    <configuration name="SpringBootDubboAndHystrixApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="spring-boot-dubbo-and-hystrix" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="cn.withmes.springboot.dubboandhystrix.SpringBootDubboAndHystrixApplication" />
+    </configuration>
     <configuration name="SpringBootDubboConsumeApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="spring-boot-dubbo-consume" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="cn.withmes.spring.boot.dubbo.consume.SpringBootDubboConsumeApplication" />
@@ -457,9 +478,21 @@
       <module name="spring-boot-dubbo-provider" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="cn.withmes.spring.boot.dubbo.provider.SpringBootDubboProviderApplication" />
     </configuration>
+    <configuration name="SpringBootMybatisInterceptorApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="spring-boot-mybatis-interceptor" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="cn.withmes.springboot.mybatis.interceptor.SpringBootMybatisInterceptorApplication" />
+    </configuration>
     <configuration name="SpringBootStudyApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="spring-boot-study" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="cn.withme.springbootstudy.SpringBootStudyApplication" />
+    </configuration>
+    <configuration name="SpringBootWebDemo01Application (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="spring-boot-web-demo01" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="cn.withme.springboot.web.demo.SpringBootWebDemo01Application" />
+    </configuration>
+    <configuration name="SpringBootWebDemo01Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="spring-boot-web-demo01" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="cn.withme.springbootwebdemo01.SpringBootWebDemo01Application" />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -489,21 +522,25 @@
     <list>
       <item itemvalue="Spring Boot.SpringBootStudyApplication" />
       <item itemvalue="Spring Boot.SpringBootAopApplication" />
-      <item itemvalue="JUnit.SpringBootWorkTest.addTest" />
-      <item itemvalue="Application.SpringMain" />
-      <item itemvalue="Application.SpringBootDubboConsumeApplication" />
-      <item itemvalue="Application.SpringBootDubboProviderApplication" />
       <item itemvalue="Spring Boot.SpringBootDubboProviderApplication" />
       <item itemvalue="Spring Boot.SpringBootDubboConsumeApplication" />
-      <item itemvalue="Application.DubboAdminApplication" />
+      <item itemvalue="Spring Boot.SpringBootWebDemo01Application" />
+      <item itemvalue="Spring Boot.SpringBootWebDemo01Application (1)" />
+      <item itemvalue="Spring Boot.SpringBootMybatisInterceptorApplication" />
+      <item itemvalue="JUnit.SpringBootMybatisInterceptorApplicationTests.findByName" />
+      <item itemvalue="Spring Boot.SpringBootDubboAndHystrixApplication" />
+      <item itemvalue="Application.SpringCloudSentinelApplication" />
+      <item itemvalue="Application.ProduceConsumeVersion2" />
+      <item itemvalue="Application.WaitAndNotify" />
+      <item itemvalue="Application.WaitAndNotify2" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.DubboAdminApplication" />
-        <item itemvalue="Application.SpringBootDubboProviderApplication" />
-        <item itemvalue="Application.SpringBootDubboConsumeApplication" />
-        <item itemvalue="Application.SpringMain" />
-        <item itemvalue="JUnit.SpringBootWorkTest.addTest" />
+        <item itemvalue="Application.WaitAndNotify2" />
+        <item itemvalue="Application.WaitAndNotify" />
+        <item itemvalue="Application.ProduceConsumeVersion2" />
+        <item itemvalue="JUnit.SpringBootMybatisInterceptorApplicationTests.findByName" />
+        <item itemvalue="Application.SpringCloudSentinelApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -521,7 +558,9 @@
       <workItem from="1557741760351" duration="1768000" />
       <workItem from="1557817768132" duration="15707000" />
       <workItem from="1557911111359" duration="231000" />
-      <workItem from="1558317246161" duration="1966000" />
+      <workItem from="1558317246161" duration="8146000" />
+      <workItem from="1558420222281" duration="17493000" />
+      <workItem from="1558494116312" duration="30122000" />
     </task>
     <task id="LOCAL-00001" summary="dubbo admin">
       <created>1558319640442</created>
@@ -534,39 +573,39 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SpringBootWorkTest - 2019.05.14 at 15h 11m 38s.xml">
-      <configuration name="SpringBootWorkTest" configurationId="JUnit" />
+    <history-entry file="SpringBootMybatisInterceptorApplicationTests_findByName - 2019.05.22 at 17h 43m 44s.xml">
+      <configuration name="SpringBootMybatisInterceptorApplicationTests.findByName" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SpringBootWorkTest - 2019.05.14 at 15h 11m 58s.xml">
-      <configuration name="SpringBootWorkTest" configurationId="JUnit" />
+    <history-entry file="SpringBootMybatisInterceptorApplicationTests_findByName - 2019.05.22 at 17h 44m 54s.xml">
+      <configuration name="SpringBootMybatisInterceptorApplicationTests.findByName" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SpringBootWorkTest - 2019.05.14 at 15h 14m 48s.xml">
-      <configuration name="SpringBootWorkTest" configurationId="JUnit" />
+    <history-entry file="SpringBootMybatisInterceptorApplicationTests_findByName - 2019.05.22 at 17h 46m 51s.xml">
+      <configuration name="SpringBootMybatisInterceptorApplicationTests.findByName" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SpringBootWorkTest - 2019.05.14 at 15h 19m 27s.xml">
-      <configuration name="SpringBootWorkTest" configurationId="JUnit" />
+    <history-entry file="SpringBootMybatisInterceptorApplicationTests_findByName - 2019.05.22 at 17h 47m 27s.xml">
+      <configuration name="SpringBootMybatisInterceptorApplicationTests.findByName" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SpringBootWorkTest - 2019.05.14 at 15h 22m 47s.xml">
-      <configuration name="SpringBootWorkTest" configurationId="JUnit" />
+    <history-entry file="SpringBootMybatisInterceptorApplicationTests_findByName - 2019.05.22 at 17h 48m 02s.xml">
+      <configuration name="SpringBootMybatisInterceptorApplicationTests.findByName" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SpringBootWorkTest - 2019.05.14 at 15h 24m 28s.xml">
-      <configuration name="SpringBootWorkTest" configurationId="JUnit" />
+    <history-entry file="SpringBootMybatisInterceptorApplicationTests_findByName - 2019.05.22 at 17h 54m 15s.xml">
+      <configuration name="SpringBootMybatisInterceptorApplicationTests.findByName" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SpringBootWorkTest - 2019.05.14 at 15h 25m 53s.xml">
-      <configuration name="SpringBootWorkTest" configurationId="JUnit" />
+    <history-entry file="SpringBootMybatisInterceptorApplicationTests_findByName - 2019.05.23 at 16h 56m 11s.xml">
+      <configuration name="SpringBootMybatisInterceptorApplicationTests.findByName" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SpringBootWorkTest - 2019.05.14 at 15h 26m 40s.xml">
-      <configuration name="SpringBootWorkTest" configurationId="JUnit" />
+    <history-entry file="SpringBootMybatisInterceptorApplicationTests_findByName - 2019.05.23 at 16h 56m 28s.xml">
+      <configuration name="SpringBootMybatisInterceptorApplicationTests.findByName" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SpringBootWorkTest - 2019.05.14 at 15h 28m 40s.xml">
-      <configuration name="SpringBootWorkTest" configurationId="JUnit" />
+    <history-entry file="SpringBootMybatisInterceptorApplicationTests_findByName - 2019.05.23 at 16h 56m 53s.xml">
+      <configuration name="SpringBootMybatisInterceptorApplicationTests.findByName" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SpringBootWorkTest_addTest - 2019.05.14 at 16h 05m 27s.xml">
-      <configuration name="SpringBootWorkTest.addTest" configurationId="JUnit" />
+    <history-entry file="SpringBootMybatisInterceptorApplicationTests_findByName - 2019.05.23 at 16h 57m 16s.xml">
+      <configuration name="SpringBootMybatisInterceptorApplicationTests.findByName" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40863000" />
+    <option name="totallyTimeSpent" value="94658000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -576,29 +615,57 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Messages" order="7" weight="0.3297062" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="JRebel Console" order="7" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" order="3" visible="true" weight="0.32995737" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50053304" side_tool="true" weight="0.46028292" />
+      <window_info anchor="bottom" id="JRebel Console" order="7" sideWeight="0.50053304" side_tool="true" weight="0.39934713" />
+      <window_info anchor="right" id="Maven Projects" order="3" weight="0.32995737" />
       <window_info anchor="bottom" id="JRebel Executor" order="7" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3297062" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.4047878" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.46028292" />
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26066098" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4981884" visible="true" weight="0.26705757" />
       <window_info id="JRebel" order="2" side_tool="true" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3297062" />
+      <window_info id="Structure" order="1" sideWeight="0.5018116" side_tool="true" weight="0.26439232" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39934713" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49946696" weight="0.39934713" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3297062" />
     </layout>
+    <layout-to-restore>
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info id="JRebel" order="2" side_tool="true" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.46028292" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4981884" weight="0.26705757" />
+      <window_info id="Structure" order="1" sideWeight="0.5018116" side_tool="true" weight="0.26439232" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3297062" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3297062" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49946696" weight="0.39934713" />
+      <window_info anchor="right" id="Palette&#9;" order="4" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50053304" side_tool="true" weight="0.46028292" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="JRebel Executor" order="11" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.3297062" />
+      <window_info anchor="right" id="Maven Projects" order="5" weight="0.32995737" />
+      <window_info anchor="bottom" id="JRebel Console" order="13" sideWeight="0.50053304" side_tool="true" weight="0.39934713" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -615,7 +682,7 @@
       <breakpoints>
         <line-breakpoint suspend="THREAD" type="java-line">
           <condition expression="i=2" language="JAVA" />
-          <url>file://$PROJECT_DIR$/java-base/src/debug/DebugDemo.java</url>
+          <url>file://$PROJECT_DIR$/java-base/src/main/java/debug/DebugDemo.java</url>
           <line>24</line>
           <properties />
           <option name="timeStamp" value="8" />
@@ -626,11 +693,29 @@
           <properties />
           <option name="timeStamp" value="12" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/java-base/src/main/java/arithmetic/ReLink.java</url>
+          <line>48</line>
+          <properties />
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/spring-boot/spring-boot-mybatis-interceptor/src/main/java/cn/withmes/springboot/mybatis/interceptor/config/ExecutorInterceptor.java</url>
+          <line>119</line>
+          <properties />
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/java-base/src/main/java/thread/Demo01.java</url>
+          <line>21</line>
+          <properties field="a" class="thread.Demo01" />
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="19" />
+      <option name="time" value="40" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
@@ -685,530 +770,405 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/360zip$Temp/360$11/DatalogAspect.java" />
-    <entry file="file://$PROJECT_DIR$/spring-boot/spring-boot-aop/src/main/java/cn/withmes/spring/boot/aop/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="19" column="16" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/aspectj/aspectjweaver/1.9.2/aspectjweaver-1.9.2.jar!/org/aspectj/lang/annotation/Around.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="14" column="8" lean-forward="true" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-boot/spring-boot-aop/src/main/java/cn/withmes/spring/boot/aop/work/ProductService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="23" column="23" lean-forward="true" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/aspectj/aspectjweaver/1.9.2/aspectjweaver-1.9.2.jar!/org/aspectj/lang/JoinPoint.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="34" column="23" lean-forward="true" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.1.6.RELEASE/spring-beans-5.1.6.RELEASE.jar!/org/springframework/beans/factory/xml/XmlBeanFactory.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="14" column="43" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-boot/spring-boot-aop/src/main/java/cn/withmes/spring/boot/aop/Aop.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="112" column="14" selection-start-line="112" selection-end-line="113" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-boot/spring-boot-aop/src/main/java/cn/withmes/spring/boot/aop/work/A.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-boot/spring-boot-aop/src/main/java/cn/withmes/spring/boot/aop/work/FakerDataBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="18" column="49" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-boot/spring-boot-aop/src/main/java/cn/withmes/spring/boot/aop/work/ProductAOP.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8">
-          <caret line="31" column="38" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-boot/spring-boot-aop/src/test/java/cn/withmes/spring/boot/aop/SpringBootWorkTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="36" column="51" selection-start-line="36" selection-start-column="51" selection-end-line="36" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.1.6.RELEASE/spring-beans-5.1.6.RELEASE.jar!/org/springframework/beans/factory/xml/BeanDefinitionParserDelegate.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="469" column="68" selection-start-line="469" selection-start-column="54" selection-end-line="469" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.1.6.RELEASE/spring-context-5.1.6.RELEASE.jar!/org/springframework/context/ApplicationContext.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="27" column="31" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.1.6.RELEASE/spring-context-5.1.6.RELEASE.jar!/org/springframework/context/support/AbstractApplicationContext.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="786" column="47" lean-forward="true" selection-start-line="786" selection-start-column="47" selection-end-line="786" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.1.6.RELEASE/spring-context-5.1.6.RELEASE.jar!/org/springframework/context/support/AbstractRefreshableApplicationContext.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="117" column="95" selection-start-line="117" selection-start-column="95" selection-end-line="117" selection-end-column="95" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://JIGSAW/spring.beans">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JIGSAW</ID>
-          <OriginalElement>spring.beans</OriginalElement>
-          <nodes>
-            <node x="" y="">spring.beans</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="54.0" y="15.0" />
-          <SelectedNodes />
-          <Categories />
-          <SCOPE>All</SCOPE>
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://JAVA/org.springframework.beans.factory.BeanFactory">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>org.springframework.beans.factory.BeanFactory</OriginalElement>
-          <nodes>
-            <node x="" y="">org.springframework.beans.factory.BeanFactory</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="60.0" y="15.0" />
-          <SelectedNodes />
-          <Categories />
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.1.6.RELEASE/spring-beans-5.1.6.RELEASE.jar!/org/springframework/beans/factory/BeanFactory.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="11" column="22" lean-forward="true" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.1.6.RELEASE/spring-context-5.1.6.RELEASE.jar!/org/springframework/context/ConfigurableApplicationContext.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.1.6.RELEASE/spring-beans-5.1.6.RELEASE.jar!/org/springframework/beans/factory/ListableBeanFactory.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.1.6.RELEASE/spring-beans-5.1.6.RELEASE.jar!/org/springframework/beans/factory/config/ConfigurableListableBeanFactory.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="26" column="30" lean-forward="true" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://JAVA/org.springframework.beans.factory.support.DefaultListableBeanFactory">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>org.springframework.beans.factory.support.DefaultListableBeanFactory</OriginalElement>
-          <nodes>
-            <node x="271.2003205128206" y="160.0">org.springframework.beans.factory.HierarchicalBeanFactory</node>
-            <node x="685.4791666666667" y="80.0">org.springframework.core.SimpleAliasRegistry</node>
-            <node x="601.7291666666667" y="160.0">org.springframework.beans.factory.support.DefaultSingletonBeanRegistry</node>
-            <node x="424.20032051282067" y="80.0">org.springframework.beans.factory.config.SingletonBeanRegistry</node>
-            <node x="286.4166666666667" y="320.0">org.springframework.beans.factory.config.AutowireCapableBeanFactory</node>
-            <node x="866.4791666666667" y="80.0">org.springframework.beans.factory.support.BeanDefinitionRegistry</node>
-            <node x="134.0" y="400.0">org.springframework.beans.factory.config.ConfigurableListableBeanFactory</node>
-            <node x="0.0" y="400.0">java.io.Serializable</node>
-            <node x="604.7291666666667" y="240.0">org.springframework.beans.factory.support.FactoryBeanRegistrySupport</node>
-            <node x="447.08173076923083" y="400.0">org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory</node>
-            <node x="802.6378205128204" y="0.0">org.springframework.core.AliasRegistry</node>
-            <node x="563.0817307692308" y="320.0">org.springframework.beans.factory.support.AbstractBeanFactory</node>
-            <node x="220.66666666666663" y="80.0">org.springframework.beans.factory.BeanFactory</node>
-            <node x="350.20032051282055" y="480.0">org.springframework.beans.factory.support.DefaultListableBeanFactory</node>
-            <node x="319.70032051282055" y="240.0">org.springframework.beans.factory.config.ConfigurableBeanFactory</node>
-            <node x="45.86858974358984" y="160.0">org.springframework.beans.factory.ListableBeanFactory</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="org.springframework.core.SimpleAliasRegistry" target="org.springframework.core.AliasRegistry">
-              <point x="0.0" y="-15.0" />
-              <point x="765.9791666666667" y="55.0" />
-              <point x="833.1378205128204" y="55.0" />
-              <point x="-30.5" y="15.0" />
-            </edge>
-            <edge source="org.springframework.beans.factory.HierarchicalBeanFactory" target="org.springframework.beans.factory.BeanFactory">
-              <point x="0.0" y="-15.0" />
-              <point x="364.7003205128206" y="135.0" />
-              <point x="319.83333333333326" y="135.0" />
-              <point x="39.66666666666663" y="15.0" />
-            </edge>
-            <edge source="org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory" target="org.springframework.beans.factory.config.AutowireCapableBeanFactory">
-              <point x="-66.5" y="-15.0" />
-              <point x="513.5817307692308" y="375.0" />
-              <point x="449.9166666666667" y="375.0" />
-              <point x="54.5" y="15.0" />
-            </edge>
-            <edge source="org.springframework.beans.factory.config.AutowireCapableBeanFactory" target="org.springframework.beans.factory.BeanFactory">
-              <point x="0.0" y="-15.0" />
-              <point x="395.4166666666667" y="290.0" />
-              <point x="260.70032051282067" y="290.0" />
-              <point x="260.70032051282067" y="135.0" />
-              <point x="280.16666666666663" y="135.0" />
-              <point x="0.0" y="15.0" />
-            </edge>
-            <edge source="org.springframework.beans.factory.config.ConfigurableListableBeanFactory" target="org.springframework.beans.factory.config.AutowireCapableBeanFactory">
-              <point x="79.33333333333331" y="-15.0" />
-              <point x="332.3333333333333" y="375.0" />
-              <point x="340.9166666666667" y="375.0" />
-              <point x="-54.5" y="15.0" />
-            </edge>
-            <edge source="org.springframework.beans.factory.support.FactoryBeanRegistrySupport" target="org.springframework.beans.factory.support.DefaultSingletonBeanRegistry">
-              <point x="0.0" y="-15.0" />
-              <point x="0.0" y="15.0" />
-            </edge>
-            <edge source="org.springframework.beans.factory.support.DefaultSingletonBeanRegistry" target="org.springframework.core.SimpleAliasRegistry">
-              <point x="54.75" y="-15.0" />
-              <point x="0.0" y="15.0" />
-            </edge>
-            <edge source="org.springframework.beans.factory.config.ConfigurableListableBeanFactory" target="org.springframework.beans.factory.ListableBeanFactory">
-              <point x="-79.33333333333331" y="-15.0" />
-              <point x="173.66666666666669" y="375.0" />
-              <point x="127.36858974358984" y="375.0" />
-              <point x="0.0" y="15.0" />
-            </edge>
-            <edge source="org.springframework.beans.factory.ListableBeanFactory" target="org.springframework.beans.factory.BeanFactory">
-              <point x="0.0" y="-15.0" />
-              <point x="127.36858974358984" y="135.0" />
-              <point x="240.5" y="135.0" />
-              <point x="-39.66666666666666" y="15.0" />
-            </edge>
-            <edge source="org.springframework.beans.factory.config.ConfigurableBeanFactory" target="org.springframework.beans.factory.config.SingletonBeanRegistry">
-              <point x="48.50000000000006" y="-15.0" />
-              <point x="465.2003205128206" y="215.0" />
-              <point x="468.70032051282067" y="215.0" />
-              <point x="-44.5" y="15.0" />
-            </edge>
-            <edge source="org.springframework.beans.factory.config.ConfigurableListableBeanFactory" target="org.springframework.beans.factory.config.ConfigurableBeanFactory">
-              <point x="0.0" y="-15.0" />
-              <point x="253.0" y="375.0" />
-              <point x="248.08173076923083" y="375.0" />
-              <point x="248.08173076923083" y="300.0" />
-              <point x="368.20032051282055" y="300.0" />
-              <point x="-48.5" y="15.0" />
-            </edge>
-            <edge source="org.springframework.beans.factory.support.BeanDefinitionRegistry" target="org.springframework.core.AliasRegistry">
-              <point x="-1.1368683772161603E-13" y="-15.0" />
-              <point x="955.9791666666666" y="55.0" />
-              <point x="894.1378205128204" y="55.0" />
-              <point x="30.5" y="15.0" />
-            </edge>
-            <edge source="org.springframework.beans.factory.support.DefaultSingletonBeanRegistry" target="org.springframework.beans.factory.config.SingletonBeanRegistry">
-              <point x="-54.75" y="-15.0" />
-              <point x="656.4791666666667" y="135.0" />
-              <point x="557.7003205128207" y="135.0" />
-              <point x="44.5" y="15.0" />
-            </edge>
-            <edge source="org.springframework.beans.factory.support.AbstractBeanFactory" target="org.springframework.beans.factory.support.FactoryBeanRegistrySupport">
-              <point x="41.75" y="-15.0" />
-              <point x="688.3317307692308" y="300.0" />
-              <point x="711.2291666666667" y="300.0" />
-              <point x="0.0" y="15.0" />
-            </edge>
-            <edge source="org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory" target="org.springframework.beans.factory.support.AbstractBeanFactory">
-              <point x="66.5" y="-15.0" />
-              <point x="0.0" y="15.0" />
-            </edge>
-            <edge source="org.springframework.beans.factory.support.DefaultListableBeanFactory" target="org.springframework.beans.factory.config.ConfigurableListableBeanFactory">
-              <point x="-25.499999999999943" y="-15.0" />
-              <point x="426.7003205128206" y="450.0" />
-              <point x="253.0" y="450.0" />
-              <point x="0.0" y="15.0" />
-            </edge>
-            <edge source="org.springframework.beans.factory.support.DefaultListableBeanFactory" target="java.io.Serializable">
-              <point x="-76.49999999999994" y="-15.0" />
-              <point x="375.7003205128206" y="460.0" />
-              <point x="57.0" y="460.0" />
-              <point x="0.0" y="15.0" />
-            </edge>
-            <edge source="org.springframework.beans.factory.support.AbstractBeanFactory" target="org.springframework.beans.factory.config.ConfigurableBeanFactory">
-              <point x="-41.75" y="-15.0" />
-              <point x="604.8317307692308" y="300.0" />
-              <point x="465.20032051282055" y="300.0" />
-              <point x="48.5" y="15.0" />
-            </edge>
-            <edge source="org.springframework.beans.factory.support.DefaultListableBeanFactory" target="org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory">
-              <point x="25.500000000000057" y="-15.0" />
-              <point x="477.7003205128206" y="450.0" />
-              <point x="580.0817307692308" y="450.0" />
-              <point x="0.0" y="15.0" />
-            </edge>
-            <edge source="org.springframework.beans.factory.config.ConfigurableBeanFactory" target="org.springframework.beans.factory.HierarchicalBeanFactory">
-              <point x="-48.49999999999994" y="-15.0" />
-              <point x="368.2003205128206" y="215.0" />
-              <point x="364.7003205128206" y="215.0" />
-              <point x="0.0" y="15.0" />
-            </edge>
-            <edge source="org.springframework.beans.factory.support.DefaultListableBeanFactory" target="org.springframework.beans.factory.support.BeanDefinitionRegistry">
-              <point x="76.50000000000006" y="-15.0" />
-              <point x="528.7003205128206" y="460.0" />
-              <point x="955.9791666666667" y="460.0" />
-              <point x="0.0" y="15.0" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="0.9" x="40.0" y="339.0" />
-          <SelectedNodes>
-            <node>org.springframework.beans.factory.ListableBeanFactory</node>
-          </SelectedNodes>
-          <Categories />
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.1.6.RELEASE/spring-beans-5.1.6.RELEASE.jar!/org/springframework/beans/factory/support/DefaultListableBeanFactory.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="95" selection-start-line="95" selection-end-line="95" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring/src/main/java/spring/start/demo/Message.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/4.3.22.RELEASE/spring-context-4.3.22.RELEASE.jar!/org/springframework/context/support/AbstractRefreshableConfigApplicationContext.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/4.3.22.RELEASE/spring-context-4.3.22.RELEASE.jar!/org/springframework/context/support/AbstractXmlApplicationContext.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/4.3.22.RELEASE/spring-context-4.3.22.RELEASE.jar!/org/springframework/context/support/ClassPathXmlApplicationContext.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="36" column="65" lean-forward="true" selection-start-line="36" selection-start-column="65" selection-end-line="36" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/4.3.22.RELEASE/spring-core-4.3.22.RELEASE.jar!/org/springframework/core/env/ConfigurableEnvironment.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/4.3.22.RELEASE/spring-context-4.3.22.RELEASE.jar!/org/springframework/context/support/AbstractRefreshableApplicationContext.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="48" column="34" lean-forward="true" selection-start-line="48" selection-start-column="34" selection-end-line="48" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/4.3.22.RELEASE/spring-context-4.3.22.RELEASE.jar!/org/springframework/context/support/AbstractApplicationContext.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="254" selection-start-line="254" selection-end-line="254" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-11.0.3/lib/src.zip!/java.base/java/lang/Thread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="489">
-          <caret line="857" selection-start-line="857" selection-end-line="857" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-11.0.3/lib/src.zip!/java.base/java/util/ArrayList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="283" selection-start-line="283" selection-end-line="283" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/4.3.22.RELEASE/spring-beans-4.3.22.RELEASE.jar!/org/springframework/beans/factory/config/BeanPostProcessor.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring/src/main/java/spring/start/demo/SpringMain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring/src/main/java/spring/start/demo/MessageImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="77">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring/src/main/resources/application.xml">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.5.1/mybatis-3.5.1.jar!/org/apache/ibatis/executor/parameter/ParameterHandler.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
+          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spring/src/main/webapp/WEB-INF/web.xml">
+    <entry file="file://$PROJECT_DIR$/spring-boot/spring-boot-mybatis-interceptor/src/main/java/cn/withmes/springboot/mybatis/interceptor/pojo/PageBase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="16" column="51" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="51" />
+        <state relative-caret-position="-4">
+          <caret line="7" column="19" lean-forward="true" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spring-boot/spring-boot-dubbo-provider/src/main/java/cn/withmes/spring/boot/dubbo/provider/HelloService.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.5.1/mybatis-3.5.1.jar!/org/apache/ibatis/annotations/Select.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
-          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/alibaba/dubbo/2.6.5/dubbo-2.6.5.jar!/com/alibaba/dubbo/config/annotation/Reference.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="41" column="13" selection-start-line="41" selection-start-column="11" selection-end-line="41" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.1.6.RELEASE/spring-beans-5.1.6.RELEASE.jar!/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="391" column="79" selection-start-line="391" selection-start-column="79" selection-end-line="391" selection-end-column="79" />
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spring-boot/spring-boot-dubbo-consume/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-boot/spring-boot-dubbo-consume/src/main/java/cn/withmes/spring/boot/dubbo/consume/SpringBootDubboConsumeApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="e#384#385#0" expanded="true" />
-            <element signature="e#468#469#0" expanded="true" />
-          </folding>
+          <caret line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spring-boot/spring-boot-dubbo-provider/src/main/resources/application.properties">
+    <entry file="file://$PROJECT_DIR$/spring-boot/spring-boot-dubbo-and-hystrix/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
           <caret line="5" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spring-boot/spring-boot-dubbo-provider/src/main/java/cn/withmes/spring/boot/dubbo/provider/HelloServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/spring-boot/spring-boot-dubbo-consume/src/main/java/cn/withmes/spring/boot/dubbo/consume/HelloController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+        <state relative-caret-position="397">
+          <caret line="29" column="5" lean-forward="true" selection-start-line="21" selection-start-column="3" selection-end-line="29" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spring-boot/spring-boot-dubbo-consume/src/main/java/cn/withmes/spring/boot/dubbo/consume/HelloController.java">
+    <entry file="file://$PROJECT_DIR$/spring-boot/spring-boot-dubbo-consume/pom.xml">
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="22" column="38" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
+        <state relative-caret-position="150">
+          <caret line="53" selection-start-line="53" selection-end-line="57" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/netflix/hystrix/hystrix-javanica/1.5.18/hystrix-javanica-1.5.18.jar!/com/netflix/hystrix/contrib/javanica/annotation/HystrixCommand.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="25" column="11" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/alibaba/dubbo/2.6.0/dubbo-2.6.0-sources.jar!/com/alibaba/dubbo/config/annotation/Reference.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1577">
+          <caret line="32" column="18" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-boot/spring-boot-dubbo-provider/src/main/java/cn/withmes/spring/boot/dubbo/provider/HelloService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-boot/spring-boot-dubbo-provider/pom.xml">
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="28" column="43" selection-start-line="28" selection-start-column="43" selection-end-line="28" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-boot/spring-boot-dubbo-and-hystrix/pom.xml">
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="75" selection-start-line="75" selection-end-line="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-boot/spring-boot-dubbo-provider/src/main/java/cn/withmes/spring/boot/dubbo/provider/HelloServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-boot/spring-boot-dubbo-and-hystrix/src/main/java/cn/withmes/springboot/dubboandhystrix/SpringBootDubboAndHystrixApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-boot/spring-boot-dubbo-and-hystrix/src/main/java/cn/withmes/springboot/dubboandhystrix/controller/MyController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="30" column="33" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#768#769#0" expanded="true" />
+            <element signature="e#823#824#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spring-boot/spring-boot-dubbo-provider/src/main/java/cn/withmes/spring/boot/dubbo/provider/SpringBootDubboProviderApplication.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-cloud/spring-cloud-sentinel/src/main/java/cn/withmes/springcloudsentinel/controller/TestApplication.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-aop/2.1.5.RELEASE/spring-boot-starter-aop-2.1.5.RELEASE.pom">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-cloud/spring-cloud-sentinel/src/main/java/cn/withmes/springcloudsentinel/service/TestServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="631">
+          <caret line="53" column="8" selection-start-line="53" selection-start-column="8" selection-end-line="53" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#622#623#0" expanded="true" />
+            <element signature="e#664#665#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-cloud/spring-cloud-sentinel/src/main/java/cn/withmes/springcloudsentinel/controller/MyException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-cloud/spring-cloud-sentinel/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-cloud/spring-cloud-sentinel/src/main/java/cn/withmes/springcloudsentinel/controller/DemoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-cloud/spring-cloud-sentinel/src/main/java/cn/withmes/springcloudsentinel/controller/TestService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/alibaba/csp/sentinel-core/1.4.0/sentinel-core-1.4.0.jar!/com/alibaba/csp/sentinel/annotation/SentinelResource.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-cloud/pom.xml">
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" column="41" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-cloud/spring-cloud-sentinel/src/main/java/cn/withmes/springcloudsentinel/service/ExceptionUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-cloud/spring-cloud-sentinel/src/main/java/cn/withmes/springcloudsentinel/SpringCloudSentinelApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
+          <caret line="22" column="25" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="25" />
+          <folding>
+            <element signature="e#789#790#0" expanded="true" />
+            <element signature="e#835#836#0" expanded="true" />
+            <element signature="e#869#870#0" expanded="true" />
+            <element signature="e#902#903#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-cloud/spring-cloud-sentinel/pom.xml">
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="28" column="26" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/alibaba/dubbo/2.6.0/dubbo-2.6.0-sources.jar!/com/alibaba/dubbo/config/AbstractInterfaceConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="68" column="27" selection-start-line="68" selection-start-column="21" selection-end-line="68" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/alibaba/dubbo/2.6.0/dubbo-2.6.0-sources.jar!/com/alibaba/dubbo/config/AbstractReferenceConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="29" column="68" selection-start-line="29" selection-start-column="68" selection-end-line="29" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/alibaba/dubbo/2.6.0/dubbo-2.6.0-sources.jar!/com/alibaba/dubbo/config/ConsumerConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="23" column="56" lean-forward="true" selection-start-line="23" selection-start-column="56" selection-end-line="23" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-cloud/spring-cloud-sentinel/src/main/java/cn/withmes/springcloudsentinel/config/AopConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spring-boot/incubator-dubbo-admin/pom.xml">
+    <entry file="file://$PROJECT_DIR$/spring/src/main/java/spring/start/demo/MessageImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring/src/main/java/spring/start/demo/SpringMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java-base/src/main/java/arithmetic/ReLink.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding>
+            <element signature="method#reList#0;class#ReLink#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-boot/spring-boot-mybatis-interceptor/src/main/java/cn/withmes/springboot/mybatis/interceptor/mapper/UserMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-boot/spring-boot-mybatis-interceptor/src/main/java/cn/withmes/springboot/mybatis/interceptor/config/ExecutorInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="598">
+          <caret line="88" column="33" lean-forward="true" selection-start-line="88" selection-start-column="33" selection-end-line="88" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-boot/spring-boot-mybatis-interceptor/src/test/java/cn/withmes/springboot/mybatis/interceptor/SpringBootMybatisInterceptorApplicationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-13">
+          <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-boot/spring-boot-mybatis-interceptor/src/main/java/cn/withmes/springboot/mybatis/interceptor/SpringBootMybatisInterceptorApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.3/lib/src.zip!/java.base/java/util/concurrent/Executor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="123" column="17" selection-start-line="123" selection-start-column="17" selection-end-line="123" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.3/lib/src.zip!/java.base/java/util/concurrent/ThreadFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="57" column="17" selection-start-line="57" selection-start-column="17" selection-end-line="57" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/google/guava/guava/16.0.1/guava-16.0.1.jar!/com/google/common/util/concurrent/ThreadFactoryBuilder.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="20" column="11" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#3199#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="17" column="67" selection-start-line="17" selection-start-column="67" selection-end-line="17" selection-end-column="67" />
+        <state relative-caret-position="161">
+          <caret line="12" column="36" lean-forward="true" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spring-boot/incubator-dubbo-admin/dubbo-admin/src/main/resources/application.properties">
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.3/lib/src.zip!/java.base/java/util/concurrent/ThreadPoolExecutor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-244" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dubbo-governance.log">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-boot/incubator-dubbo-admin/dubbo-admin/src/main/java/com/alibaba/dubboadmin/DubboAdminApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="17" column="31" lean-forward="true" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
+        <state relative-caret-position="830">
+          <caret line="1208" column="11" selection-start-line="1208" selection-start-column="11" selection-end-line="1208" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.3/lib/src.zip!/java.base/java/lang/Object.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+        <state relative-caret-position="148">
+          <caret line="281" column="29" selection-start-line="281" selection-start-column="29" selection-end-line="281" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java-base/src/main/java/thread/ProduceConsumeVersion2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="51" column="39" lean-forward="true" selection-start-line="51" selection-start-column="39" selection-end-line="51" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jrt://C:/Program Files/Java/jdk-11.0.3!/java.base/java/util/HashMap.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="42" column="38" lean-forward="true" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#78967#0" expanded="true" />
+            <element signature="e#5783#5784#0" expanded="true" />
+            <element signature="e#5853#5854#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.3/lib/src.zip!/java.base/java/util/HashMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#93173#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java-base/src/main/java/thread/WriterAndRead.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java-base/src/main/java/thread/WaitAndNotify2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="20" column="16" lean-forward="true" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java-base/src/main/java/thread/WaitAndNotify.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1794">
+          <caret line="82" column="1" lean-forward="true" selection-start-line="6" selection-end-line="82" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1265,7 +1225,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>dubbo-ops</last-edited>
+          <last-edited>java-base</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
