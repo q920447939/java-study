@@ -58,14 +58,14 @@ public class ReLink {
 
 
     private static Node reList2(Node head) {
-       Node result = null;
-        while (head != null) {
-            Node next = head.next;
-            head.next = result;
-            result = head;
-            head = next;
+        Node res = null;
+        while (null != head) {
+            Node temp = head.next;
+            head.next = res;
+            res = head;
+            head = temp;
         }
-        return result;
+        return res;
     }
 
 
