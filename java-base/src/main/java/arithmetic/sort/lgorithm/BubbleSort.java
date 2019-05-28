@@ -6,6 +6,7 @@
 package arithmetic.sort.lgorithm;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.Random;
 
 /**
@@ -40,17 +41,26 @@ public class BubbleSort {
     }
 
     public static int twoPointFind(int[] arr, int x) {
-        int res = -1;
         int idx = 0;
-        int hight = arr.length-1;
-        return null;
+        int left = 0;
+        int right = arr.length - 1;
+
+        while (idx != arr.length) {
+            idx++;
+            int middle = (left + right) / 2;
+            int temp = arr[middle];
+            if (temp == x) return middle;
+            else if (x < temp ) right-=1;
+            else if (x > temp ) left+=1;
+        }
+        return -1;
     }
 
     public static void main(String[] args) {
-        int[] ints = new int[]{1,2,3,4,5};
-      //  Arrays.sort(ints);
+        int[] ints = new int[]{3, 11, 22, 34, 55,56,64};
+        //  Arrays.sort(ints);
         System.out.println("正确排序后的数组:" + Arrays.toString(ints));
-        int i = twoPointFind(ints, 2);
+        int i = twoPointFind(ints, 55);
         System.out.println(i);
     }
 }

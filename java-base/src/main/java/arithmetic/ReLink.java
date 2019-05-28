@@ -58,11 +58,17 @@ public class ReLink {
 
 
     private static Node reList2(Node head) {
+        // 1 next =2   next = 3
         Node res = null;
         while (null != head) {
+            //  2  3    ,   3  ,  null
             Node temp = head.next;
+            // null      2,next = 1  ,   next =2 ,next =1
             head.next = res;
+            // res =    1  next = null  ,   2,next = 1    ,   ,va =3 ,next =2 ,next =1
             res = head;
+
+            // head  = 2 next  =3   ,3
             head = temp;
         }
         return res;
