@@ -22,6 +22,9 @@ public class SpringCloudSentinelApplication {
         @GetMapping("/hello")
         @SentinelResource(value = "spring-cloud-sentinel.hello", blockHandler = "exceptionHandler", fallback = "fallback")
         public String hello() {
+
+
+
             return "didispace.com";
         }
 

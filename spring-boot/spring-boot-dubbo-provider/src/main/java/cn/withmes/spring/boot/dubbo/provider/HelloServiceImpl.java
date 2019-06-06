@@ -14,7 +14,6 @@ package cn.withmes.spring.boot.dubbo.provider;
 import com.alibaba.dubbo.config.annotation.Service;
 import org.springframework.stereotype.Component;
 
-@Component
 @Service
 public class HelloServiceImpl implements HelloService {
     @Override
