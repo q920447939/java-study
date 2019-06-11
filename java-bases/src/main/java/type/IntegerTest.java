@@ -3,7 +3,7 @@
  * @Author: leegoo
  * @Date: 2019年05月27日
  */
-package eigth.type;
+package type;
 
 import java.util.concurrent.ConcurrentHashMap;
 

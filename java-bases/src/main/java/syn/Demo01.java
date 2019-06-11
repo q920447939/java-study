@@ -36,8 +36,7 @@ public class Demo01 {
 
 
     public static Demo01 getInstance() {
-        var a = 1;
-        val(a++);
+
         return instance;
     }
 
