@@ -57,14 +57,14 @@
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
                 <version>Finchley.SR1</version>
-                <type>pom</type>
+                <cn.withme.type>pom</cn.withme.type>
                 <scope>import</scope>
             </dependency>
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-alibaba-dependencies</artifactId>
                 <version>0.2.1.RELEASE</version>
-                <type>pom</type>
+                <cn.withme.type>pom</cn.withme.type>
                 <scope>import</scope>
             </dependency>
         </dependencies>

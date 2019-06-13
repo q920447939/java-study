@@ -1,1 +1,0 @@
-package arithmetic.sort.lgorithm;
