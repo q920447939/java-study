@@ -17,7 +17,7 @@ import java.nio.ByteBuffer;
 public class NIOTest01 {
 
     public static void main(String[] args) {
-        ByteBuffer byteBuffer = ByteBuffer.allocate(1024);
+        ByteBuffer byteBuffer = ByteBuffer.allocateDirect(1024);
         System.out.println(byteBuffer.capacity());
         System.out.println(byteBuffer.limit());
         System.out.println(byteBuffer.position());
