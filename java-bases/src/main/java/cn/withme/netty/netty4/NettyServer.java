@@ -59,6 +59,7 @@ public class NettyServer {
                 .childHandler(new ChannelInitializer<SocketChannel>() {
                     @Override
                     protected void initChannel(SocketChannel sc) throws Exception {
+                        //
                         ByteBuf buf = Unpooled.copiedBuffer("_bb".getBytes());
                         sc.pipeline().addLast(new DelimiterBasedFrameDecoder(1024, buf));
                         sc.pipeline().addLast(new StringDecoder());
