@@ -14,9 +14,9 @@ public class StringTest {
         String two = "abcde";
 
         //自己定义的变量在反编译之后,在JVM修改成 localList1
-        List<Integer>  ssssa = List.of(1,2,3,4);
+        //List<Integer>  ssssa = List.of(1,2,3,4);
 
         //自己定义的变量在反编译之后,在JVM修改成 localList2
-        List<Integer>  bbb = List.of(1,2,3,4);
+        //List<Integer>  bbb = List.of(1,2,3,4);
     }
 }
