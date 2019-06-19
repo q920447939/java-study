@@ -6,26 +6,30 @@
 package cn.withme.springcloud.zookeeper.simple;
 
 
-import org.omg.PortableInterceptor.ClientRequestInterceptor;
+import org.apache.commons.collections4.MapUtils;
+import org.apache.commons.collections4.SetUtils;
+import org.apache.zookeeper.common.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpRequest;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.http.client.ClientHttpRequestExecution;
 import org.springframework.http.client.ClientHttpRequestInterceptor;
 import org.springframework.http.client.ClientHttpResponse;
-import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.web.client.RestTemplate;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.URI;
-import java.util.List;
+import java.net.URISyntaxException;
+import java.net.URL;
+import java.net.URLConnection;
 import java.util.Map;
 import java.util.Random;
 import java.util.Set;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.stream.Collectors;
 
 /**
  * ClassName: LoadBanlance
@@ -36,44 +40,81 @@ import java.util.stream.Collectors;
  */
 public class LoadBanlance implements ClientHttpRequestInterceptor {
 
-    @Autowired
-    private DiscoveryClient client;
+//    @Autowired
+//    private DiscoveryClient client;
 
     @Autowired
-    private RestTemplate restTemplate;
+    ServerInfo serverInfo;
 
-
-    private Map<String, Set<String>> servers = new ConcurrentHashMap<>();
+    @Autowired
+    Task task;
 
     @Override
     public ClientHttpResponse intercept(HttpRequest httpRequest, byte[] bytes, ClientHttpRequestExecution clientHttpRequestExecution) throws IOException {
         URI uri = httpRequest.getURI();
         //"/" + servierName + "/hello"
+        //servierName
         String serverName = uri.getPath().split("/")[1];
-        HttpMethod httpRequestMethod = httpRequest.getMethod();
-        String  serverMethod = uri.getPath().split("/")[2];
+        //HttpMethod httpRequestMethod = httpRequest.getMethod();
+        //hello
+        String serverMethod = uri.getPath().split("/")[2];
+
+
         //获得zookeeper 注册列表(可以传入服务名,这样就能把这个项目所对应的集群节点ip 全部拿到,然后就可以自己模拟负载均衡了)
-        Object[] targetServerNames = servers.get(serverName).toArray();
-        String targetUrl = (String) targetServerNames[new Random().nextInt(targetServerNames.length)];
-        String forObject = restTemplate.getForObject(targetUrl + "/" + serverMethod, String.class);
-        return null;
+        Map<String, Set<String>> serversMap = serverInfo.getServersMap();
+
+        if (MapUtils.isEmpty(serversMap) || null == serversMap.get(serverName)) {
+            task.getServerList();//可能任务调度还没有执行,主动执行一次任务调度
+        }
+        Object[] targetServerNames = serversMap.get(serverName).toArray();
+        String randomServer = (String) targetServerNames[new Random().nextInt(targetServerNames.length)];
+        String targetUrl = randomServer + "/" + serverMethod + (uri.getQuery()==null?"":uri.getQuery());
+        URL url = new URL(targetUrl);
+//        RestTemplate restTemplate = new RestTemplate();
+//        ResponseEntity<InputStream> responseEntity = restTemplate.getForEntity(, InputStream.class);
+        //byte[] responseByte = org.apache.commons.io.IOUtils.toByteArray(url.openConnection().getInputStream());
+        return new ClientHttpResponseImpl(new HttpHeaders(), url.openConnection().getInputStream());
     }
 
+    class ClientHttpResponseImpl implements ClientHttpResponse {
+        private InputStream inputStream;
 
-    // 定时任务, cron表达式 一秒钟执行一次
-    @Scheduled(cron = "0/1 * * * * ?")
-    public void getServerList() {
-        List<String> services = client.getServices();
-        Map<String, Set<String>> newServerList = new ConcurrentHashMap<>(services.size());
-        services.stream().distinct().forEach(e -> {
-            List<ServiceInstance> instanceList = client.getInstances(e);
-            Set<String> set1 = instanceList.stream().map(
-                    m -> m.isSecure() ? "https://" + m.getHost() + ":" + m.getPort()
-                            : "http://" + m.getHost() + ":" + m.getPort()
-            ).collect(Collectors.toSet());
-            newServerList.put(e, set1);
-        });
-        servers = newServerList;
+        private HttpHeaders httpHeaders;
+
+        public ClientHttpResponseImpl(HttpHeaders httpHeaders, InputStream inputStream) {
+            this.inputStream = inputStream;
+            this.httpHeaders = httpHeaders;
+        }
+
+        @Override
+        public HttpStatus getStatusCode() throws IOException {
+            return HttpStatus.OK;
+        }
+
+        @Override
+        public int getRawStatusCode() throws IOException {
+            return 200;
+        }
+
+        @Override
+        public String getStatusText() throws IOException {
+            return "success";
+        }
+
+        @Override
+        public void close() {
+
+        }
+
+        @Override
+        public InputStream getBody() throws IOException {
+            return inputStream;
+        }
+
+        @Override
+        public HttpHeaders getHeaders() {
+            return httpHeaders;
+        }
     }
 
 
