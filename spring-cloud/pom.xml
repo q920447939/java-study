@@ -17,6 +17,7 @@
         <module>spring-cloud-source-find</module>
         <module>spring-cloud-zookeeper-server</module>
         <module>spring-cloud-zookeeper-simple</module>
+        <module>spring-cloud-hysrix</module>
     </modules>
 
     <dependencyManagement>
