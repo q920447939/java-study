@@ -1,4 +1,4 @@
-package cn.withmes.spring.cloud.hysrix.demo.controller.davance;
+package cn.withmes.spring.cloud.hysrix.controller.davance;
 
 
 import java.lang.annotation.Documented;

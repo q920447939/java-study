@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>cn.withmes</groupId>
-	<artifactId>spring-cloud-hysrix-demo</artifactId>
+	<artifactId>spring-cloud-hysrix</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>spring-cloud-hysrix-demo</name>
-	<description>Demo project for Spring Boot</description>
+	<name>spring-cloud-hysrix</name>
+	<description>spring-cloud-hysrix</description>
 
 	<properties>
 		<java.version>1.8</java.version>

@@ -1,6 +1,5 @@
-package cn.withmes.spring.cloud.hysrix.demo;
+package cn.withmes.spring.cloud.hysrix;
 
-import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.cloud.netflix.hystrix.EnableHystrix;
@@ -10,15 +9,15 @@ import java.util.Map;
 
 @SpringBootApplication
 @EnableHystrix
-public class SpringCloudHysrixDemoApplication {
+public class SpringCloudHysrixApplication {
 
     public static void main(String[] args) {
         Map<String, Object> params = new HashMap<>();
         params.put("server.port", 65018);
-        params.put("spring.application.name", SpringCloudHysrixDemoApplication.class.getSimpleName());
+        params.put("spring.application.name", SpringCloudHysrixApplication.class.getSimpleName());
         params.put("management.server.port", 9002);
         params.put("management.endpoints.web.exposure.include", "*");
-        new SpringApplicationBuilder(SpringCloudHysrixDemoApplication.class)
+        new SpringApplicationBuilder(SpringCloudHysrixApplication.class)
                 .properties(params)
                 .run(args);
     }

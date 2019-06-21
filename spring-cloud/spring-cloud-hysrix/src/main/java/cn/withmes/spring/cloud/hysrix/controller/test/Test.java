@@ -3,11 +3,9 @@
  * @Author: leegoo
  * @Date: 2019年06月20日
  */
-package cn.withmes.spring.cloud.hysrix.demo.controller.test;
+package cn.withmes.spring.cloud.hysrix.controller.test;
 
-import cn.withmes.spring.cloud.hysrix.demo.controller.davance.MyHystrixAnnotation;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**

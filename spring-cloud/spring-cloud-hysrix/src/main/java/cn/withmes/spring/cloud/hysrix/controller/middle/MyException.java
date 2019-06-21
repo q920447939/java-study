@@ -3,7 +3,7 @@
  * @Author: leegoo
  * @Date: 2019年06月20日
  */
-package cn.withmes.spring.cloud.hysrix.demo.controller.middle;
+package cn.withmes.spring.cloud.hysrix.controller.middle;
 
 import org.springframework.stereotype.Component;
 
