@@ -19,6 +19,7 @@
         <module>spring-cloud-zookeeper-simple</module>
         <module>spring-cloud-hysrix</module>
         <module>spring-cloud-fegin</module>
+        <module>spring-cloud-stream</module>
     </modules>
 
     <dependencyManagement>
