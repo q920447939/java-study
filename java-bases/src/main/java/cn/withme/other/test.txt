@@ -1,0 +1,144 @@
+Classfile /E:/my-project/java-study/java-bases/src/main/java/cn/withme/other/MapTest.class
+  Last modified 2019-6-28; size 1489 bytes
+  MD5 checksum 6dccf957a7be6ababfc0cda3c8744100
+  Compiled from "MapTest.java"
+public class cn.withme.other.MapTest
+  minor version: 0
+  major version: 52
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #18.#29        // java/lang/Object."<init>":()V
+   #2 = Class              #30            // java/util/HashMap
+   #3 = Methodref          #2.#29         // java/util/HashMap."<init>":()V
+   #4 = String             #31            // 1
+   #5 = String             #32            // jack
+   #6 = InterfaceMethodref #33.#34        // java/util/Map.put:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+   #7 = String             #35            // 2
+   #8 = String             #36            // tom
+   #9 = InvokeDynamic      #0:#42         // #0:accept:()Ljava/util/function/BiConsumer;
+  #10 = InterfaceMethodref #33.#43        // java/util/Map.forEach:(Ljava/util/function/BiConsumer;)V
+  #11 = Fieldref           #44.#45        // java/lang/System.out:Ljava/io/PrintStream;
+  #12 = Class              #46            // java/lang/StringBuilder
+  #13 = Methodref          #12.#29        // java/lang/StringBuilder."<init>":()V
+  #14 = Methodref          #12.#47        // java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  #15 = Methodref          #12.#48        // java/lang/StringBuilder.toString:()Ljava/lang/String;
+  #16 = Methodref          #49.#50        // java/io/PrintStream.println:(Ljava/lang/String;)V
+  #17 = Class              #51            // cn/withme/other/MapTest
+  #18 = Class              #52            // java/lang/Object
+  #19 = Utf8               <init>
+  #20 = Utf8               ()V
+  #21 = Utf8               Code
+  #22 = Utf8               LineNumberTable
+  #23 = Utf8               main
+  #24 = Utf8               ([Ljava/lang/String;)V
+  #25 = Utf8               lambda$main$0
+  #26 = Utf8               (Ljava/lang/String;Ljava/lang/String;)V
+  #27 = Utf8               SourceFile
+  #28 = Utf8               MapTest.java
+  #29 = NameAndType        #19:#20        // "<init>":()V
+  #30 = Utf8               java/util/HashMap
+  #31 = Utf8               1
+  #32 = Utf8               jack
+  #33 = Class              #53            // java/util/Map
+  #34 = NameAndType        #54:#55        // put:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+  #35 = Utf8               2
+  #36 = Utf8               tom
+  #37 = Utf8               BootstrapMethods
+  #38 = MethodHandle       #6:#56         // invokestatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+  #39 = MethodType         #57            //  (Ljava/lang/Object;Ljava/lang/Object;)V
+  #40 = MethodHandle       #6:#58         // invokestatic cn/withme/other/MapTest.lambda$main$0:(Ljava/lang/String;Ljava/lang/String;)V
+  #41 = MethodType         #26            //  (Ljava/lang/String;Ljava/lang/String;)V
+  #42 = NameAndType        #59:#60        // accept:()Ljava/util/function/BiConsumer;
+  #43 = NameAndType        #61:#62        // forEach:(Ljava/util/function/BiConsumer;)V
+  #44 = Class              #63            // java/lang/System
+  #45 = NameAndType        #64:#65        // out:Ljava/io/PrintStream;
+  #46 = Utf8               java/lang/StringBuilder
+  #47 = NameAndType        #66:#67        // append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  #48 = NameAndType        #68:#69        // toString:()Ljava/lang/String;
+  #49 = Class              #70            // java/io/PrintStream
+  #50 = NameAndType        #71:#72        // println:(Ljava/lang/String;)V
+  #51 = Utf8               cn/withme/other/MapTest
+  #52 = Utf8               java/lang/Object
+  #53 = Utf8               java/util/Map
+  #54 = Utf8               put
+  #55 = Utf8               (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+  #56 = Methodref          #73.#74        // java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+  #57 = Utf8               (Ljava/lang/Object;Ljava/lang/Object;)V
+  #58 = Methodref          #17.#75        // cn/withme/other/MapTest.lambda$main$0:(Ljava/lang/String;Ljava/lang/String;)V
+  #59 = Utf8               accept
+  #60 = Utf8               ()Ljava/util/function/BiConsumer;
+  #61 = Utf8               forEach
+  #62 = Utf8               (Ljava/util/function/BiConsumer;)V
+  #63 = Utf8               java/lang/System
+  #64 = Utf8               out
+  #65 = Utf8               Ljava/io/PrintStream;
+  #66 = Utf8               append
+  #67 = Utf8               (Ljava/lang/String;)Ljava/lang/StringBuilder;
+  #68 = Utf8               toString
+  #69 = Utf8               ()Ljava/lang/String;
+  #70 = Utf8               java/io/PrintStream
+  #71 = Utf8               println
+  #72 = Utf8               (Ljava/lang/String;)V
+  #73 = Class              #76            // java/lang/invoke/LambdaMetafactory
+  #74 = NameAndType        #77:#81        // metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+  #75 = NameAndType        #25:#26        // lambda$main$0:(Ljava/lang/String;Ljava/lang/String;)V
+  #76 = Utf8               java/lang/invoke/LambdaMetafactory
+  #77 = Utf8               metafactory
+  #78 = Class              #83            // java/lang/invoke/MethodHandles$Lookup
+  #79 = Utf8               Lookup
+  #80 = Utf8               InnerClasses
+  #81 = Utf8               (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+  #82 = Class              #84            // java/lang/invoke/MethodHandles
+  #83 = Utf8               java/lang/invoke/MethodHandles$Lookup
+  #84 = Utf8               java/lang/invoke/MethodHandles
+{
+  public cn.withme.other.MapTest();
+    descriptor: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return
+      LineNumberTable:
+        line 7: 0
+
+  public static void main(java.lang.String[]);
+    descriptor: ([Ljava/lang/String;)V
+    flags: ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=3, locals=2, args_size=1
+         0: new           #2                  // class java/util/HashMap
+         3: dup
+         4: invokespecial #3                  // Method java/util/HashMap."<init>":()V
+         7: astore_1
+         8: aload_1
+         9: ldc           #4                  // String 1
+        11: ldc           #5                  // String jack
+        13: invokeinterface #6,  3            // InterfaceMethod java/util/Map.put:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+        18: pop
+        19: aload_1
+        20: ldc           #7                  // String 2
+        22: ldc           #8                  // String tom
+        24: invokeinterface #6,  3            // InterfaceMethod java/util/Map.put:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+        29: pop
+        30: aload_1
+        31: invokedynamic #9,  0              // InvokeDynamic #0:accept:()Ljava/util/function/BiConsumer;
+        36: invokeinterface #10,  2           // InterfaceMethod java/util/Map.forEach:(Ljava/util/function/BiConsumer;)V
+        41: return
+      LineNumberTable:
+        line 9: 0
+        line 10: 8
+        line 11: 19
+        line 12: 30
+        line 13: 41
+}
+SourceFile: "MapTest.java"
+InnerClasses:
+     public static final #79= #78 of #82; //Lookup=class java/lang/invoke/MethodHandles$Lookup of class java/lang/invoke/MethodHandles
+BootstrapMethods:
+  0: #38 invokestatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #39 (Ljava/lang/Object;Ljava/lang/Object;)V
+      #40 invokestatic cn/withme/other/MapTest.lambda$main$0:(Ljava/lang/String;Ljava/lang/String;)V
+      #41 (Ljava/lang/String;Ljava/lang/String;)V
