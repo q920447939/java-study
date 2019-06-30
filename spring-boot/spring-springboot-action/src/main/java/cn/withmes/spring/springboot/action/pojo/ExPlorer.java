@@ -30,4 +30,8 @@ public class ExPlorer {
         System.out.println(task.execute());
         System.out.println("结束");
     }
+
+    public String heselfName () {
+        return "伊泽瑞尔";
+    }
 }
