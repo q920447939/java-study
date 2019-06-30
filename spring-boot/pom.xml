@@ -19,6 +19,7 @@
         <module>spring-boot-mybatis-interceptor</module>
         <module>spring-boot-source-find</module>
         <module>spring-boot-web-demo01</module>
+        <module>spring-springboot-action</module>
     </modules>
 
     <repositories>
