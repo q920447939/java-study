@@ -20,6 +20,8 @@
         <module>spring-cloud-hysrix</module>
         <module>spring-cloud-fegin</module>
         <module>spring-cloud-stream</module>
+        <module>spring-cloud-distribute-tran</module>
+        <module>spring-cloud-bus</module>
     </modules>
 
     <dependencyManagement>
