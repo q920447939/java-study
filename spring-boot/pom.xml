@@ -12,7 +12,7 @@
     <artifactId>spring-boot</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>incubator-dubbo-admin</module>
+<!--        <module>incubator-dubbo-admin</module>-->
         <module>spring-boot-aop</module>
         <module>spring-boot-dubbo-consume</module>
         <module>spring-boot-dubbo-provider</module>
@@ -20,6 +20,7 @@
         <module>spring-boot-source-find</module>
         <module>spring-boot-web-demo01</module>
         <module>spring-springboot-action</module>
+        <module>spring-boot-java-spi</module>
     </modules>
 
     <repositories>
