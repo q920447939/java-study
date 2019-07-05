@@ -11,5 +11,12 @@
 
     <artifactId>spring-boot-mq</artifactId>
 
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>spring-boot-rabbitmq-consumer</module>
+        <module>spring-boot-rabbitmq-producter</module>
+        <module>spring-boot-rabbitmq-simple</module>
+    </modules>
 
 </project>

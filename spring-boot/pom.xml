@@ -21,6 +21,7 @@
         <module>spring-boot-web-demo01</module>
         <module>spring-springboot-action</module>
         <module>spring-boot-java-spi</module>
+        <module>spring-boot-mq</module>
     </modules>
 
     <repositories>
