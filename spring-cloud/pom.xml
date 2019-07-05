@@ -22,6 +22,7 @@
         <module>spring-cloud-stream</module>
         <module>spring-cloud-distribute-tran</module>
         <module>spring-cloud-bus</module>
+        <module>spring-cloud-eureka</module>
     </modules>
 
     <dependencyManagement>
