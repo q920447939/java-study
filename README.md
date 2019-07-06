@@ -1,3 +1,6 @@
+## **多线程 部分**
+[java 死锁的一个例子](java-bases/src/main/java/cn/withme/thread/DealLock.java)
+
 ## **spring 部分**
 
 [spring](./spring)
