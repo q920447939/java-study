@@ -20,5 +20,5 @@
 
 
 ## **spring cloud 部分**
-[eureka服务注册与服务发现](spring-cloud/spring-cloud-eureka)
+[eureka服务注册与服务发现 + feign](spring-cloud/spring-cloud-eureka)
 
