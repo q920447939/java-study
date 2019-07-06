@@ -5,7 +5,10 @@
  */
 package cn.withmes.spring.cloud.eureka.api;
 
+import cn.withmes.spring.cloud.eureka.api.pojo.User;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 
 /**
  * ClassName: SayServer
@@ -17,4 +20,8 @@ public interface SayServer {
 
     @GetMapping("/server/say")
     String sayInfo ();
+
+
+    @PostMapping("/server/save")
+    User save (@RequestBody  User user);
 }
