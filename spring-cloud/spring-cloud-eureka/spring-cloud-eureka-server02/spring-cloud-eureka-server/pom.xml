@@ -9,24 +9,30 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>cn.withmes</groupId>
-    <artifactId>spring-cloud-eureka-client01</artifactId>
+    <artifactId>spring-cloud-eureka-server</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>spring-cloud-eureka-client01</name>
-    <description>spring-cloud-eureka-client01</description>
+    <name>spring-cloud-eureka-server</name>
+    <description>spring-cloud-eureka-server</description>
 
     <properties>
         <java.version>1.8</java.version>
         <spring-cloud.version>Greenwich.SR1</spring-cloud.version>
+
     </properties>
 
     <dependencies>
+
+
+        <dependency>
+            <groupId>cn.withmes</groupId>
+            <artifactId>spring-cloud-eureka-api02</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+            <artifactId>spring-boot-starter</artifactId>
         </dependency>
 
         <dependency>
@@ -35,12 +41,17 @@
             <scope>test</scope>
         </dependency>
 
-        <!--fegin -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-openfeign</artifactId>
+            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
         </dependency>
 
+
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.boot</groupId>-->
+<!--            <artifactId>spring-boot-starter-security</artifactId>-->
+<!--            <version>2.1.3.RELEASE</version>-->
+<!--        </dependency>-->
     </dependencies>
 
     <dependencyManagement>
@@ -54,6 +65,9 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
+
+
 
     <build>
         <plugins>
