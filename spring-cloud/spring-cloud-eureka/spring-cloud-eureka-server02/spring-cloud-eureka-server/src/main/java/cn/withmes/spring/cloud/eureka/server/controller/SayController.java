@@ -40,13 +40,27 @@ public class SayController implements SayServer, EnvironmentAware {
     public User save(User user) {
         user.setId(new Random().nextInt());
         try {
-            TimeUnit.SECONDS.sleep(1);
+            TimeUnit.SECONDS.sleep(new Random().nextInt(10));
         } catch (InterruptedException e) {
             e.printStackTrace();
             throw new RuntimeException();
         }
         return user;
     }
+
+    @Override
+    public String getMessageById(String id) {
+        int sleepTime = new Random().nextInt(10);
+        System.out.println("服务器查询,一共耗时:"+sleepTime+"秒");
+        try {
+            TimeUnit.SECONDS.sleep(sleepTime);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return "服务器查询到信息,信息内容为: 你好,2008年奥运会已经结束 ,id:"+id;
+    }
+
+
 
     @Override
     public void setEnvironment(Environment environment) {

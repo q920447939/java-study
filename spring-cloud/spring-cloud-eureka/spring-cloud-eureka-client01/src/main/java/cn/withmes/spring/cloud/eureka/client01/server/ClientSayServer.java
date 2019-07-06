@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @date 2019年07月06日
  */
 
-@FeignClient(name = "spring-cloud-eureka-server")
+@FeignClient(name = "spring-cloud-eureka-server",fallback = FallBackDefault.class)
 public interface ClientSayServer {
 
     @GetMapping("/server/say")
@@ -30,4 +30,7 @@ public interface ClientSayServer {
 
     @RequestMapping(value = "/server/save",method = RequestMethod.POST)
     User save(@RequestBody User user);
+
+    @GetMapping("/server/getMessageById")
+    String getMessageById(@RequestParam("id") String id);
 }

@@ -9,10 +9,12 @@ spring:
     name: SpringCloudEurekaClient01
 server:
   port: 8846
-#ribbon的超时时间
 feign:
+  hystrix:
+    enabled: true
   client:
     config:
+      #ribbon的超时时间
       remote-service:           #服务名，填写default为所有服务
         connectTimeout: 3_000
         readTimeout: 3_000

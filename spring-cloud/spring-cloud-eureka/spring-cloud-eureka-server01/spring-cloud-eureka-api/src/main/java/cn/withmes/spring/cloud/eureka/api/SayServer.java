@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * ClassName: SayServer
@@ -26,4 +27,8 @@ public interface SayServer {
 
     @RequestMapping(value = "/server/save",method = RequestMethod.POST)
     User save (@RequestBody  User user);
+
+
+    @GetMapping("/server/getMessageById")
+    String getMessageById(@RequestParam("id") String id);
 }
