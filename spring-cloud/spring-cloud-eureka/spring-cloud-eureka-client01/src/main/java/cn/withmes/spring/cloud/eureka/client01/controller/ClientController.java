@@ -49,6 +49,19 @@ public class ClientController {
     @PostMapping("/save")
     public User save (@RequestBody User user) {
         System.err.println("save.....user:"+user);
+        // 必须配置feign 的超时时间,因为server 会睡眠一秒,而feign 默认超时时间是1秒钟 ,如果不配置会导致 Read Time Out
+        //
+        /*1. application.yml加入
+        * #ribbon的超时时间
+            feign:
+              client:
+                config:
+                  remote-service:           #服务名，填写default为所有服务
+                    connectTimeout: 10000
+                    readTimeout: 10000
+
+         2.配置 FeignConfigure.class
+        * */
         User user1 = clientSayServer.save(user);
         return user1;
     }

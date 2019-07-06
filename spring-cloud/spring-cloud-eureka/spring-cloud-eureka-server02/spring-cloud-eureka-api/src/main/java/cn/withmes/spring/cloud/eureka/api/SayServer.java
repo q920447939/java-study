@@ -21,9 +21,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public interface SayServer {
 
     @GetMapping("/server/say")
-    String sayInfo ();
+    String sayInfo();
 
 
     @RequestMapping(value = "/server/save",method = RequestMethod.POST)
-    User save (@RequestBody  User user);
+    User save(@RequestBody User user);
 }

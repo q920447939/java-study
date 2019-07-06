@@ -1,7 +1,7 @@
 eureka:
   client:
     service-url:
-      defaultZone: http://user:123456@localhost:8761/eureka/
+      defaultZone: http://localhost:8761/eureka/
   instance:
     prefer-ip-address: true  #ip注册
 spring:
@@ -9,3 +9,10 @@ spring:
     name: SpringCloudEurekaClient01
 server:
   port: 8846
+#ribbon的超时时间
+feign:
+  client:
+    config:
+      remote-service:           #服务名，填写default为所有服务
+        connectTimeout: 3_000
+        readTimeout: 3_000
