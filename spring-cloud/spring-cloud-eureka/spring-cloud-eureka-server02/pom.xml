@@ -12,7 +12,7 @@
     <artifactId>spring-cloud-eureka-server02</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>spring-cloud-eureka-server02</name>
-    <description>spring-cloud-eureka-server01</description>
+    <description>spring-cloud-eureka-server02</description>
 
     <packaging>pom</packaging>
 
