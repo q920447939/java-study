@@ -18,7 +18,12 @@
 
 [java SPI](spring-boot/spring-boot-java-spi/src/main/java/cn/withmes/spi/SpiTest.java)
 
-
 ## **spring cloud 部分**
-[eureka服务注册与服务发现 + feign](spring-cloud/spring-cloud-eureka)
+
+1. [eureka服务注册与服务发现 + feign](spring-cloud/spring-cloud-eureka)
+2. [ribbon源码研究](spring-cloud/spring-cloud-simulate-ribbon-service/src/main/java/cn/withmes/spring/cloud/simulate/ribbon/service/SimulateApplication.java)
+3. feign源码研究
+   1. [feignclient+Hystrix](spring-cloud/spring-cloud-fegin/spring-cloud-open-fegin-client/src/main/java/cn/withmes/springcloud/open/fegin/client/FeginClient.java)
+   2. [feignserver+rabbion](spring-cloud/spring-cloud-fegin/spring-cloud-open-fegin-server/src/main/java/cn/withmes/spring/cloud/open/fegin/server/FeginServer.java)
+
 
