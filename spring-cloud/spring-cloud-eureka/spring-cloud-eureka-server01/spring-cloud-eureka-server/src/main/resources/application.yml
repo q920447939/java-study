@@ -5,9 +5,16 @@ eureka:
     #register-with-eureka: false
     service-url:
        defaultZone: http://localhost:8762/eureka/
+    healthcheck:
+      enabled: true  #开启健康检查
+  server:
+    enable-self-preservation: false #关闭自我保护
+    eviction-interval-timer-in-ms: 4000  #注销时间
+  #instance:
+    #instance-id: ${spring.cloud.client.ipAddress}:${server.port}
 spring:
   application:
-    name: spring-cloud-eureka-server
+    name: spring-cloud-eureka-server  #自定义server name
 #security:
       ##    user:
     ##      name: user
