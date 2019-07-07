@@ -66,7 +66,7 @@
 
    - 将项目文件传到linux 服务器:
 
-   - 使用maven命令进行打包(需要提前配置maven 环境,和java环境才能进行打包):
+   - 使用maven命令进行打包(需要提前配置[maven(3.5版本已经失效,需要自己去apache官网查看最新的下载地址)](<https://www.cnblogs.com/jimisun/p/8054819.html>) 环境,和[java](<https://www.cnblogs.com/xiaohao95/p/7615248.html>)环境才能进行打包):
 
      ```shell
      mvn clean package docker:build
