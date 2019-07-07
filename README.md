@@ -198,11 +198,11 @@
 
 5.  使用`docker-compose` 同时部署多个docker 应用
 
-   - 修改`spring-cloud-eureka-client01`中`pom.xml`配置,加入如下内容 [链接](htt):
+   - 修改`spring-cloud-eureka-client01`中`pom.xml`配置,加入如下内容 [链接](spring-cloud/spring-cloud-eureka/spring-cloud-eureka-client01/pom.xml):
 
-   - 修改`spring-cloud-eureka-server01`中的 `pom.xml`,加入如下内容 [链接](htt),
+   - 修改`spring-cloud-eureka-server01`中的 `pom.xml`,加入如下内容 [链接](spring-cloud/spring-cloud-eureka/spring-cloud-eureka-server01/spring-cloud-eureka-server/pom.xml),
 
-   - 修改`spring-cloud-eureka-server02`中的 `pom.xml`.加入如下内容 [链接](htt),
+   - 修改`spring-cloud-eureka-server02`中的 `pom.xml`.加入如下内容 [链接](spring-cloud/spring-cloud-eureka/spring-cloud-eureka-server02/spring-cloud-eureka-server/pom.xml),
 
      ```xml
      
@@ -256,7 +256,7 @@
          prefer-ip-address: true  #ip注册
      ```
 
-   - 增加`docker-compose.yml` ,内容如下,[直达链接]()
+   - 增加`docker-compose.yml` ,内容如下,[直达链接](spring-cloud/spring-cloud-eureka/docker-compose.yml)
 
      ```yaml
      version: "2"
