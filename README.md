@@ -320,7 +320,27 @@
 
 1. 调用图 TODO
 
-2. 源码分析(基于版本`2.5.x`)
+2. 错误分析
+
+   - 从apach-dubbo 官网上面 抄袭了一份 简单的`consumer `和`provider`,结果发现`provider `"正常启动"(其实使用zkCli 连接上去看信息,发现只是注册了一个接口,但是好像没有任何内容),当时没太注意,紧接着又启动了`consumer `,结果发现`consumer`一直卡着不动 
+
+     ```java
+     //这是consumer的代码,理论上会执行完,但是执行到打印之前就会一直卡住
+     ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("dubbo-demo-consumer.xml");
+     context.refresh();
+     // Executing remote methods
+     DemoService bean = context.getBean(DemoService.class);
+     System.out.println("bean:"+bean);
+     String hello = bean.sayHello("world");
+     // Display the call result
+     System.err.println("========"+hello);
+     ```
+     
+     后来想了一下是不是zk的问题,发现zkServer版本是`3.5.5` 但是客户端(`consumer 和 provider 中的 pom.xml`)用的好像是`3.3.3` ,于是把`pom.xml`都改成了`3.5.5`后,发现`consumer`正常的访问了`provider`并且返回了结果,使用zkCli 去查看也有`provider 和consumer`的信息
+
+   
+
+3. 源码分析(基于版本`2.5.x`)
 
    - 报错`No such any registry to reference` 源码地址 `com.alibaba.dubbo.config.ReferenceConfig.createProxy`
 

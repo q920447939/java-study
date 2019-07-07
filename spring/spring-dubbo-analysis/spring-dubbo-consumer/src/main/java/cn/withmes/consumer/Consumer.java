@@ -24,7 +24,7 @@ public class Consumer {
 
     public static void main(String[] args) throws Exception {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("dubbo-demo-consumer.xml");
-        context.start();
+        context.refresh();
         // Executing remote methods
         DemoService bean = context.getBean(DemoService.class);
         System.out.println("bean:"+bean);
