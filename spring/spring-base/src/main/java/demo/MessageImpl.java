@@ -1,14 +1,11 @@
-package spring.start.demo; /**
+package demo; /**
  * @Project:
  * @Author: leegoo
  * @Date: 2019年05月14日
  */
 
-import org.springframework.beans.BeansException;
-import org.springframework.beans.factory.config.BeanPostProcessor;
-
 /**
- * ClassName: spring.start.demo.MessageImpl
+ * ClassName: demo.MessageImpl
  * @Description:
  * @author leegoo
  * @date 2019年05月14日

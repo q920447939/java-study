@@ -1,11 +1,11 @@
-package spring.start.demo; /**
+package demo; /**
  * @Project:
  * @Author: leegoo
  * @Date: 2019年05月14日
  */
 
 /**
- * ClassName: spring.start.demo.Message
+ * ClassName: demo.Message
  *
  * @author leegoo
  * @Description:

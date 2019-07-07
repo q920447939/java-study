@@ -12,6 +12,8 @@ import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
+import org.springframework.context.EnvironmentAware;
+import org.springframework.core.env.Environment;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -19,6 +21,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
+import java.net.Inet4Address;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 import java.util.List;
 
 /**
@@ -29,7 +34,7 @@ import java.util.List;
  * @date 2019年07月06日
  */
 @RestController
-public class ClientController {
+public class ClientController implements EnvironmentAware {
 
     @Autowired
     private ClientSayServer clientSayServer;
@@ -40,6 +45,8 @@ public class ClientController {
     @Autowired
     private RestTemplate restTemplate;
 
+    private Environment environment;
+
     /**
      * @Description:测试feign GET 请求
      * @param: []
@@ -49,7 +56,15 @@ public class ClientController {
      */
     @GetMapping("/say")
     public String sayinfo() {
-        System.err.println("sayinfo.....");
+        InetAddress localHost = null;
+        try {
+            localHost = Inet4Address.getLocalHost();
+        } catch (UnknownHostException e) {
+            throw  new RuntimeException();
+        }
+        String ip = localHost.getHostAddress();  // 返回格式为：xxx.xxx.xxx
+
+        System.err.println("client.sayinfo.....当前服务器ip:"+ip);
         List<ServiceInstance> instances = discoveryClient.getInstances("spring-cloud-eureka-server");
         String sayinfo = clientSayServer.sayinfo();
         return sayinfo;
@@ -113,7 +128,9 @@ public class ClientController {
     }
 
 
-
-
+    @Override
+    public void setEnvironment(Environment environment) {
+        this.environment = environment;
+    }
 }
 

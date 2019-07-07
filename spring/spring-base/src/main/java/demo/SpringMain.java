@@ -1,20 +1,14 @@
-package spring.start.demo; /**
+package demo; /**
  * @Project:
  * @Author: leegoo
  * @Date: 2019年05月14日
  */
 
 import org.springframework.beans.factory.BeanFactory;
-import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import java.beans.beancontext.BeanContext;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 /**
- * ClassName: spring.start.demo.SpringMain
+ * ClassName: demo.SpringMain
  * @Description:
  * @author leegoo
  * @date 2019年05月14日
