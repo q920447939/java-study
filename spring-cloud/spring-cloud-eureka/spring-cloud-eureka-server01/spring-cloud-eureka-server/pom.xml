@@ -83,9 +83,24 @@
                 <groupId>com.spotify</groupId>
                 <artifactId>docker-maven-plugin</artifactId>
                 <version>0.4.13</version>
+
+                <!-- 新加部分开始 -->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <id>build-images</id>-->
+<!--                        <phase>package</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>build</goal>-->
+<!--                        </goals>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+                <!-- 新加部分结束 -->
+
+
                 <configuration>
                     <!-- leegoo0820/spring-cloud-eureka-server01-service(name):0.0.1(tag)-->
-                    <imageName>leegoo0820/spring-cloud-eureka-server01-service:0.0.1</imageName>
+                    <imageName>leegoo0820/${project.artifactId}:${project.version}</imageName>
+                    <forceTags>true</forceTags>
                     <!-- 基础镜像 -->
                     <baseImage>java</baseImage>
                     <entryPoint>["java","-jar","/${project.build.finalName}.jar"]</entryPoint>

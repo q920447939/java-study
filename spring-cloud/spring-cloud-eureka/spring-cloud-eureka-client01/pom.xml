@@ -75,6 +75,31 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+
+            <plugin>
+                <groupId>com.spotify</groupId>
+                <artifactId>docker-maven-plugin</artifactId>
+                <version>0.4.13</version>
+
+                <configuration>
+                    <!-- leegoo0820/spring-cloud-eureka-server01-service(name):0.0.1(tag)-->
+                    <imageName>leegoo0820/${project.artifactId}:${project.version}</imageName>
+                    <forceTags>true</forceTags>
+                    <!-- 基础镜像 -->
+                    <baseImage>java</baseImage>
+                    <entryPoint>["java","-jar","/${project.build.finalName}.jar"]</entryPoint>
+                    <resources>
+                        <resource>
+                            <targetPath>/</targetPath>
+                            <!-- 目录地址,也就是target生成的地址 -->
+                            <directory>${project.build.directory}</directory>
+                            <!--需要复制的jar包 -->
+                            <include>${project.build.finalName}.jar</include>
+                        </resource>
+                    </resources>
+                </configuration>
+            </plugin>
+
         </plugins>
     </build>
 

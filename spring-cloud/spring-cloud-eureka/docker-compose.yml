@@ -1,0 +1,37 @@
+version: "2"
+
+services:
+  spring-cloud-eureka-server01:
+    #image: java 指定镜像名或者id,没有就会下载
+    image: leegoo0820/spring-cloud-eureka-server01-service:0.0.1-SNAPSHOT
+    volumes:  #挂载目录
+      - "/usr/tmp/data/spring-cloud-eureka-server01"
+    container_name: spring-cloud-eureka-server_eureka01
+    build: .
+    ports:  #开放端口
+      - "8761:8761"
+    #links:
+    #  - spring-cloud-eureka-server02:discovery
+    #environment:  设置环境参数
+    #  - spring.profile.active=dev
+
+  spring-cloud-eureka-server02:
+    #image: java 指定镜像名或者id,没有就会下载
+    image: leegoo0820/spring-cloud-eureka-server02-service:0.0.1-SNAPSHOT
+    volumes:  #挂载目录
+      - "/usr/tmp/data/spring-cloud-eureka-server02"
+    container_name: spring-cloud-eureka-server_eureka02
+    build: .
+    ports:  #开放端口
+      - "8762:8762"
+
+  spring-cloud-eureka-client01:
+    #image: java 指定镜像名或者id,没有就会下载
+    image: leegoo0820/spring-cloud-eureka-client01:0.0.1-SNAPSHOT
+    volumes:  #挂载目录
+      - "/usr/tmp/data/spring-cloud-eureka-client01"
+    container_name: spring-cloud-eureka-client01
+    build: .
+    ports:  #开放端口
+      - "8846:8846"
+

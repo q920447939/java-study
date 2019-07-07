@@ -11,7 +11,7 @@ import org.springframework.web.client.RestTemplate;
 @SpringBootApplication
 @EnableDiscoveryClient //激活服务发现 @EnableDiscoveryClient不止局限于eureka ,可以用zk nacos 注册中心....
 @EnableFeignClients //激活feign
-@EnableHystrix //激活Hystrix
+//@EnableHystrix //激活Hystrix
 public class SpringCloudEurekaClient01Application {
 
     public static void main(String[] args) {

@@ -5,7 +5,9 @@ eureka:
   client:
     #register-with-eureka: false
     service-url:
-       defaultZone: http://localhost:8761/eureka/  #配置账号密码
+       defaultZone: http://spring-cloud-eureka-server01:8761/eureka/  #配置账号密码
+  instance:
+    prefer-ip-address: true
 spring:
   application:
     name: spring-cloud-eureka-server
