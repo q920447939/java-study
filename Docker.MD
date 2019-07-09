@@ -165,7 +165,7 @@
      ```
 
 ## **<a id="t4">使用`docker-compose` 同时部署多个docker 应用</a>**          
-4.  使用`docker-compose` 同时部署多个docker 应用
+1.  使用`docker-compose` 同时部署多个docker 应用
 
    - 修改`spring-cloud-eureka-client01`中`pom.xml`配置,加入如下内容 [链接](spring-cloud/spring-cloud-eureka/spring-cloud-eureka-client01/pom.xml):
 
