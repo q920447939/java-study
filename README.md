@@ -30,9 +30,12 @@
 
 
 ## **<a id="多线程">多线程</a>**
-1. [java 死锁的一个例子](java-bases/src/main/java/cn/withme/thread/DealLock.java)
-2. [volatile测试](java-bases/src/main/java/cn/withme/myvolatile/VolatileTest01.java)
-3. [停止线程的方式](java-bases/src/main/java/cn/withme/thread/StopThreadUnsafe.java)
+:sunny: [java 死锁的一个例子](java-bases/src/main/java/cn/withme/thread/DealLock.java)
+
+:umbrella: [volatile测试](java-bases/src/main/java/cn/withme/myvolatile/VolatileTest01.java)
+
+:cloud: [停止线程的方式](java-bases/src/main/java/cn/withme/thread/StopThreadUnsafe.java)
+
 
 ## **<a id="设计模式">设计模式</a>**
 1. [策略模式](java-bases/src/main/java/cn/withme/pattern/StrategyPattern.java)
