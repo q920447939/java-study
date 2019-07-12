@@ -1,12 +1,22 @@
 # 目录
 
 - [多线程](#多线程)
+
+- [设计模式](#设计模式)
+
 - [Spring](#Spring)
+
 - [Java知识点整理](#Java知识点整理)
+
 - [SpringBoot](#SpringBoot)
+
 - [SpringCloud](#SpringCloud)
+
 - [Docker](#Docker)
+
 - [Dubbo](#Dubbo)
+
+  
 
 
 联系作者:
@@ -21,7 +31,11 @@
 
 ## **<a id="多线程">多线程</a>**
 1. [java 死锁的一个例子](java-bases/src/main/java/cn/withme/thread/DealLock.java)
+2. [volatile测试](java-bases/src/main/java/cn/withme/myvolatile/VolatileTest01.java)
+3. [停止线程的方式](java-bases/src/main/java/cn/withme/thread/StopThreadUnsafe.java)
 
+## **<a id="设计模式">设计模式</a>**
+1. [策略模式](java-bases/src/main/java/cn/withme/pattern/StrategyPattern.java)
 
 
 
