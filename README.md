@@ -36,6 +36,8 @@
 
 :cloud: [停止线程的方式](java-bases/src/main/java/cn/withme/thread/StopThreadUnsafe.java)
 
+:snowflake: [锁住同一个对象就能保证多线程问题吗?](MulitThread.MD/#t1)
+
 
 ## **<a id="设计模式">设计模式</a>**
 1. [策略模式](java-bases/src/main/java/cn/withme/pattern/StrategyPattern.java)
