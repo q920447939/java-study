@@ -13,6 +13,7 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.GenericApplicationContext;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -31,13 +32,17 @@ import javax.annotation.Resource;
 public class SpringCloudApplication {
     private static ConfigurableApplicationContext applicationContext;
 
+
+
     public static void main(String[] args) {
         //配置父的context , 理论上可以无限继承
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
         //父context 注册id
         context.setId("小明");
+
         //父context 注册一个bean
-        context.registerBean("string hello worild", String.class, "contructor hello wolrd");
+        //TODO 此处不知道为什么找不到registerBean()方法 以后有时候在处理
+        //context.registerBean("string hello worild", String.class, "contructor hello wolrd");
         //父context 刷新bean
         context.refresh();
         //context.setParent();
