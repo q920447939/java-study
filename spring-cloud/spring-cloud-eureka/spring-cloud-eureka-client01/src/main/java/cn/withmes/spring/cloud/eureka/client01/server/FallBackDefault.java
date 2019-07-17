@@ -14,7 +14,7 @@ import org.springframework.stereotype.Component;
  * @author leegoo
  * @date 2019年07月06日
  */
-//@Component
+@Component
 public class FallBackDefault implements   ClientSayServer{
     @Override
     public String sayinfo() {

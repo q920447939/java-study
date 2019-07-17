@@ -121,6 +121,7 @@ public class ClientController implements EnvironmentAware {
     }
     */
 
+    //测试熔断
     @GetMapping("/fallback/feign")
     public String getMessageByIdInfegin(@RequestParam(name = "id") String id) {
         String message = clientSayServer.getMessageById(id);
