@@ -38,6 +38,12 @@
 
 :snowflake: [锁住同一个对象就能保证多线程问题吗?](MulitThread.MD/#t1)
 
+:zap: ​[测试SimpleDateFormat多线程发生异常](java-bases/src/main/java/cn/withme/date/ParseDate.java)
+
+
+
+
+
 
 ## **<a id="设计模式">设计模式</a>**
 1. [策略模式](java-bases/src/main/java/cn/withme/pattern/StrategyPattern.java)
@@ -65,15 +71,20 @@
 
 ## **<a id="SpringCloud">SpringCloud</a>**
 1. [eureka服务注册与服务发现 + feign](spring-cloud/spring-cloud-eureka)
-
 2. [ribbon源码研究](spring-cloud/spring-cloud-simulate-ribbon-service/src/main/java/cn/withmes/spring/cloud/simulate/ribbon/service/SimulateApplication.java)
-
 3. feign源码研究
    1. [feignclient+Hystrix](spring-cloud/spring-cloud-fegin/spring-cloud-open-fegin-client/src/main/java/cn/withmes/springcloud/open/fegin/client/FeginClient.java)
    2. [feignserver+rabbion](spring-cloud/spring-cloud-fegin/spring-cloud-open-fegin-server/src/main/java/cn/withmes/spring/cloud/open/fegin/server/FeginServer.java)
    
-   
+4. SpringCloud集成 Eureka +Feign+ [Hystrix](https://github.com/Netflix/Hystrix)    
+   - [测试以及配置链接](SpringCloud.MD/#t1)
+
+
+
+
+
 ## **<a id="Docker">Docker</a>**
+
 1. [将spring-cloud项目打包成docker镜像并启动](Docker.MD/#t1)
 
 2. [安装`docker-compose`(linux)](Docker.MD/#t2)
