@@ -40,11 +40,11 @@
         </dependency>
 
 
-        <dependency>
-            <groupId>cn.withmes</groupId>
-            <artifactId>spring-cloud-open-fegin-client</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>cn.withmes</groupId>-->
+            <!--<artifactId>spring-cloud-open-fegin-client</artifactId>-->
+            <!--<version>0.0.1-SNAPSHOT</version>-->
+        <!--</dependency>-->
 
     </dependencies>
 

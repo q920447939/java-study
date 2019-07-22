@@ -12,7 +12,7 @@ public class SpringBootWebDemo01Application {
 
     public static void main(String[] args) {
         ConfigurableApplicationContext applicationContext = SpringApplication.run(SpringBootWebDemo01Application.class, args);
-        applicationContext.stop();
+       // applicationContext.stop();
 
 
     }
