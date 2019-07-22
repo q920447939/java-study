@@ -16,15 +16,14 @@ import java.util.Map;
 
 
 //简易版所需要的注解
-//@SpringBootApplication(scanBasePackages = "cn.withmes.springcloud.open.fegin.client.simple")
-//@EnableDiscoveryClient
-//@EnableFeignClients  简易版本需要把该注解打开
-
+@SpringBootApplication(scanBasePackages = "cn.withmes.springcloud.open.fegin.client.simple")
+@EnableDiscoveryClient
+@EnableFeignClients(basePackages = "cn.withmes.spring.cloud.open.fegin.server")  //简易版本需要把该注解打开
 
 //自实现版本所需要注解 防止冲突 所以分开
-@SpringBootApplication(scanBasePackages = "cn.withmes.springcloud.open.fegin.client.advance")
-@EnableDiscoveryClient
-@EnableMyFeignC(clients = AdvanceSayingServer.class)  //激活寻找带@MyFeignClient的接口
+//@SpringBootApplication(scanBasePackages = "cn.withmes.springcloud.open.fegin.client.advance")
+//@EnableDiscoveryClient
+//@EnableMyFeignC(clients = AdvanceSayingServer.class)  //激活寻找带@MyFeignClient的接口
 public class FeginClient {
 
     public static void main(String[] args) {

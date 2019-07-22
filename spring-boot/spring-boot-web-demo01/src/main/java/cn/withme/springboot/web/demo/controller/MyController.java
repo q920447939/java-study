@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.PreDestroy;
+import java.util.Random;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -53,5 +54,22 @@ public class MyController {
         executorService.shutdown();
         System.out.println("关闭...");
     }
+
+    static  StringBuffer buffer = new StringBuffer(1000);
+
+    static {
+        for (int i = 0; i < 10; i++) {
+            buffer.append(String.valueOf((char)new Random().nextInt()));
+            buffer.append("\n");
+        }
+    }
+
+    @GetMapping("/ab")
+    public String testAB () throws InterruptedException {
+        System.err.println("当前线程:"+Thread.currentThread().getName());
+        Thread.sleep(new Random().nextInt(200)+100);
+        return buffer.toString();
+    }
+
 
 }
