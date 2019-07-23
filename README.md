@@ -19,7 +19,7 @@
 
 - **运维**
 
-  - [Linux常用命令和操作](md-file/Linux常用命令和操作.md)
+  - [Linux常用命令和操作](shell/Linux常用命令和操作.md)
   
   
 
