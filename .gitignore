@@ -26,3 +26,5 @@ hs_err_pid*
 /.idea/
 *.iml
 **/target/*
+
+/spring-framework-5.2.2.RELEASE
