@@ -53,9 +53,7 @@
 
 ## **<a id="设计模式">设计模式</a>**
 1. [策略模式](java-bases/src/main/java/cn/withme/pattern/StrategyPattern.java)
-
-
-
+2. [工厂模式和抽象工厂模式](https://blog.csdn.net/qq920447939/article/details/104009055)
 
 ## **<a id="Spring">Spring</a>**
 
@@ -73,7 +71,7 @@
 2. [java SPI](spring-boot/spring-boot-java-spi/src/main/java/cn/withmes/spi/SpiTest.java)
 3. [Spring boot session Redis简单实现](SpringBoot.MD/#t1)
 4. [Spring boot JWT 实现](SpringBoot.MD/#t2)
-5. ​[纯手写SpringBoot+Spring MVC](spring-boot/spring-boot-custom)
+5. [纯手写SpringBoot+Spring MVC](spring-boot/spring-boot-custom)
 
 
 ## **<a id="SpringCloud">SpringCloud</a>**

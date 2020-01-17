@@ -24,7 +24,7 @@ public class StrategyPattern {
     }
 
     public static class Apple implements Eat{
-        @Override
+       // @Override
         public String eatFruit() {
             return "吃了一个苹果";
         }
@@ -32,7 +32,7 @@ public class StrategyPattern {
 
 
     public static  class Banan implements Eat{
-        @Override
+      //  @Override
         public String eatFruit() {
             return "吃了一个香蕉";
         }
