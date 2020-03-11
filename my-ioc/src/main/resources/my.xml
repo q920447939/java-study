@@ -1,0 +1,25 @@
+<beans>
+    <bean id="zs" class="pojo.Student">
+       <construct>
+           <property name="name">张三</property>
+           <property name="sex">1</property>
+       </construct>
+    </bean>
+
+    <bean id="ls" class="pojo.ClassRoom">
+        <construct>
+            <property name="name">李四</property>
+            <property name="sex">1</property>
+        </construct>
+    </bean>
+
+    <bean id="math" class="pojo.ClassRoom">
+        <construct>
+            <property name="teacherName">王老师</property>
+            <property name="sts">
+                <ref>zs</ref>
+                <ref>ls</ref>
+            </property>
+        </construct>
+    </bean>
+</beans>
