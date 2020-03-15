@@ -72,6 +72,7 @@
 3. [Spring boot session Redis简单实现](SpringBoot.MD/#t1)
 4. [Spring boot JWT 实现](SpringBoot.MD/#t2)
 5. [纯手写SpringBoot+Spring MVC](spring-boot/spring-boot-custom)
+6. [SpringBoot实现自定义包扫描](./SpringBoot实现自定义包扫描.md)
 
 
 ## **<a id="SpringCloud">SpringCloud</a>**
