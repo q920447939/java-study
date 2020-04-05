@@ -3,9 +3,9 @@
  * @Author: leegoo
  * @Date: 2020年03月14日
  */
-package cn.withmes.springboot.my.aop.aop.service;
+package cn.withmes.springboot.my.aop.service;
 
-import cn.withmes.springboot.my.aop.aop.exception.MyException;
+import cn.withmes.springboot.my.aop.exception.MyException;
 
 /**
  * ClassName: UserService

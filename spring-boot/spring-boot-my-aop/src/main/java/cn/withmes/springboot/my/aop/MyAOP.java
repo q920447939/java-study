@@ -3,7 +3,7 @@
  * @Author: leegoo
  * @Date: 2020年03月14日
  */
-package cn.withmes.springboot.my.aop.aop;
+package cn.withmes.springboot.my.aop;
 
 import org.springframework.context.annotation.Import;
 

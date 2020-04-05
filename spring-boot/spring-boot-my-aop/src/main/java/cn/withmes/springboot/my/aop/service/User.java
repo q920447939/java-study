@@ -3,7 +3,7 @@
  * @Author: leegoo
  * @Date: 2020年03月14日
  */
-package cn.withmes.springboot.my.aop.aop.service;
+package cn.withmes.springboot.my.aop.service;
 
 /**
  * ClassName: User

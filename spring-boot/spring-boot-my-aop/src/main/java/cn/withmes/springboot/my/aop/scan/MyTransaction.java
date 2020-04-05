@@ -1,4 +1,4 @@
-package cn.withmes.springboot.my.aop.aop.scan;
+package cn.withmes.springboot.my.aop.scan;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;

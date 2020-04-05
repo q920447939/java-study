@@ -5,6 +5,9 @@
  */
 package cn.withme.other;
 
+import javax.script.ScriptEngine;
+import javax.script.ScriptEngineManager;
+import javax.script.ScriptException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -39,17 +42,18 @@ public class SetTest {
 
 
 
-    public static void main(String[] args) {
-        List<Inclass>  list  = new ArrayList<>();
-        list.add(new Inclass(1));
-        list.add(new Inclass(2));
-        Integer pc = 1;
-        System.out.println( list.stream().max(Comparator.comparingInt(Inclass::getPc)).get().getPc());
-        Set<Integer> collect = list.stream().map(e -> e.getPc()).collect(Collectors.toSet());
-        Integer max = Collections.max(collect);
-        if (max > 0) {
-            pc = max + 1;
-        }
-        System.out.println(pc);
+    public static void main(String[] args) throws ScriptException {
+        String str = "(a >= 0 && a <= 5)";
+        ScriptEngineManager manager = new ScriptEngineManager();
+        ScriptEngine engine = manager.getEngineByName("js");
+        engine.put("a",4);
+        Object result = engine.eval(str);
+
+        System.out.println("结果类型:" + result.getClass().getName() + ",计算结果:" + result);
+    }
+
+
+    public static String  getResult (int a ,int b ) {
+        return (a+b)+"";
     }
 }

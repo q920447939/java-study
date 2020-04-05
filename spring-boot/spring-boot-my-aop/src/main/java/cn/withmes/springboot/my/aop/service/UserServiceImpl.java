@@ -3,11 +3,11 @@
  * @Author: leegoo
  * @Date: 2020年03月14日
  */
-package cn.withmes.springboot.my.aop.aop.service;
+package cn.withmes.springboot.my.aop.service;
 
-import cn.withmes.springboot.my.aop.aop.exception.MyException;
-import cn.withmes.springboot.my.aop.aop.scan.MyCTransaction;
-import cn.withmes.springboot.my.aop.aop.scan.MyTransaction;
+import cn.withmes.springboot.my.aop.exception.MyException;
+import cn.withmes.springboot.my.aop.scan.MyCTransaction;
+import cn.withmes.springboot.my.aop.scan.MyTransaction;
 
 import javax.annotation.Resource;
 

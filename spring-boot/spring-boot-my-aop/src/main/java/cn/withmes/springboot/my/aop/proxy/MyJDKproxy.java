@@ -1,6 +1,6 @@
-package cn.withmes.springboot.my.aop.aop.proxy;
+package cn.withmes.springboot.my.aop.proxy;
 
-import cn.withmes.springboot.my.aop.aop.scan.MyTransaction;
+import cn.withmes.springboot.my.aop.scan.MyTransaction;
 import org.springframework.beans.factory.BeanFactory;
 
 import java.lang.reflect.InvocationHandler;
