@@ -4,7 +4,7 @@ package demo; /**
  * @Date: 2019年05月14日
  */
 
-import org.springframework.beans.factory.BeanFactory;
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
@@ -14,10 +14,12 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  * @date 2019年05月14日
  */
 public class SpringMain {
-    public static void main(String[] args) {
-        BeanFactory context = new ClassPathXmlApplicationContext("application.xml");
+    public static void main(String[] args) throws InterruptedException {
+        ApplicationContext context = new ClassPathXmlApplicationContext("application.xml");
         MessageImpl bean = context.getBean("messageImpl", MessageImpl.class);
-        bean.send("1");
-        ((ClassPathXmlApplicationContext) context).close();
+        String name = bean.getName();
+        System.err.println(name);
+        //((ClassPathXmlApplicationContext) context).close();
+        //Thread.sleep(Integer.MAX_VALUE);
     }
 }

@@ -4,6 +4,7 @@ package demo; /**
  * @Date: 2019年05月14日
  */
 
+
 /**
  * ClassName: demo.Message
  *
@@ -13,4 +14,6 @@ package demo; /**
  */
 public interface Message {
     Object send(Object o);
+
+    String getName ();
 }

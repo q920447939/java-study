@@ -5,6 +5,7 @@
 
     <bean id="messageImpl" class="demo.MessageImpl" init-method="init" destroy-method="destory"/>
 
-
+    <!-- 注册处理器 -->
+    <bean class="demo.HelloServiceInjectProcessor"></bean>
 
 </beans>
