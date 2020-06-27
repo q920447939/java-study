@@ -10,8 +10,8 @@
     don't set it same as provider -->
     <dubbo:application name="demo-consumer"/>
     <!-- use multicast registry center to discover service -->
-    <dubbo:registry address="zookeeper://localhost:2181" client="zkclient"/>
+    <dubbo:registry address="zookeeper://localhost:2181" client="zkclient" />
     <!-- generate proxy for the remote service, then demoService can be used in the same way as the
     local regular interface -->
-    <dubbo:reference id="demoService" check="true" interface="cn.withmes.provider.DemoService"/>
+    <dubbo:reference id="demoService" check="false" interface="cn.withmes.provider.DemoService"/>
 </beans>

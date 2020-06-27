@@ -52,8 +52,15 @@
 
 
 ## **<a id="设计模式">设计模式</a>**
-1. [策略模式](java-bases/src/main/java/cn/withme/pattern/StrategyPattern.java)
-2. [工厂模式和抽象工厂模式](https://blog.csdn.net/qq920447939/article/details/104009055)
+1. [~~策略模式~~](java-bases/src/main/java/cn/withme/pattern/StrategyPattern.java)
+
+2. [~~工厂模式和抽象工厂模式~~](https://blog.csdn.net/qq920447939/article/details/104009055)
+
+   
+
+   
+
+#### [重学设计模式](#重学设计模式)
 
 ## **<a id="Spring">Spring</a>**
 
@@ -113,8 +120,7 @@
   
 
 
+## **<a id="重学设计模式">重学设计模式</a>**
 
-
-
-
+1. [策略模式](https://blog.csdn.net/qq920447939/article/details/106985808)
 

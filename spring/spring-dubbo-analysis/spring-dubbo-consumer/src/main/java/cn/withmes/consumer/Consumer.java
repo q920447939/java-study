@@ -27,7 +27,7 @@ public class Consumer {
         context.refresh();
         // Executing remote methods
         DemoService bean = context.getBean(DemoService.class);
-        System.out.println("bean:"+bean);
+        System.err.println("bean:"+bean);
         String hello = bean.sayHello("world");
         // Display the call result
         System.err.println("========"+hello);

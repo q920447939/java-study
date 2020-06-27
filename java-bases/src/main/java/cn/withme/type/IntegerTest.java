@@ -5,6 +5,9 @@
  */
 package cn.withme.type;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
@@ -16,11 +19,7 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 public class IntegerTest {
     public static void main(String[] args) {
-        int a = 50;
-        Integer b = new Integer(50);
-        System.out.println(a==b);
-        ConcurrentHashMap c  = new ConcurrentHashMap();
-        c.put(1, 1);
-        System.out.println(c);
+        // Why generic array creation is illegal - won't compile!
+
     }
 }

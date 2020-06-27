@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:custorm="http://www.superpay.com/schema/user"
+       xsi:schemaLocation="http://www.superpay.com/schema/user http://www.superpay.com/schema/user.xsd" >
+    <custorm:user id="user" userName="张三" email="sadas@.qqcom"/>
+</beans>
