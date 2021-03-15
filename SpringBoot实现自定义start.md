@@ -51,3 +51,9 @@ public class DemoConfig {
 所有的核心逻辑已经处理完成,那么如果有一个项目依赖这个项目的话,  项目会去application.properties 里面寻找demo.name 属性
 
 然后注入到DemoCofig Bean 中
+
+
+
+代码可参考 
+
+https://github.com/q920447939/java-study/tree/master/spring-boot/spring-boot-my-start
