@@ -1,0 +1,12 @@
+Java HotSpot(TM) 64-Bit Server VM (25.161-b12) for windows-amd64 JRE (1.8.0_161-b12), built on Dec 19 2017 17:52:25 by "java_re" with MS VC++ 10.0 (VS2010)
+Memory: 4k page, physical 16700892k(8720200k free), swap 17749468k(7540292k free)
+CommandLine flags: -XX:InitialHeapSize=62914560 -XX:MaxHeapSize=629145600 -XX:+PrintGC -XX:+PrintGCDateStamps -XX:+PrintGCDetails -XX:+PrintGCTimeStamps -XX:+UseCompressedClassPointers -XX:+UseCompressedOops -XX:-UseLargePagesIndividualAllocation -XX:+UseParallelGC 
+Heap
+ PSYoungGen      total 17920K, used 2775K [0x00000000f3800000, 0x00000000f4c00000, 0x0000000100000000)
+  eden space 15360K, 18% used [0x00000000f3800000,0x00000000f3ab5f78,0x00000000f4700000)
+  from space 2560K, 0% used [0x00000000f4980000,0x00000000f4980000,0x00000000f4c00000)
+  to   space 2560K, 0% used [0x00000000f4700000,0x00000000f4700000,0x00000000f4980000)
+ ParOldGen       total 40960K, used 0K [0x00000000da800000, 0x00000000dd000000, 0x00000000f3800000)
+  object space 40960K, 0% used [0x00000000da800000,0x00000000da800000,0x00000000dd000000)
+ Metaspace       used 3373K, capacity 4496K, committed 4864K, reserved 1056768K
+  class space    used 369K, capacity 388K, committed 512K, reserved 1048576K

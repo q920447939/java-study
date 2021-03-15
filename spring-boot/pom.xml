@@ -23,6 +23,7 @@
         <module>spring-boot-java-spi</module>
         <module>spring-boot-mq</module>
         <module>spring-boot-single-point</module>
+        <module>spring-boot-my-start</module>
     </modules>
 
     <repositories>

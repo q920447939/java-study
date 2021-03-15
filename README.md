@@ -80,6 +80,7 @@
 4. [Spring boot JWT 实现](SpringBoot.MD/#t2)
 5. [纯手写SpringBoot+Spring MVC](spring-boot/spring-boot-custom)
 6. [SpringBoot实现自定义包扫描](./SpringBoot实现自定义包扫描.md)
+7. [SpringBoot实现自定义start](./SpringBoot实现自定义start.md)
 
 
 ## **<a id="SpringCloud">SpringCloud</a>**
