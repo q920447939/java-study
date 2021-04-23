@@ -64,7 +64,10 @@
 
 ## **<a id="Spring">Spring</a>**
 
-1. [spring](./spring)
+1. [spring](./spring/README.md)
+2. [通过BeanFactoryPostProcessor动态注入](./spring/README.md#t1)
+
+3. [使用加密的属性文件](./spring/README.md#t2)
 
 
 
