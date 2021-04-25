@@ -156,5 +156,43 @@ public class Teacher {
 
 
 
+7.原理解析
+
+当调用invokeBeanFactoryPostProcessors(beanFactory); 时， 会把实现了BeanFactoryPostProcessors的类全部拿出来做加工，可以理解为bean最开始被放到beandefinitionRegister ，那个时候的beandefinition是一个半成品，还需要进行加工才能是一个成品beandefinition（也就是处理postProcessor方法）
+
+ [调用链图](img/placeholderConfig.jpg)
+
+7.1翻到代码 （版本spring-context-4.3.22.RELEASE.jar）
+
+```java
+org.springframework.context.support.PostProcessorRegistrationDelegate#invokeBeanFactoryPostProcessors(org.springframework.beans.factory.config.ConfigurableListableBeanFactory, java.util.List<org.springframework.beans.factory.config.BeanFactoryPostProcessor>)
+
+    1.按照类型获取到当前bean工厂里面实现了BeanFactoryPostProcessor.class的子类
+String[] postProcessorNames =
+				beanFactory.getBeanNamesForType(BeanFactoryPostProcessor.class, true, false);
+    
+	2.随后调用 org.springframework.context.support.PostProcessorRegistrationDelegate#invokeBeanFactoryPostProcessors(java.util.Collection<? extends org.springframework.beans.factory.config.BeanFactoryPostProcessor>, org.springframework.beans.factory.config.ConfigurableListableBeanFactory)
+        
+    3.因为EncryptPropertiesPlaceholderConfig没有直接实现BeanFactoryPostProcessors，所以会调用父类PropertyResourceConfigurer#postProcessBeanFactory
+     4.在postProcessBeanFactory方法中，会调用convertProperties(mergedProps); 
+
+5.convertProperties代码如下	
+	protected void convertProperties(Properties props) {
+		Enumeration<?> propertyNames = props.propertyNames();
+		while (propertyNames.hasMoreElements()) {
+			String propertyName = (String) propertyNames.nextElement();
+			String propertyValue = props.getProperty(propertyName);
+			String convertedValue = convertProperty(propertyName, propertyValue); // 这里是因为子类（EncryptPropertiesPlaceholderConfig）重写了convertProperty方法，所以会调用EncryptPropertiesPlaceholderConfig类中的方法（也就是我们自定义的方法）
+			if (!ObjectUtils.nullSafeEquals(propertyValue, convertedValue)) {
+				props.setProperty(propertyName, convertedValue); //转换完值后，再设置对应的属性
+			}
+		}
+	}
+```
+
+
+
+
+
 
 

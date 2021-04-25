@@ -13,6 +13,8 @@ import javax.crypto.KeyGenerator;
 import java.nio.charset.StandardCharsets;
 import java.security.Key;
 import java.security.SecureRandom;
+import java.text.NumberFormat;
+import java.util.Locale;
 
 /**
  * ClassName: DESUtils
@@ -86,5 +88,10 @@ public class DESUtils {
 
         System.out.println(getDecryptString("e1MY0AEk4oiIavT6a8A13A=="));
         //System.out.println(getDecryptString("gJQ9O+q34qk="));
+        Locale locale = Locale.CANADA;
+        String country = locale.getCountry();
+        NumberFormat format = NumberFormat.getCurrencyInstance(locale);
+        System.out.println(format.format(123));
+        System.out.println(country);
     }
 }
