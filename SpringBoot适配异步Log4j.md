@@ -30,9 +30,9 @@ spring boot 版本 `2.5.3`
 
 项目资源目录结构
 
-![image-20210825161328612](./img/image-20210825161328612.png)
+![image-20210825161328612](F:\liming\md\img\spring-boot\image-20210825161328612.png)
 
-`applicatio.yml` 增加log4j2配置文件地址
+`applicatio.yml` 增加log4l2配置文件地址
 
 ```yaml
 logging:
@@ -61,8 +61,8 @@ logging:
 <?xml version="1.0" encoding="UTF-8"?>
 
 <properties>
-    <!--日志格式-->
-    <property name="PATTERN" value="[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} %X{TRACE_ID} [%thread]  %logger[%L] - %m%n"/>
+        <!--日志格式  %maxLen{%m}{5000} 限制最多输出5000个字符 [%X{trace-id}] 全局traceId -->
+    <property name="PATTERN" value="%highlight{[%-5level]} [%X{trace-id}]  %d{yyyy-MM-dd HH:mm:ss.SSS} [%thread]  %logger[%L] - %maxLen{%m}{5000}%n "/>
     <!--日志编码-->
     <property name="CHARSET" value="utf-8"/>
     <!--单个日志文件大小-->
@@ -78,9 +78,6 @@ logging:
 </properties>
 
 ```
-  
-  
-
 
 `log4j-xinclude-appenders.xml` 配置如下(定义appender输出细节):
 
