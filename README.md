@@ -16,6 +16,8 @@
 
 - [Dubbo](#Dubbo)
 
+- [MQ](#MQ)
+
 
 - **运维**
 
@@ -121,6 +123,8 @@
 
 - ​	dubbo 获取zk注册信息
 
+## **<a id="MQ">MQ</a>**
+2. [rabbitMQ部署方案以及生产消费demo](rabbitMQ.md)
   
 
 
