@@ -64,12 +64,15 @@ always_yes: false
 	2.在任意pycharm编辑器中。打开setting ，搜索Interpreter
 	![1636506062](../img/python/1636506062.jpg)
 	3.点击右上角的小齿轮，选择Add
-	4. 
-	​	图中1处选择Conda Environment
-	​	图中2处选择新的conda 环境
-	​	图中3处选择的conda.exe(在安装目录下的Script中)
+
+
+
+​	4. 
+​	​	图中1处选择Conda Environment
+​	​	图中2处选择新的conda 环境
+​	​	图中3处选择的conda.exe(在安装目录下的Script中)
 ![image-20211110090248893](../img/python/image-20211110090248893.png)
-	​	
+​	​	
 
 5. 等待一会儿就能使用conda环境了	
 
