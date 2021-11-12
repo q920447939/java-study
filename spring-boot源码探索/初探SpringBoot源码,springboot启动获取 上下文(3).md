@@ -267,10 +267,83 @@ public class AnnotationConfigApplicationContext extends GenericApplicationContex
 	 */
 	public AnnotationConfigApplicationContext() {
 		StartupStep createAnnotatedBeanDefReader = this.getApplicationStartup().start("spring.context.annotated-bean-reader.create");
-		this.reader = new AnnotatedBeanDefinitionReader(this);
+		//new AnnotatedBeanDefinitionReader(this); 详见代码1
+        this.reader = new AnnotatedBeanDefinitionReader(this);
 		createAnnotatedBeanDefReader.end();
 		this.scanner = new ClassPathBeanDefinitionScanner(this);
 	}
+    
+    //代码1
+    //  new AnnotatedBeanDefinitionReader(this); 最终里面的内容 第5.1章会用到
+    
+    	public static Set<BeanDefinitionHolder> registerAnnotationConfigProcessors(
+			BeanDefinitionRegistry registry, @Nullable Object source) {
+
+		DefaultListableBeanFactory beanFactory = unwrapDefaultListableBeanFactory(registry);
+		if (beanFactory != null) {
+            // beanFactory.getDependencyComparator() 为null
+            // 设置一个默认的比较器
+			if (!(beanFactory.getDependencyComparator() instanceof AnnotationAwareOrderComparator)) {
+				beanFactory.setDependencyComparator(AnnotationAwareOrderComparator.INSTANCE);
+			}
+            //beanFactory.getAutowireCandidateResolver()  返回值是 org.springframework.beans.factory.support.SimpleAutowireCandidateResolver
+			if (!(beanFactory.getAutowireCandidateResolver() instanceof ContextAnnotationAutowireCandidateResolver)) {
+				beanFactory.setAutowireCandidateResolver(new ContextAnnotationAutowireCandidateResolver());
+			}
+		}
+
+		Set<BeanDefinitionHolder> beanDefs = new LinkedHashSet<>(8);
+
+            // 当register里面没有注册名字为org.springframework.context.annotation.internalConfigurationAnnotationProcessor的话。那么就会注册一个
+		if (!registry.containsBeanDefinition(CONFIGURATION_ANNOTATION_PROCESSOR_BEAN_NAME)) {
+			RootBeanDefinition def = new RootBeanDefinition(ConfigurationClassPostProcessor.class);
+			def.setSource(source);
+			beanDefs.add(registerPostProcessor(registry, def, CONFIGURATION_ANNOTATION_PROCESSOR_BEAN_NAME));
+		}
+
+		if (!registry.containsBeanDefinition(AUTOWIRED_ANNOTATION_PROCESSOR_BEAN_NAME)) {
+			RootBeanDefinition def = new RootBeanDefinition(AutowiredAnnotationBeanPostProcessor.class);
+			def.setSource(source);
+			beanDefs.add(registerPostProcessor(registry, def, AUTOWIRED_ANNOTATION_PROCESSOR_BEAN_NAME));
+		}
+
+		// Check for JSR-250 support, and if present add the CommonAnnotationBeanPostProcessor.
+		if (jsr250Present && !registry.containsBeanDefinition(COMMON_ANNOTATION_PROCESSOR_BEAN_NAME)) {
+			RootBeanDefinition def = new RootBeanDefinition(CommonAnnotationBeanPostProcessor.class);
+			def.setSource(source);
+			beanDefs.add(registerPostProcessor(registry, def, COMMON_ANNOTATION_PROCESSOR_BEAN_NAME));
+		}
+
+		// Check for JPA support, and if present add the PersistenceAnnotationBeanPostProcessor.
+		if (jpaPresent && !registry.containsBeanDefinition(PERSISTENCE_ANNOTATION_PROCESSOR_BEAN_NAME)) {
+			RootBeanDefinition def = new RootBeanDefinition();
+			try {
+				def.setBeanClass(ClassUtils.forName(PERSISTENCE_ANNOTATION_PROCESSOR_CLASS_NAME,
+						AnnotationConfigUtils.class.getClassLoader()));
+			}
+			catch (ClassNotFoundException ex) {
+				throw new IllegalStateException(
+						"Cannot load optional framework class: " + PERSISTENCE_ANNOTATION_PROCESSOR_CLASS_NAME, ex);
+			}
+			def.setSource(source);
+			beanDefs.add(registerPostProcessor(registry, def, PERSISTENCE_ANNOTATION_PROCESSOR_BEAN_NAME));
+		}
+
+		if (!registry.containsBeanDefinition(EVENT_LISTENER_PROCESSOR_BEAN_NAME)) {
+			RootBeanDefinition def = new RootBeanDefinition(EventListenerMethodProcessor.class);
+			def.setSource(source);
+			beanDefs.add(registerPostProcessor(registry, def, EVENT_LISTENER_PROCESSOR_BEAN_NAME));
+		}
+
+		if (!registry.containsBeanDefinition(EVENT_LISTENER_FACTORY_BEAN_NAME)) {
+			RootBeanDefinition def = new RootBeanDefinition(DefaultEventListenerFactory.class);
+			def.setSource(source);
+			beanDefs.add(registerPostProcessor(registry, def, EVENT_LISTENER_FACTORY_BEAN_NAME));
+		}
+
+		return beanDefs;
+	}
+
 }
 
 public class GenericApplicationContext extends AbstractApplicationContext implements BeanDefinitionRegistry {
