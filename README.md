@@ -18,8 +18,7 @@
 
 - [MQ](#MQ)
 
-
-
+- [安装教程](#安装教程)
 
 - **运维**
 
@@ -130,6 +129,10 @@
 
 ## **<a id="MQ">MQ</a>**
 2. [rabbitMQ部署方案以及生产消费demo](rabbitMQ.md)
+
+
+  ## **<a id="安装教程">安装教程</a>**
+1. [centOS离线安装nginx](install_tutorial/centos_offline_nginx_script.md)
   
 
 
