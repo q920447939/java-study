@@ -328,7 +328,7 @@ public class SpringBootLogDesensitizationApplication {
 
 ​	通过重写`Append` ，可以实现日志脱敏
 
-​	具体代码可参考github：https://github.com/q920447939/java-study/tree/master/spring-boot/spring-boot-log-desensitization
+​	具体代码可参考github：[github](https://github.com/q920447939/java-study/tree/master/spring-boot/spring-boot-log-desensitization)
 
 ​	参考：https://blog.csdn.net/rick_zyl/article/details/120016622
 
