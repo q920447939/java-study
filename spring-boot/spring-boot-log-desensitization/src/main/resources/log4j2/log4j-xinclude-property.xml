@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<properties>
+    <!--日志格式-->
+    <property name="PATTERN"
+              value="[%-5level] [%X{trace-id}] [%X{trace-ip}] %d{yyyy-MM-dd HH:mm:ss.SSS} [%thread]  %logger[%L] - %maxLen{%m}{3000}%n "/>
+    <!--日志编码-->
+    <property name="CHARSET" value="utf-8"/>
+    <!--单个日志文件大小-->
+    <property name="MAX_FILE_SIZE" value="200MB"/>
+    <!--日志保存时间-->
+    <property name="MAX_HISTORY" value="P10D"/>
+    <!--日志根路径-->
+    <property name="BASE_LOG_PATH" value="${sys:user.dir}/logs"/>
+    <!--日志应用名，例如/data/logs/app/app-info.log-->
+    <property name="SERVER_NAME" value="${sys:SERVICE_NAME:-myapp}"/>
+    <!-- DefaultRolloverStrategy属性如不设置，则默认为最多同一文件夹下7个文件，这里设置了20 -->
+    <property name="DEFAULT_ROLLOVER_STRATEGY" value="20"/>
+</properties>

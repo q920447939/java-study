@@ -91,6 +91,7 @@
 7. [SpringBoot实现自定义start](./SpringBoot实现自定义start.md)
 8. [SpringBoot适配异步Log4j](./SpringBoot适配异步Log4j.md)
 9. [初探SpringBoot源码](./spring-boot源码探索)
+10. [springboot log4j2 日志脱敏](./springboot_log4j2_日志脱敏.md)
 
 ## **<a id="SpringCloud">SpringCloud</a>**
 1. [eureka服务注册与服务发现 + feign](spring-cloud/spring-cloud-eureka)
