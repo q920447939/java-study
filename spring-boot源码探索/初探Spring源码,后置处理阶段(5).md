@@ -66,7 +66,7 @@ public static void invokeBeanFactoryPostProcessors(
             //分别是  org.springframework.boot.autoconfigure.SharedMetadataReaderFactoryContextInitializer$CachingMetadataReaderFactoryPostProcessor
            	 //	org.springframework.boot.context.ConfigurationWarningsApplicationContextInitializer$ConfigurationWarningsPostProcessor
             //不过这里当时DEBUG的时的时候产生了一点疑惑. 是在什么地方把这两个对象放到beanFactoryPostProcessors
-            //感兴趣可参考 初探Spring源码,后置处理阶段(5.1).md
+            //感兴趣可参考 初探Spring源码,后置处理阶段(5.附1).md
 			for (BeanFactoryPostProcessor postProcessor  : beanFactoryPostProcessors) {
 				if (postProcessor instanceof BeanDefinitionRegistryPostProcessor) {
 					BeanDefinitionRegistryPostProcessor registryProcessor =
@@ -98,6 +98,8 @@ public static void invokeBeanFactoryPostProcessors(
 
 			// First, invoke the BeanDefinitionRegistryPostProcessors that implement PriorityOrdered. 第一步，将后置处理器先进行优先级排序
             //beanFactory.getBeanNamesForType 这个方法暂时没有去研究，不过通过名字可知，应该是通过传入BeanDefinitionRegistryPostProcessor ，找到它的一些实现类。
+            //有兴趣的同学可以看 初探Spring源码,后置处理阶段(5.附2).md
+            //这里postProcessorNames只会有一个  org.springframework.context.annotation.ConfigurationClassPostProcessor
 			String[] postProcessorNames =
 					beanFactory.getBeanNamesForType(BeanDefinitionRegistryPostProcessor.class, true, false);
 			for (String ppName : postProcessorNames) {
@@ -110,6 +112,7 @@ public static void invokeBeanFactoryPostProcessors(
             //进行排序
 			sortPostProcessors(currentRegistryProcessors, beanFactory);
 			registryProcessors.addAll(currentRegistryProcessors);
+             //这部分篇幅较长。将移到 初探Spring源码,后置处理阶段(5.1).md
 			invokeBeanDefinitionRegistryPostProcessors(currentRegistryProcessors, registry, beanFactory.getApplicationStartup());
 			currentRegistryProcessors.clear();
 
@@ -208,3 +211,4 @@ public static void invokeBeanFactoryPostProcessors(
 ![image-20211110172953755](../img/spring/image-20211110172953755.png)
 
 #### 图1
+
