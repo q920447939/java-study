@@ -67,12 +67,12 @@
 	}
 ```
 
-![图1](F:\liming\work_space\my_work_space\java-study\img\spring\annex-5-2\1640846504.jpg)
+![图1](https://github.com/q920447939/java-study/tree/master/img/spring/annex-5-2/1640846504.jpg)
 
 图1
 
 
 
-![image-20211230145423639](C:\Users\wangguochu\AppData\Roaming\Typora\typora-user-images\image-20211230145423639.png)
+![image-20211230145423639](https://github.com/q920447939/java-study/tree/master/img/spring/annex-5-2/beanDefinitionNames.png)
 
 图2
