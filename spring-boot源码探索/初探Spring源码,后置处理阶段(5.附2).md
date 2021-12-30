@@ -67,10 +67,10 @@
 	}
 ```
 
-![图1](img/spring/annex-5-2/1640846504.jpg)
+![图1](../img/spring/annex-5-2/1640846504.jpg)
 
 图1
 
-![image-20211230145423639](img/spring/annex-5-2/beanDefinitionNames.png)
+![image-20211230145423639](../img/spring/annex-5-2/beanDefinitionNames.png)
 
 图2
