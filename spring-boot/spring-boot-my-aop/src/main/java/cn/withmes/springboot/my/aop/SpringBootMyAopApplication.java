@@ -9,7 +9,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 import cn.withmes.springboot.my.aop.customer.bean.CustomerScan;
 
 @SpringBootApplication
-//@CustomerScan(basePackages = "cn.withmes.springboot.my.aop.customer")
+@CustomerScan(basePackages = "cn.withmes.springboot.my.aop.customer")
 public class SpringBootMyAopApplication {
 
     public static void main(String[] args) throws MyException, InterruptedException {
