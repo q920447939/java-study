@@ -62,42 +62,12 @@ public void processConfigBeanDefinitions(BeanDefinitionRegistry registry) {
                registry, this.sourceExtractor, this.resourceLoader, this.environment,
                this.importBeanNameGenerator, parser.getImportRegistry());
       }
+       //1。加载配置类 中带有@bean注解的方法。并把bean注册到register中
+       //2。从@ImportSource里面加载 bean信息
+       //3。加载@Import 。会调用这个类的实现类 org.springframework.context.annotation.ImportBeanDefinitionRegistrar#registerBeanDefinitions(org.springframework.core.type.AnnotationMetadata, org.springframework.beans.factory.support.BeanDefinitionRegistry, org.springframework.beans.factory.support.BeanNameGenerator)
+       // 可参考 com.example.demo.MyImportRegister的实现
       this.reader.loadBeanDefinitions(configClasses);
-      alreadyParsed.addAll(configClasses);
-      processConfig.tag("classCount", () -> String.valueOf(configClasses.size())).end();
-
-      candidates.clear();
-      if (registry.getBeanDefinitionCount() > candidateNames.length) {
-         String[] newCandidateNames = registry.getBeanDefinitionNames();
-         Set<String> oldCandidateNames = new HashSet<>(Arrays.asList(candidateNames));
-         Set<String> alreadyParsedClasses = new HashSet<>();
-         for (ConfigurationClass configurationClass : alreadyParsed) {
-            alreadyParsedClasses.add(configurationClass.getMetadata().getClassName());
-         }
-         for (String candidateName : newCandidateNames) {
-            if (!oldCandidateNames.contains(candidateName)) {
-               BeanDefinition bd = registry.getBeanDefinition(candidateName);
-               if (ConfigurationClassUtils.checkConfigurationClassCandidate(bd, this.metadataReaderFactory) &&
-                     !alreadyParsedClasses.contains(bd.getBeanClassName())) {
-                  candidates.add(new BeanDefinitionHolder(bd, candidateName));
-               }
-            }
-         }
-         candidateNames = newCandidateNames;
-      }
-   }
-   while (!candidates.isEmpty());
-
-   // Register the ImportRegistry as a bean in order to support ImportAware @Configuration classes
-   if (sbr != null && !sbr.containsSingleton(IMPORT_REGISTRY_BEAN_NAME)) {
-      sbr.registerSingleton(IMPORT_REGISTRY_BEAN_NAME, parser.getImportRegistry());
-   }
-
-   if (this.metadataReaderFactory instanceof CachingMetadataReaderFactory) {
-      // Clear cache in externally provided MetadataReaderFactory; this is a no-op
-      // for a shared cache since it'll be cleared by the ApplicationContext.
-      ((CachingMetadataReaderFactory) this.metadataReaderFactory).clearCache();
-   }
+    //后续非必要代码，已忽略
 }
 
 

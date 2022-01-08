@@ -210,5 +210,14 @@ public static void invokeBeanFactoryPostProcessors(
 
 ![image-20211110172953755](../img/spring/image-20211110172953755.png)
 
-#### 图1
+图1
 
+
+
+### 总结：
+
+在`org.springframework.context.support.PostProcessorRegistrationDelegate#invokeBeanFactoryPostProcessors(org.springframework.beans.factory.config.ConfigurableListableBeanFactory, java.util.List<org.springframework.beans.factory.config.BeanFactoryPostProcessor>)`方法中。
+
+1.首先通过入参传过来的 ` java.util.List<org.springframework.beans.factory.config.BeanFactoryPostProcessor>` 。循环调用`org.springframework.beans.factory.support.BeanDefinitionRegistryPostProcessor#postProcessBeanDefinitionRegistry`  这块可参考附1.md
+
+2.通过
