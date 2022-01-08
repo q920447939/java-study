@@ -114,23 +114,37 @@ public static void invokeBeanFactoryPostProcessors(
 			registryProcessors.addAll(currentRegistryProcessors);
              //这部分篇幅较长。将移到 初探Spring源码,后置处理阶段(5.1).md
 			invokeBeanDefinitionRegistryPostProcessors(currentRegistryProcessors, registry, beanFactory.getApplicationStartup());
+            //将容器清理
 			currentRegistryProcessors.clear();
 
 			// Next, invoke the BeanDefinitionRegistryPostProcessors that implement Ordered.
+            //这里再次调用getBeanNamesForType()方法。
 			postProcessorNames = beanFactory.getBeanNamesForType(BeanDefinitionRegistryPostProcessor.class, true, false);
 			for (String ppName : postProcessorNames) {
+                //不同的点在于这个条件。processedBeans容器里面没有的 根据后面的代码推断。 因为如果没有这个判断的话。那么org.springframework.context.annotation.ConfigurationClassPostProcessor相同的代码又会执行一次
+                //并且这个类需要实现Ordered接口。上面的是实现PriorityOrdered接口。 两个是不同的。
+                //所以如果实现了PriorityOrdered会比实现Ordered的先调用
 				if (!processedBeans.contains(ppName) && beanFactory.isTypeMatch(ppName, Ordered.class)) {
 					currentRegistryProcessors.add(beanFactory.getBean(ppName, BeanDefinitionRegistryPostProcessor.class));
 					processedBeans.add(ppName);
 				}
 			}
+            //排序
 			sortPostProcessors(currentRegistryProcessors, beanFactory);
-			//在50行registryProcessors也进行了add处理。 一个是入参传入的beanfactorypostprocess 一个是通过getBeanNamesForType 拿到的postProcess
+            //放到registryProcessors里面。 
 			registryProcessors.addAll(currentRegistryProcessors);
+            //还是调用之前的方法。只是 currentRegistryProcessors 里面的东西不同
 			invokeBeanDefinitionRegistryPostProcessors(currentRegistryProcessors, registry, beanFactory.getApplicationStartup());
 			currentRegistryProcessors.clear();
 
 			// Finally, invoke all other BeanDefinitionRegistryPostProcessors until no further ones appear.
+            // 最后，调用所有其他 BeanDefinitionRegistryPostProcessor 直到不再出现。
+            //这里依旧还是调用beanFactory.getBeanNamesForType 然后再调用invokeBeanDefinitionRegistryPostProcessors
+            // 思考 
+            //为什么会三次（或者说多次，因为这里是while ）调用beanFactory.getBeanNamesForType呢？  
+            //前面两次由于需要对实现了PriorityOrdered和Ordered的 BeanDefinitionRegistryPostProcessor做优先处理
+            //这里使用while的原因是。如果我们自定义的类 。也同样实现了BeanDefinitionRegistryPostProcessor接口。但是没有实现PriorityOrdered和Ordered接口。那么就只能放到这里进行最后的调用了。
+            //但是可能在我们自己实现的BeanDefinitionRegistryPostProcessor子类中。我们手动又增加了新的放到bean工厂中。那么我们就需要再次调用beanFactory.getBeanNamesForType。防止漏掉手动新增的BeanDefinitionRegistryPostProcessor子类
 			boolean reiterate = true;
 			while (reiterate) {
 				reiterate = false;
@@ -144,11 +158,15 @@ public static void invokeBeanFactoryPostProcessors(
 				}
 				sortPostProcessors(currentRegistryProcessors, beanFactory);
 				registryProcessors.addAll(currentRegistryProcessors);
+                 //会调用 BeanDefinitionRegistryPostProcessor#postProcessBeanDefinitionRegistry
 				invokeBeanDefinitionRegistryPostProcessors(currentRegistryProcessors, registry, beanFactory.getApplicationStartup());
 				currentRegistryProcessors.clear();
 			}
 
 			// Now, invoke the postProcessBeanFactory callback of all processors handled so far.
+            //这里会回调所有实现了BeanFactoryPostProcessor.postProcessBeanDefinitionRegistry的方法。参考com.example.demo.MyBeanDefinitionRegistryPostProcessor。 
+            //1.registryProcessors 也是前面每次把currentRegistryProcessors里面的数据放到容器里面了。而currentRegistryProcessors又是从bean工厂里面拿出来的。所以如果想要调用postProcessBeanDefinitionRegistry成功。那么需要让bean注册到bean工厂里面去
+            //2.虽然MyBeanDefinitionRegistryPostProcessor没有单独实现BeanFactoryPostProcessor。但是因为 MyBeanDefinitionRegistryPostProcessor 实现了BeanDefinitionRegistryPostProcessor  。而BeanDefinitionRegistryPostProcessor接口又继承了 BeanFactoryPostProcessor  所以  MyBeanDefinitionRegistryPostProcessor instanceof BeanFactoryPostProcessor 肯定是true
 			invokeBeanFactoryPostProcessors(registryProcessors, beanFactory);
 			invokeBeanFactoryPostProcessors(regularPostProcessors, beanFactory);
 		}
