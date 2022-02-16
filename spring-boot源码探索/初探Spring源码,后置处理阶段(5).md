@@ -1,4 +1,4 @@
-**文章内容如有错误,请提出**
+**文章内容如有错误,欢迎指出**
 
 本章内容涉及的内容非常多.postProcess ,getBean
 
@@ -178,6 +178,9 @@ public static void invokeBeanFactoryPostProcessors(
 
 		// Do not initialize FactoryBeans here: We need to leave all regular beans
 		// uninitialized to let the bean factory post-processors apply to them!
+    	// 不要在此处初始化 FactoryBeans：我们需要保留所有常规 bean
+    	//未初始化让bean factory后处理器应用到他们身上！
+        // 这里再次根据类型去获取postProcessor
 		String[] postProcessorNames =
 				beanFactory.getBeanNamesForType(BeanFactoryPostProcessor.class, true, false);
 
@@ -189,20 +192,25 @@ public static void invokeBeanFactoryPostProcessors(
 		for (String ppName : postProcessorNames) {
 			if (processedBeans.contains(ppName)) {
 				// skip - already processed in first phase above
+                //如果process已经处理过了。那么跳过处理
 			}
 			else if (beanFactory.isTypeMatch(ppName, PriorityOrdered.class)) {
+                //优先级容器
 				priorityOrderedPostProcessors.add(beanFactory.getBean(ppName, BeanFactoryPostProcessor.class));
 			}
 			else if (beanFactory.isTypeMatch(ppName, Ordered.class)) {
 				orderedPostProcessorNames.add(ppName);
 			}
 			else {
+                //普通容器
 				nonOrderedPostProcessorNames.add(ppName);
 			}
 		}
 
 		// First, invoke the BeanFactoryPostProcessors that implement PriorityOrdered.
+        //优先级process排序
 		sortPostProcessors(priorityOrderedPostProcessors, beanFactory);
+         //调用PostProcessors
 		invokeBeanFactoryPostProcessors(priorityOrderedPostProcessors, beanFactory);
 
 		// Next, invoke the BeanFactoryPostProcessors that implement Ordered.
@@ -219,9 +227,13 @@ public static void invokeBeanFactoryPostProcessors(
 			nonOrderedPostProcessors.add(beanFactory.getBean(postProcessorName, BeanFactoryPostProcessor.class));
 		}
 		invokeBeanFactoryPostProcessors(nonOrderedPostProcessors, beanFactory);
+    	//考虑到流程与上面的流程雷同。
+        //只能猜测到。后面的这块重新获取beanFactory.getBeanNamesForType(BeanFactoryPostProcessor.class, true, false); 可能是因为走了else流程。else流程里面没有进行while循环调用。所以可能又会产生新的postprocess 
 
 		// Clear cached merged bean definitions since the post-processors might have
 		// modified the original metadata, e.g. replacing placeholders in values...
+         //清除缓存的合并 bean 定义，因为后处理器可能有 修改了原始元数据，例如 替换值中的占位符...
+         //也就是说 原来保存的definition 。可能由于后置处理器修改了对象的属性。 所以需要清空definition
 		beanFactory.clearMetadataCache();
 	}
 ```
@@ -232,6 +244,8 @@ public static void invokeBeanFactoryPostProcessors(
 
 
 
+<iframe id="embed_dom" name="embed_dom" frameborder="0" style="display:block;width:1200px; height:800px;" src="https://www.processon.com/embed/61ce663a0e3e7441570a1d68"></iframe>
+
 ### 总结：
 
 在`org.springframework.context.support.PostProcessorRegistrationDelegate#invokeBeanFactoryPostProcessors(org.springframework.beans.factory.config.ConfigurableListableBeanFactory, java.util.List<org.springframework.beans.factory.config.BeanFactoryPostProcessor>)`方法中。
@@ -239,3 +253,8 @@ public static void invokeBeanFactoryPostProcessors(
 1.首先通过入参传过来的 ` java.util.List<org.springframework.beans.factory.config.BeanFactoryPostProcessor>` 。循环调用`org.springframework.beans.factory.support.BeanDefinitionRegistryPostProcessor#postProcessBeanDefinitionRegistry`  这块可参考附1.md
 
 2.通过
+
+
+
+
+
