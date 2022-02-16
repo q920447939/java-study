@@ -258,3 +258,51 @@ public static void invokeBeanFactoryPostProcessors(
 
 
 
+### 彩蛋：
+
+最上方的`invokeBeanFactoryPostProcessors`方法中。还有一段如下的代码：
+
+```java
+		// Detect a LoadTimeWeaver and prepare for weaving, if found in the meantime
+		// (e.g. through an @Bean method registered by ConfigurationClassPostProcessor)
+		if (!NativeDetector.inNativeImage() && beanFactory.getTempClassLoader() == null && beanFactory.containsBean(LOAD_TIME_WEAVER_BEAN_NAME)) {
+			beanFactory.addBeanPostProcessor(new LoadTimeWeaverAwareProcessor(beanFactory));
+			beanFactory.setTempClassLoader(new ContextTypeMatchClassLoader(beanFactory.getBeanClassLoader()));
+		}
+```
+
+当时看到`NativeDetector.inNativeImage()`也是一脸懵逼不知道是个什么情况。但是点开一看`NativeDetector`类一看就猜出来一个大概：
+
+```java
+
+/**
+ * A common delegate for detecting a GraalVM native image environment.
+ *
+ * <p>Requires using the {@code -H:+InlineBeforeAnalysis} native image compiler flag in order to allow code removal at
+ * build time.
+ *
+ * @author Sebastien Deleuze
+ * @since 5.3.4
+ */
+public abstract class NativeDetector {
+
+	// See https://github.com/oracle/graal/blob/master/sdk/src/org.graalvm.nativeimage/src/org/graalvm/nativeimage/ImageInfo.java
+	private static final boolean imageCode = (System.getProperty("org.graalvm.nativeimage.imagecode") != null);
+
+	/**
+	 * Returns {@code true} if invoked in the context of image building or during image runtime, else {@code false}.
+	 */
+	public static boolean inNativeImage() {
+		return imageCode;
+	}
+}
+```
+
+瞧。。这不就是大名鼎鼎的[graalvm](https://github.com/oracle/graal)吗。
+
+原来`spring`团队这么早就布局了`GraalVM`
+
+同时大家也可以去了解一下为什么需要`GraalVM`以及`云原生`
+
+关于`spring native`支持可以查看[github](https://github.com/spring-projects-experimental/spring-native) 
+
