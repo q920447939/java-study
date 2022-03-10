@@ -49,13 +49,27 @@ demo项目地址  `cn.withmes.springboot.mybatis.interceptor.SpringBootMybatisIn
 
 其他方法没有研究过。
 
-![设置自定义factoryBean](F:\liming\work_space\my_work_space\java-study\gif\设置自定义factoryBean.gif)
+![设置自定义factoryBean](../gif/设置自定义factoryBean.gif)
 
 
 
+**FruitFactoryBean**创建过程。
+
+当然，我们现在知道这么写可以让`com.example.springboot.myfactorybean.bean.Apple`从`FruitFactoryBean`取出来。电但是目前还没有研究**FruitFactoryBean**是从哪里被创建出来的。
+
+很简单。我们采用逆向思维
+
+在**FruitFactoryBean**的构造函数上打上断点，就知道是一个怎么样的运行情况
+
+![FruitFactoryBean实例化过程](../gif/FruitFactoryBean实例化过程.gif)
 
 
 
+**FruitFactoryBean** 取`Apple`。
+
+这一部分相对来说比较简单。因为 apple存在bean工厂里面的key叫做 beanName，Value就是一个**FruitFactoryBean** 。
+
+所以`spring`会推断是否是工厂`bean`(代码可以查看`org.springframework.beans.factory.support.FactoryBeanRegistrySupport#doGetObjectFromFactoryBean`)。如果是工厂`bean`,那么就会调用`factory.getObject();`
 
 按照`spring`对工厂`bean`的处理。默认在`bean`名字前面加一个`&` ,于是乎 原来的`bean`名字 `userMapper` 变成了`&userMapper`
 
