@@ -35,7 +35,9 @@
 
 当这个`ppName`调用`beanFactory.getBean(ppName, BeanPostProcessor.class);`方法时。
 
-有一步会拿到所有的`beanDefinitionNames`。判断是否是工厂`factoryBean`。如果是的话就会进行实例化(最终就会调用`org.mybatis.spring.mapper.MapperFactoryBean#MapperFactoryBean(java.lang.Class<T>)`)。
+有一步会拿到所有的`beanDefinitionNames`。判断是否是工厂`factoryBean`。
+
+如果是的话就会进行实例化(因为`@MapperScan`会扫描`UserMapper`最终就会调用`org.mybatis.spring.mapper.MapperFactoryBean#MapperFactoryBean(java.lang.Class<T>)`)。
 
 
 
