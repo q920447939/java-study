@@ -38,9 +38,10 @@ demo项目地址  `cn.withmes.springboot.mybatis.interceptor.SpringBootMybatisIn
 
 解释可以参考文章`https://blog.csdn.net/a625013/article/details/104050128`
 
+(知识点)
 
-通过追踪源码发现，要判断一个类是否是某个类的子类。 除了可以用`instanceof` 
-也可以用 `FactoryBean.class.isAssignableFrom(beanType)`
+    通过追踪源码发现，要判断一个类是否是某个类的子类。 除了可以用`instanceof` 
+    也可以用 `FactoryBean.class.isAssignableFrom(beanType)`
 
 
 参考`spring-boot-my-factory-bean`项目下`com.example.springboot.myfactorybean.register.FruitRegister.registerBeanDefinitions`代码
