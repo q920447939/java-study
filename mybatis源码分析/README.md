@@ -10,3 +10,5 @@
 4.[`MapperFactoryBean属性实例化过程`](mybatis源码4.md)
 
 5.[`DaoSupport init()方法`](mybatis源码5.md)
+
+6.[`实例化MapperProxy`](mybatis源码6.md)

@@ -77,11 +77,17 @@ public interface InitializingBean {
     if (type.isInterface()) { //必须是接口
         knownMappers.put(type, new MapperProxyFactory<>(type)); //这里将userMapper 放到knownMappers Map中 
         MapperAnnotationBuilder parser = new MapperAnnotationBuilder(config, type);
-        //留在下一章
+        /*
+          这一步是对Mapper接口进行解析。
+          解析接口方法，方法入参，返回值等      
+         */
         parser.parse();
     }
   }
 ```
+
+如果以后遇到`Mybaits`没有注册相应的接口，可以查看是否已经增加到`knownMappers`中
+
 
 
 
