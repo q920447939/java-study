@@ -12,3 +12,5 @@
 5.[`DaoSupport init()方法`](mybatis源码5.md)
 
 6.[`实例化MapperProxy`](mybatis源码6.md)
+
+6.[`获取session和调用自定义拦截器（7.1-7.3  共3章节）`](mybatis源码7.1.md)
