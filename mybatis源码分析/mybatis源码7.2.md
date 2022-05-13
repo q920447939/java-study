@@ -91,7 +91,7 @@
 Alt +7 查看当前类所有方法
 Ctrl+H 查看类的继承关系
 
-![image-20220512204135327](F:\liming\work_space\my_work_space\java-study\img\mybatis\image-20220512204135327.png)
+![image-20220512204135327](../img/mybatis/image-20220512204135327.png)
 
 
 
@@ -267,13 +267,13 @@ public Object invoke(Object proxy, Method method, Object[] args) throws Throwabl
 
 `PreparedStatementHandler`,`RoutingStatementHandler`,`SimpleStatementHandler`。这三个子类是我们在7.1-7.2篇章中遇到的
 
-![image-20220513083932449](F:\liming\work_space\my_work_space\java-study\img\mybatis\image-20220513083932449.png)
+![image-20220513083932449](../img/mybatis/image-20220513083932449.png)
 
 `Executor`子类
 
 `BaseStatementHandler`,`CachingExecutor`,`SimpleExecutor`这三个子类是我们遇到的
 
-![image-20220513084151808](F:\liming\work_space\my_work_space\java-study\img\mybatis\image-20220513084151808.png)
+![image-20220513084151808](../img/mybatis/image-20220513084151808.png)
 
 
 
@@ -282,19 +282,19 @@ public Object invoke(Object proxy, Method method, Object[] args) throws Throwabl
 ### 总结
 
 ~~~mermaid
-graph BT
- 
-Master --- client((客户端))
-Slave-1 --> Master
-Slave-2 --> Master
- 
-Slave-3 --> Master-2
-Slave-4 --> Master-2
- 
-Slave-5 --> Master-3
-Slave-6 --> Master-3  
- 
-style client fill:#ccf,stroke:#f66,stroke-width:2px,stroke-dasharray: 10,5
+flowchart TD
+    A[调用SqlSessionInterceptor#invoke方法] --> B(获取SqlSession)
+    B --> C(继续调用原selectOne方法)
+    C --> D(委托给SimpleExecutor)
+    D --> a1(父类queryFromDatabase方法)
+    subgraph ide1 [父类]
+    a1-->a2(父类query方法)
+    end
+    a2-->E["SimpleExecutor(子类)创建一个StatementHandler(实际上是RoutingStatementHandler)"]
+    E-->F["RoutingStatementHandler实现了StatementHandler"]
+    F-->G["创建代理对象(调用Plugin.invoke)"]
+    G-->H["调用自定义拦截器(ExecutorInterceptor)"]
+
 ~~~
 
 
