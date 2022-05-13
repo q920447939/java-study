@@ -56,7 +56,7 @@ demo项目地址  `cn.withmes.springboot.mybatis.interceptor.SpringBootMybatisIn
 
 **FruitFactoryBean**创建过程。
 
-当然，我们现在知道这么写可以让`com.example.springboot.myfactorybean.bean.Apple`从`FruitFactoryBean`取出来。电但是目前还没有研究**FruitFactoryBean**是从哪里被创建出来的。
+当然，我们现在知道这么写可以让`com.example.springboot.myfactorybean.bean.Apple`从`FruitFactoryBean`取出来。但是目前还没有研究**FruitFactoryBean**是从哪里被创建出来的。
 
 很简单。我们采用逆向思维
 
