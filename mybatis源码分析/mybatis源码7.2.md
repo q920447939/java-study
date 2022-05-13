@@ -281,15 +281,21 @@ public Object invoke(Object proxy, Method method, Object[] args) throws Throwabl
 
 ### 总结
 
-```flow
-st=>start: 闹钟响起
-op=>operation: 与床板分离
-cond=>condition: 分离成功?
-e=>end: 快乐的一天
+~~~mermaid
+graph BT
+ 
+Master --- client((客户端))
+Slave-1 --> Master
+Slave-2 --> Master
+ 
+Slave-3 --> Master-2
+Slave-4 --> Master-2
+ 
+Slave-5 --> Master-3
+Slave-6 --> Master-3  
+ 
+style client fill:#ccf,stroke:#f66,stroke-width:2px,stroke-dasharray: 10,5
+~~~
 
-st->op->cond
-cond(yes)->e
-cond(no)->op
 
-```
 
