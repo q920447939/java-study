@@ -25,8 +25,11 @@
 - **运维**
 
   - [Linux常用命令和操作](shell/Linux常用命令和操作.md)
-    
 
+
+- **其他**
+
+    - [过vm检测](过vm检测.md)
 
 - [Python](#python) 
 
