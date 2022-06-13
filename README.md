@@ -22,6 +22,7 @@
   
 - [安装教程](#安装教程)
 
+
 - **运维**
 
   - [Linux常用命令和操作](shell/Linux常用命令和操作.md)
@@ -31,7 +32,8 @@
 
     - [过vm检测](过vm检测.md)
     - [TP50以及TP99理解](TP50以及TP99理解.md)
-
+- [汇编](#汇编)
+  
 - [Python](#python) 
 
 
@@ -150,7 +152,8 @@
 
 1. [策略模式](https://blog.csdn.net/qq920447939/article/details/106985808)
 
-
+## **<a id="汇编">汇编</a>**
+1.[汇编指令通用寄存位宽](./assembler/汇编指令通用寄存位宽.md)
 
 ## **<a id="python">python</a>**
 1.[win7安装anaconda并且pycharm使用anaconda](./python/win7安装anaconda并且pycharm使用anaconda.md)
