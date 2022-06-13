@@ -30,6 +30,7 @@
 - **其他**
 
     - [过vm检测](过vm检测.md)
+    - [TP50以及TP99理解](TP50以及TP99理解.md)
 
 - [Python](#python) 
 
