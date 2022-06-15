@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<loggers>
+    <AsyncLogger name="cn.withmes" level="DEBUG" includeLocation="true" additivity="false">
+        <AppenderRef ref="obfuscateSensitiveData-CONSOLE"/>
+        <appender-ref ref="obfuscateSensitiveData-FILE-ALL"/>
+    </AsyncLogger>
+</loggers>

@@ -25,8 +25,12 @@ public interface UserMapper {
     @Select("SELECT * FROM USER WHERE NAME = #{name}   ")
     User findByName(User user);
 
+    @Select("SELECT * FROM USER ")
+    User findAll();
+
 
     @Insert("INSERT INTO USER(NAME, AGE) VALUES(#{name}, #{age})")
     int insert(@Param("name") String name, @Param("age") Integer age, Integer sex);
 
+    int test(@Param("param") String param);
 }

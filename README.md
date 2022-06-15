@@ -16,12 +16,25 @@
 
 - [Dubbo](#Dubbo)
 
-- [代理相关](#proxy)
+- [MQ](#MQ)
+  
+- [Mybatis](#Mybatis)
+  
+- [安装教程](#安装教程)
+
+
 - **运维**
 
   - [Linux常用命令和操作](shell/Linux常用命令和操作.md)
+
+
+- **其他**
+
+    - [过vm检测](过vm检测.md)
+    - [TP50以及TP99理解](TP50以及TP99理解.md)
+- [汇编](#汇编)
   
-  
+- [Python](#python) 
 
 
 联系作者:
@@ -84,7 +97,9 @@
 5. [纯手写SpringBoot+Spring MVC](spring-boot/spring-boot-custom)
 6. [SpringBoot实现自定义包扫描](./SpringBoot实现自定义包扫描.md)
 7. [SpringBoot实现自定义start](./SpringBoot实现自定义start.md)
-
+8. [SpringBoot适配异步Log4j](./SpringBoot适配异步Log4j.md)
+9. [初探SpringBoot源码](./spring-boot源码探索)
+10. [springboot log4j2 日志脱敏](./springboot_log4j2_日志脱敏.md)
 
 ## **<a id="SpringCloud">SpringCloud</a>**
 1. [eureka服务注册与服务发现 + feign](spring-cloud/spring-cloud-eureka)
@@ -121,6 +136,15 @@
 
 - ​	dubbo 获取zk注册信息
 
+## **<a id="MQ">MQ</a>**
+1. [rabbitMQ部署方案以及生产消费demo](rabbitMQ.md)
+
+## **<a id="Mybatis">Mybatis</a>**
+1. [mybatis源码分析](mybatis源码分析/README.md)
+
+
+  ## **<a id="安装教程">安装教程</a>**
+1. [centOS离线安装nginx](install_tutorial/centos_offline_nginx_script.md)
   
 
 
@@ -128,3 +152,10 @@
 
 1. [策略模式](https://blog.csdn.net/qq920447939/article/details/106985808)
 
+## **<a id="汇编">汇编</a>**
+1.[汇编指令通用寄存位宽](./assembler/汇编指令通用寄存位宽.md)
+2.[汇编操作指令](./assembler/汇编操作指令.md)
+3.[内存](./assembler/内存.md)
+
+## **<a id="python">python</a>**
+1.[win7安装anaconda并且pycharm使用anaconda](./python/win7安装anaconda并且pycharm使用anaconda.md)
