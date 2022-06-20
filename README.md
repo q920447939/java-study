@@ -156,6 +156,7 @@
 1.[汇编指令通用寄存位宽](./assembler/汇编指令通用寄存位宽.md)
 2.[汇编操作指令](./assembler/汇编操作指令.md)
 3.[内存](./assembler/内存.md)
+4.[C语言加法逆向](./assembler/C语言加法逆向.xlsx)
 
 ## **<a id="python">python</a>**
 1.[win7安装anaconda并且pycharm使用anaconda](./python/win7安装anaconda并且pycharm使用anaconda.md)
