@@ -145,7 +145,7 @@
 
   ## **<a id="安装教程">安装教程</a>**
 1. [centOS离线安装nginx](install_tutorial/centos_offline_nginx_script.md)
-  
+
 
 
 ## **<a id="重学设计模式">重学设计模式</a>**
@@ -154,9 +154,19 @@
 
 ## **<a id="汇编">汇编</a>**
 1.[汇编指令通用寄存位宽](./assembler/汇编指令通用寄存位宽.md)
+
 2.[汇编操作指令](./assembler/汇编操作指令.md)
+
 3.[内存](./assembler/内存.md)
-4.[C语言加法逆向](./assembler/C语言加法逆向.xlsx)
+
+4.堆栈图
+
+1. [C语言加法逆向](./assembler/C语言加法逆向.xlsx)
+2. [StackDemo](./assembler/StackDemo.xlsx)
+
+1. ​	4.1[C语言加法逆向](./assembler/C语言加法逆向.xlsx)	
+
+
 
 ## **<a id="python">python</a>**
 1.[win7安装anaconda并且pycharm使用anaconda](./python/win7安装anaconda并且pycharm使用anaconda.md)
