@@ -164,7 +164,6 @@
 1. [C语言加法逆向](./assembler/C语言加法逆向.xlsx)
 2. [StackDemo](./assembler/StackDemo.xlsx)
 
-1. ​	4.1[C语言加法逆向](./assembler/C语言加法逆向.xlsx)	
 
 
 
