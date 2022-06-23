@@ -13,3 +13,4 @@
 **设置`  definition.setBeanClass(this.mapperFactoryBeanClass);`** 
 
 这个`this.mapperFactoryBeanClass`默认就是`MapperFactoryBean.class`
+ 
