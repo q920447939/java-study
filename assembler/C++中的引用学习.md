@@ -133,7 +133,7 @@ int _tmain(int argc, _TCHAR* argv[])
 
 
 
-![image-20220806143519948](F:\liming\md\od_img\image-20220806143519948.png)
+![image-20220806143519948](../img/ODImg/image-20220806143519948.png)
 
 
 
