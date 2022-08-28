@@ -11,7 +11,7 @@
 | 工具 | 版本 |
 | :-----:| :----: |
 | 系统 | Win7 |
-| IDEA | IntelliJ IDEA 2021.1 (Ultimate Edition)<br />Build #IU-211.6693.111, built on April 6, 2021 |
+| IDEA | IntelliJ IDEA 2021.1 (Ultimate Edition) Build #IU-211.6693.111, built on April 6, 2021 |
 | JDK/JIRE | jdk1.8.0_191 |
 | spring-boot | 2.5.3 |
 | maven | maven-3.6.1 |

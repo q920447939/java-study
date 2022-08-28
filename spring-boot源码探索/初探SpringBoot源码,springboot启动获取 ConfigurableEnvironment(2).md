@@ -195,3 +195,8 @@ Caused by: java.lang.NoSuchMethodException: com.example.demo.MySpringApplication
 ​	1.调用实现类`org.springframework.boot.SpringApplicationRunListener#starting`
 
 **问题：**`而第三个参数是接受Consumer<StartupStep> `入参。没有指定`StartupStep`具体类型。但是通过DEBUG却能知道是`DefaultApplicationStartup$DefaultStartupStep`。这里有点匪夷所思！
+
+**#2022-08-23解答**
+
+1.因为在`doWithListeners()`方法的时候通过` this.applicationStartup.start(stepName);`确定`StartupStep`
+

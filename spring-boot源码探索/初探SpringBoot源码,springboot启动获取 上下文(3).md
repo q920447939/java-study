@@ -518,7 +518,7 @@ public @interface Service {
 
 ​	当然也实例化了`Reader(org.springframework.core.env.StandardEnvironment);`和`Scanner(ClassPathBeanDefinitionScanner)`
 
-​	现在等同于`context`拥有了 ``BeanDefinition`查找的能力(因为`Scanner`)。也拥有了'BeanFactory'能力
+​	现在等同于`context`拥有了 ``BeanDefinition`查找的能力(因为`Scanner`)。也拥有了`BeanFactory(因为父类实例化了DefaultListableBeanFactory)`能力
 
 ​	现在想想`context`的翻译过来是什么意思呢? 上下文?那为什么要交上下文呢,那不就是承上启下的作用呗。
 
@@ -619,7 +619,7 @@ public @interface Service {
 		this.sources = sources;
         //获取read
 		this.annotatedReader = new AnnotatedBeanDefinitionReader(registry);
-        //实例化一个xmlReader 这里默认为trie
+        //实例化一个xmlReader 这里默认为true
 		this.xmlReader = (XML_ENABLED ? new XmlBeanDefinitionReader(registry) : null);
         //groovyReader 忽视
 		this.groovyReader = (isGroovyPresent() ? new GroovyBeanDefinitionReader(registry) : null);
