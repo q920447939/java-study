@@ -514,7 +514,7 @@ public @interface Service {
 
 ​	而`AnnotationConfigApplicationContext`的父类`GenericApplicationContext`又实例化了`DefaultListableBeanFactory`属性(从而具备了 beanFactory能力)
 
-​	并且`BeanDefinitionRegistry`又实现了接口`BeanDefinitionRegistry` 
+​	并且`GenericApplicationContext`又实现了接口`BeanDefinitionRegistry` 
 
 ​	当然也实例化了`Reader(org.springframework.core.env.StandardEnvironment);`和`Scanner(ClassPathBeanDefinitionScanner)`
 
