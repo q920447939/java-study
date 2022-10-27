@@ -161,11 +161,24 @@
 
 4.堆栈图
 
-1. [C语言加法逆向](./assembler/C语言加法逆向.xlsx)
-2. [StackDemo](./assembler/StackDemo.xlsx)
+5.[C语言加法逆向](./assembler/C语言加法逆向.xlsx)
 
 
+6.[StackDemo](./assembler/StackDemo.xlsx)
 
+
+7.[vs学习](./assembler/vs学习.md)
+
+8.[C++中的引用学习](./assembler/C++中的引用学习.md)
+
+
+9.[给飞鸽传书增加一个节](./assembler/给飞鸽传书增加一个节.md)
+
+10.[飞鸽传书在启动时弹一个信息框](./assembler/飞鸽传书在启动时弹一个信息框.md)
+
+11.[PE文件结构1](./assembler/PE文件结构.md)
+
+11.[PE文件结构网页版](./assembler/pe/index.HTM)
 
 ## **<a id="python">python</a>**
 1.[win7安装anaconda并且pycharm使用anaconda](./python/win7安装anaconda并且pycharm使用anaconda.md)
