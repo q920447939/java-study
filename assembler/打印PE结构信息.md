@@ -6,13 +6,12 @@
 
 ## ![image-20221102191045573](../img/ODImg/image-20221102191045573.png)
 
-
+ 
 
 代码部分实现逻辑:
 
 ```c
 // PrintPEInfo.cpp : 定义控制台应用程序的入口点。
-//
 
 #define _CRT_SECURE_NO_WARNINGS
 #include "stdafx.h"
