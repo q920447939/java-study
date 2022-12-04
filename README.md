@@ -178,7 +178,10 @@
 
 11.[PE文件结构1](./assembler/PE文件结构.md)
 
-11.[PE文件结构网页版](./assembler/pe/index.HTM)
+1. ​	[打印PE结构](./assembler/打印PE结构信息.md)
+
+
+12.[PE文件结构网页版](./assembler/pe/index.HTM)
 
 ## **<a id="python">python</a>**
 1.[win7安装anaconda并且pycharm使用anaconda](./python/win7安装anaconda并且pycharm使用anaconda.md)
