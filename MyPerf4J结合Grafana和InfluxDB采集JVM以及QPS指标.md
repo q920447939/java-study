@@ -10,7 +10,7 @@
 
 ## 展示
 
-​     先看结果：![image-20221229150136995](F:\liming\work_space\my_work_space\java-study\img\myperf4j\image-20221229150136995.png)
+​     先看结果：![image-20221229150136995](https://github.com/q920447939/java-study/blob/master/img/myperf4j/image-20221229150136995.png)
 
 
 
