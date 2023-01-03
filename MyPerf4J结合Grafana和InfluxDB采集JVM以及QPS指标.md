@@ -36,7 +36,7 @@
    
       1. 我们到安装软件的usr/bin目录下，执行命令` ./influxd ` 前台启动 ；如图所示就代表启动成功
    
-         ![image-20221229172337822](https://github.com/q920447939/java-study/blob/MyPerf4J_influxDB_Grafana/img/myperf4j/image-20221229172337822.png)
+         ![image-20221229172337822](https://github.com/q920447939/java-study/blob/master/img/myperf4j/image-20221229172337822.png)
 
 4. 安装`grafana`
 
@@ -48,7 +48,7 @@
 
    4. 执行命令`./grafana-server &`，启动成功如图所示
 
-      ![image-20221229172927617](https://github.com/q920447939/java-study/blob/MyPerf4J_influxDB_Grafana/img/myperf4j/image-20221229172927617.png)
+      ![image-20221229172927617](https://github.com/q920447939/java-study/blob/master/img/myperf4j/image-20221229172927617.png)
 
 
 
@@ -181,22 +181,22 @@ public class SpringBootDemoApplication {
 
 3. 打开`grafana`的`DB`配置，点击`Add data source`
 
-   ![image-20221230095822756](F:\liming\work_space\my_work_space\java-study\img\myperf4j\image-20221230095822756.png)
+   ![image-20221230095822756](https://github.com/q920447939/java-study/blob/master/img/myperf4j/image-20221230095822756.png)
 4. 选择`InfluxDB`
-![image-20221230095905576](F:\liming\work_space\my_work_space\java-study\img\myperf4j\image-20221230095905576.png)
+![image-20221230095905576](https://github.com/q920447939/java-study/blob/master/img/myperf4j/image-20221230095905576.png)
 
 
 5. 填写`Http URL`(只需要把IP改成`InfluxDB`部署的`IP`即可)
-![image-20221230100006290](F:\liming\work_space\my_work_space\java-study\img\myperf4j\image-20221230100006290.png)
+![image-20221230100006290](https://github.com/q920447939/java-study/blob/master/img/myperf4j/image-20221230100006290.png)
 
 
 6. 填写`InfluxDB`对应的配置信息，然后点击`Save & test`,连接成功会提示绿色的信息
-![image-20221230100206672](F:\liming\work_space\my_work_space\java-study\img\myperf4j\image-20221230100206672.png)
+![image-20221230100206672](https://github.com/q920447939/java-study/blob/master/img/myperf4j/image-20221230100206672.png)
 
 
 
 7. 点击`Dashboards`，点击`Import`
-![image-20221230100347325](F:\liming\work_space\my_work_space\java-study\img\myperf4j\image-20221230100347325.png)
+![image-20221230100347325](https://github.com/q920447939/java-study/blob/master/img/myperf4j/image-20221230100347325.png)
 
 
 
@@ -212,7 +212,7 @@ public class SpringBootDemoApplication {
 
 
 
-![image-20221230100729260](F:\liming\work_space\my_work_space\java-study\img\myperf4j\image-20221230100729260.png)
+![image-20221230100729260](https://github.com/q920447939/java-study/blob/master/img/myperf4j/image-20221230100729260.png)
 
 
 
