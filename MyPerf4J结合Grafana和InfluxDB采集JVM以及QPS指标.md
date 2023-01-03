@@ -12,6 +12,14 @@
 
 ​     先看结果：![image-20221229150136995](F:\liming\work_space\my_work_space\java-study\img\myperf4j\image-20221229150136995.png)
 
+
+
+## 安装文件下载地址
+
+
+
+
+
 ## 安装
 
 1. JDK = 1.8 ，如果采用JDK17程序会起不来(起不来指的是采用`MyPerf4J`作为`Java`探针的情况下)
@@ -20,7 +28,7 @@
 
 3. InfluxDB = 1.7.8 ，此处采用离线安装方式(注意InfluxDB 不能是2.X的版本，`MyPerf4J`不适配)
    
-   1. 下载`InfluxDB ` `tar`包,下载地址：
+   1. 上传`InfluxDB ` `tar`包到服务器
    
    2. 解压`tar xf influxdb-1.7.8_linux_amd64.tar.gz`
    
@@ -32,7 +40,7 @@
 
 4. 安装`grafana`
 
-   1. 下载`grafana-enterprise-9.3.2.linux-amd64.tar.gz`
+   1. 上传`grafana-enterprise-9.3.2.linux-amd64.tar.gz`包到服务器
 
    2. 解压`tar -zxf grafana-enterprise-9.3.2.linux-amd64.tar.gz`
 
@@ -44,9 +52,9 @@
 
 
 
-4. 下载`MyPerf4J-ASM-3.2.0-SNAPSHOT.zip` ，原项目地址`https://github.com/LinShunKang/MyPerf4J`
+4. `MyPerf4J-ASM`(原项目地址`https://github.com/LinShunKang/MyPerf4J`)
 
-   1. 上传至`CentOS7`服务器并解压`MyPerf4J-ASM-3.2.0-SNAPSHOT.zip` 
+   1. 上传至`CentOS7`服务器并解压`MyPerf4J-ASM-3.2.0-SNAPSHOT.jar`,`MyPerf4j.properties` 
 
    2. 修改解压后的`MyPerf4j.properties`文件，主要**注意**配置文件中的配置项`metrics.exporter ;filter.packages.include;influxdb`，我修改的文件如下：
 
@@ -73,14 +81,14 @@ MetricsProcessorType=2
 # 配置各项监控指标日志的文件路径
 # 如果 metrics.exporter 配置为 log.influxdb，建议把所有的 metrics.log.* 路径配置成一样以方便 Telegraf 收集
 # 这里我发现如果 metrics.exporter 采用 http.influxdb方式，这块的配置可以不需要配置
-metrics.log.method = /home/tzdata/application/MyPerf4j/metrics.log
-metrics.log.class_loading = /home/tzdata/application/MyPerf4j/metrics.log
-metrics.log.gc = /home/tzdata/application/MyPerf4j/metrics.log
-metrics.log.memory = /home/tzdata/application/MyPerf4j/metrics.log
-metrics.log.buff_pool = /home/tzdata/application/MyPerf4j/metrics.log
-metrics.log.thread = /home/tzdata/application/MyPerf4j/metrics.log
-metrics.log.file_desc = /home/tzdata/application/MyPerf4j/metrics.log
-metrics.log.compilation = /home/tzdata/application/MyPerf4j/metrics.log
+metrics.log.method = /home/influxdb/application/MyPerf4j/metrics.log
+metrics.log.class_loading = /home/influxdb/application/MyPerf4j/metrics.log
+metrics.log.gc = /home/influxdb/application/MyPerf4j/metrics.log
+metrics.log.memory = /home/influxdb/application/MyPerf4j/metrics.log
+metrics.log.buff_pool = /home/influxdb/application/MyPerf4j/metrics.log
+metrics.log.thread = /home/influxdb/application/MyPerf4j/metrics.log
+metrics.log.file_desc = /home/influxdb/application/MyPerf4j/metrics.log
+metrics.log.compilation = /home/influxdb/application/MyPerf4j/metrics.log
 
 
 ###############################################################################
@@ -97,7 +105,7 @@ filter.packages.include = com.*;
 # 配置不需要监控的package，可配置多个，用英文';'分隔
 #filter.packages.exclude = cn.perf4j.demo.dao.DemoDAOImpl
 
-
+# 注意这里要修改influxDB对应的信息
 influxdb.host=127.0.0.1
 influxdb.port=8086
 influxdb.database=MyPerf4J
@@ -209,4 +217,4 @@ public class SpringBootDemoApplication {
 
 
 
-10. 随意点击一个图表就能查看监控指标信息，图在展示目录
+10. 随意点击一个图表就能查看监控指标信息，图在展示目录。
