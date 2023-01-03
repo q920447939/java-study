@@ -23,6 +23,7 @@
 - [安装教程](#安装教程)
 
 
+
 - **运维**
 
   - [Linux常用命令和操作](shell/Linux常用命令和操作.md)
@@ -32,6 +33,7 @@
 
     - [过vm检测](过vm检测.md)
     - [TP50以及TP99理解](TP50以及TP99理解.md)
+    - [MyPerf4J结合Grafana和InfluxDB采集JVM以及QPS指标](MyPerf4J结合Grafana和InfluxDB采集JVM以及QPS指标.md)
 - [汇编](#汇编)
   
 - [Python](#python) 

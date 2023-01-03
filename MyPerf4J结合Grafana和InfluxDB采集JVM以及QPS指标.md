@@ -16,7 +16,7 @@
 
 ## 安装文件下载地址
 
-
+`https://github.com/q920447939/java-study/releases/tag/MyPerf4J_influxDB_Grafana`
 
 
 
@@ -28,7 +28,7 @@
 
 3. InfluxDB = 1.7.8 ，此处采用离线安装方式(注意InfluxDB 不能是2.X的版本，`MyPerf4J`不适配)
    
-   1. 上传`InfluxDB ` `tar`包到服务器
+   1. 上传`influxdb-1.7.8_linux_amd64.tar.gz ` `tar`包到服务器
    
    2. 解压`tar xf influxdb-1.7.8_linux_amd64.tar.gz`
    
@@ -36,7 +36,7 @@
    
       1. 我们到安装软件的usr/bin目录下，执行命令` ./influxd ` 前台启动 ；如图所示就代表启动成功
    
-         ![image-20221229172337822](F:\liming\work_space\my_work_space\java-study\img\myperf4j\image-20221229172337822.png)
+         ![image-20221229172337822](https://github.com/q920447939/java-study/blob/MyPerf4J_influxDB_Grafana/img/myperf4j/image-20221229172337822.png)
 
 4. 安装`grafana`
 
@@ -48,7 +48,7 @@
 
    4. 执行命令`./grafana-server &`，启动成功如图所示
 
-      ![image-20221229172927617](F:\liming\work_space\my_work_space\java-study\img\myperf4j\image-20221229172927617.png)
+      ![image-20221229172927617](https://github.com/q920447939/java-study/blob/MyPerf4J_influxDB_Grafana/img/myperf4j/image-20221229172927617.png)
 
 
 
