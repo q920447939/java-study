@@ -34,8 +34,11 @@
     - [过vm检测](过vm检测.md)
     - [TP50以及TP99理解](TP50以及TP99理解.md)
     - [MyPerf4J结合Grafana和InfluxDB采集JVM以及QPS指标](MyPerf4J结合Grafana和InfluxDB采集JVM以及QPS指标.md)
+    - [CentOS7环境下,Grafana9结合Prometheus,node_exporter,mysqld_exporter监控平台搭建](CentOS7环境下,Grafana9结合Prometheus,node_exporter,mysqld_exporter监控平台搭建.md)
+
+
 - [汇编](#汇编)
-  
+
 - [Python](#python) 
 
 
