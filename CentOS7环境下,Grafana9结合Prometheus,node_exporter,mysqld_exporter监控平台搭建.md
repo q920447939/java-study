@@ -19,6 +19,8 @@
 
 **为简化操作，所有软件均在一台服务器上运行**
 
+所需软件下载地址`https://github.com/q920447939/java-study/releases/tag/Prometheus_NodeExporter_MysqlDExporter`
+
 **其他软件及版本如下表格所示**
 
 | 系统/软件              | 版本    |      |
