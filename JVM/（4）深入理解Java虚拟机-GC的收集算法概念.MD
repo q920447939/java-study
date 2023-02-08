@@ -10,19 +10,18 @@
 - 缺点 回收对象时，需要暂停用户线程
 
 #### 标记清除算法
-
-​	![image-20230202113328423](F:\liming\work_space\my_work_space\java-study\img\javaJVM\image-20230202113328423.png)
+![image-20230202113328423.png](https://s2.loli.net/2023/02/08/Nis5ZeyUlQ1gLon.png)
 - 优点  
 - 缺点 
   - 会造成内存碎片（如果要存大对象的话，往往需要连续的内存空间，因为内存不连贯了，导致无法存大对象。有可能又会触发一次GC或者Full GC ?）
 #### 标记复制算法
-​	![image-20230202113649984](F:\liming\work_space\my_work_space\java-study\img\javaJVM\image-20230202113649984.png)
+![image-20230202113649984.png](https://s2.loli.net/2023/02/08/MQXwFT1O6f4i5a7.png)
 将内存分为多份，先将对象存到一个内存区域中，如果要进行内存回收时，先把标记不需要清理的对象放到另外一块没有使用的内存中
 - 优点  解决了内存碎片的问题
 - 缺点  会浪费一份内存，也无法解决极端情况大对象超过分配的内存区域（内存被分为多份，假设总内存是10M，分为2份，那么如果要存一个6M的对象结果如何？）
 #### 标记整理算法
 
-​	![image-20230202114051168](F:\liming\work_space\my_work_space\java-study\img\javaJVM\image-20230202114051168.png)
+![image-20230202114051168.png](https://s2.loli.net/2023/02/08/6liH4LnyTcCAjzY.png)
 在标记清除算法的基础上，处理内存碎片的问题
 ​	
 
@@ -51,7 +50,7 @@
 
    3. 灰色：表示对象已经被垃圾收集器访问过，但这个对象上至少存在一个引用还没有被扫描过。
 
-      ![image-20230202134427030](F:\liming\work_space\my_work_space\java-study\img\javaJVM\image-20230202134427030.png)
+      ![image-20230202134427030.png](https://s2.loli.net/2023/02/08/j37RuNlrtngKkLZ.png)
 
 
 

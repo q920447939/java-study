@@ -39,7 +39,7 @@ public class JVMAllocationTest {
      -XX:MaxTenuringThreshold=15
      * -XX:+PrintTenuringDistribution
      *
-     * 不注释 allocation2 = new byte[_1MB / 4]; 这一行 ，  新生代 from to  t区内存被回收， 老年代占用比例增大（可能后面又触发了一次Full GC ,导致老年代占用比例减少）
+     * 不注释 allocation2 = new byte[_1MB / 4]; 这一行 ，  新生代 from to  t区内存被回收， 理论老年代占用比例增大（实际上可能后面又触发了一次Full GC ,导致老年代占用比例减少）
      * allocation1、allocation2 两个对象加起来已经到达了512KB，
      * 并且它们是同年龄的，满足同年对象达到Survivor空间一半的规则。我们只要注释掉其中一个对象的
      * new操作，就会发现另外一个就不会晋升到老年代了。
