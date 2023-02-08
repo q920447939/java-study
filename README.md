@@ -22,7 +22,7 @@
   
 - [安装教程](#安装教程)
 
-
+- [JVM](#JVM)
 
 - **运维**
 
@@ -190,3 +190,13 @@
 
 ## **<a id="python">python</a>**
 1.[win7安装anaconda并且pycharm使用anaconda](./python/win7安装anaconda并且pycharm使用anaconda.md)
+
+
+## **<a id="JVM">JVM</a>**
+1.[（1）深入理解Java虚拟机-内存模型](./JVM/（1）深入理解Java虚拟机-内存模型.MD)
+
+2.[（2）深入理解Java虚拟机-内存溢出](./JVM/（2）深入理解Java虚拟机-内存溢出.MD)
+
+3.[（3）深入理解Java虚拟机-GC如何判断对象可以回收](./JVM/（3）深入理解Java虚拟机-GC如何判断对象可以回收.MD)
+
+4.[（4）深入理解Java虚拟机-GC的收集算法概念](./JVM/（4）深入理解Java虚拟机-GC的收集算法概念.MD)
