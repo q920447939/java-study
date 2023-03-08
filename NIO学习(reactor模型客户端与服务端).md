@@ -19,21 +19,16 @@
 
 总体设计架构图
 
-![image-20230307150826014](F:\liming\work_space\my_work_space\java-study\img\nio\reactor\image-20230307150826014.png)
-
-
-
+![image-20230307150826014.png](https://s2.loli.net/2023/03/08/zGw8V37XF4cnKpZ.png)
 
 
 客户端流程图
-
-![image-20230307162936983](F:\liming\work_space\my_work_space\java-study\img\nio\reactor\image-20230307162628847.png)
-
+![image-20230307162628847.png](https://s2.loli.net/2023/03/08/mp6nRKUMHy7TWwq.png)
 
 
 服务端流程图
 
-![image-20230307164859127](F:\liming\work_space\my_work_space\java-study\img\nio\reactor\image-20230307164859127.png)
+![image-20230307164859127.png](https://s2.loli.net/2023/03/08/MZ8JKrLIgXxEo9W.png)
 
 
 
