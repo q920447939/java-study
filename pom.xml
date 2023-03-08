@@ -19,6 +19,7 @@
 		<module>spring-cloud</module>
         <module>my-ioc</module>
         <module>jvm-exercise/jvm-exercise</module>
+        <module>nio/nio</module>
     </modules>
 
     <dependencies>
