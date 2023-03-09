@@ -41,4 +41,7 @@
    简单来说：可以把很多`channel`注册到`select上`，`select`是一个单独的线程。每次`select`都会去轮训查看是否有新的事件，如果有新的事件，那么就可以告诉具体的`channel`
    
    详细可见：[NIO学习(reactor模型客户端与服务端)](./NIO学习(reactor模型客户端与服务端))
+   
+   **优点： 将`Reactor(AccpetHandler)`与实际的执行器进行分离。有利于解耦(`AcceptHandler`和`EchoHandler`同时实现了一个接口。可以通过接口编程)。**
 
+   **缺点： 由于是单线程的`Reactor`。如果有一个连接被卡住了。那么后续的连接就不能继续执行了。**

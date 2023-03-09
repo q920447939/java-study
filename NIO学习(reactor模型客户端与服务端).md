@@ -1,5 +1,100 @@
 ## NIO学习(reactor模型客户端与服务端)
 
+为了更好的理解`Reactor`模型。我们先不涉及到NIO的知识讲解一下`Reactor`模型的工作原理。这样有利于理解`NIO`的的`Reactor`模型。
+
+**我们可以理解为接收事情和处理事情不是同一个人。**
+
+**接收事情的人把工作接收后，后续的工作对接就交给具体负责的人。**
+
+**有点类似于项目经理拿到项目后，会把具体的事情交给开发人员。同时后续的工作也会交给全权交给开发人员负责进行对接！**
+
+下面我们用一段代码把这个场景描述出来：
+
+```java
+
+/**
+ * 工作接口。指派人工
+ */
+public interface Job {
+    /**
+     * 做工作
+     * @param handler 工作助手
+     */
+    void doJob(Handler handler);
+}
+```
+
+```java
+/**
+ 包工头工作
+ */
+public class Boss implements Job {
+
+    @Override
+    public void doJob(Handler handler) {
+        System.out.println("包工头开始工作");
+        handler.setJob(new Worker());
+    }
+}
+
+
+```
+
+```java
+/**
+ 苦逼工人工作
+ */
+public class Worker implements Job{
+    @Override
+    public void doJob(Handler handler) {
+        System.out.println("工人开始工作");
+    }
+}
+
+```
+
+
+
+```java
+/**
+ * 工作助手
+ */
+public class Handler {
+    private Job job;
+
+    public void setJob(Job job) {
+        this.job = job;
+    }
+
+    public void doJob(){
+        this.job.doJob(this);
+    }
+}
+
+```
+
+测试类
+
+```java
+public class Test {
+
+    public static void main(String[] args) {
+        Handler handler = new Handler();
+        handler.setJob(new Boss());
+        handler.doJob(); // 包工头开始工作
+        handler.doJob(); //工人开始工作
+    }
+}
+```
+
+
+
+当一开始指定工作由`Boss`完成时，`Boss`打印了`包工头开始工作`，随后就把工作交给`Worker`处理。所以后续再调用`handler.doJob();`，都是调用的`Worker`类。这与后续的`sk.attach(this);`原理类似！
+
+
+
+
+
 这里我们详细了解NIO并提供一个例子来讲解。
 
 首先我们先了解服务端主要工作
@@ -354,3 +449,24 @@ Server控制台效果
 [main] INFO  cn.withmes.reactor.v2.NIOReactorServerV2$EchoHandler  - 【服务端】 接收到的数据 3
 ```
 
+
+
+
+
+多线程Reactor
+
+总体设计：
+
+1.创建一个selet专门处理accpet事件（取名baseSelect）、创建多个select集合专门处理Read/Write事件(取名workSelects)
+
+2.baseSelect获取到接收事件后，委派给workSelects进行处理
+
+架构图（接收事件）
+
+![image-20230308110259331](F:\liming\work_space\my_work_space\java-study\img\nio\reactor\image-20230308110259331.png)
+
+
+
+架构图（工作事件）
+
+![image-20230308110434679](F:\liming\work_space\my_work_space\java-study\img\nio\reactor\image-20230308110434679.png)
