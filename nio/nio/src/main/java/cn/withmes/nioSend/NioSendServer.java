@@ -75,6 +75,7 @@ public class NioSendServer {
                         ByteBuffer  buffer = ByteBuffer.allocate(1024);
                         int len = 0;
                         //10. 从管道读取字节
+                        buffer.mark();
                         while ( (len = channel.read(buffer)) > 0 ){
                             buffer.flip();
                             byte[] array = buffer.array();
