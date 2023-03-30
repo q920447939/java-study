@@ -1,0 +1,3 @@
+protoc --java_out=D:\code\protobuf\src
+  D:\code\protobuf\proto\Message.proto
+  --proto_path=D:\code\protobuf\proto

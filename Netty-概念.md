@@ -76,3 +76,4 @@ Netty 还有`slice`切片实现类似零拷贝的功能。
 
 
 
+[透过现象看 Java AIO 的本质](https://xie.infoq.cn/article/3740980e285510995cd206143)

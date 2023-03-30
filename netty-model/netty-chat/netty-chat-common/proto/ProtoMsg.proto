@@ -1,0 +1,83 @@
+option java_package = "com.crazymakercircle.im.common.bean.msg";
+option java_outer_classname = "ProtoMsg";
+
+
+enum HeadType
+{
+  LOGIN_REQUEST = 1;
+  LOGIN_RESPONSE = 2;
+  LOGOUT_REQUEST = 3;
+  LOGOUT_RESPONSE = 4;
+  HEATBEAT_REQUEST = 5;
+  HEATBEAT_RESPONSE = 6;
+  MESSAGE_REQUEST = 7;
+  MESSAGE_RESPONSE = 8;
+  MESSAGE_NOTIFICATION = 9;
+}
+
+
+message LoginRequest{
+	required string uid = 1;
+	required string deviceId = 2;
+	required string token = 3;
+	optional uint32 platform = 4;
+	optional string app_version = 5;
+}
+
+message LoginResponse{
+    required bool  result = 1;
+    required uint32 code = 2;
+    required string info = 3;
+    required uint32 expose = 4;
+}
+
+
+
+message MessageRequest{
+    required uint64 msg_id = 1;
+    required string from = 2;
+    required string to = 3;
+    required uint64 time = 4;
+    required uint32 msg_type = 5;
+    required string content = 6;
+	optional string url = 8;
+    optional string property = 9;
+    optional string from_nick = 10;
+    optional string json = 11;
+}
+
+
+message MessageResponse
+{
+    required bool result = 1;
+    required uint32 code = 2;
+    required string info = 3;
+    required uint32 expose = 4;
+    required bool last_block = 5;
+    required fixed32 block_index = 6;
+}
+
+
+message MessageNotification
+{
+ required uint32 msg_type = 1;
+ required bytes  sender = 2;
+ required string json = 3;
+ required string timestamp = 4;
+}
+
+
+message Message
+{
+ required HeadType type = 1;
+ required uint64  sequence = 2;
+ required string  session_id = 3;
+ optional LoginRequest loginRequest = 4;
+ optional LoginResponse loginResponse = 5;
+ optional MessageRequest messageRequest = 6;
+ optional MessageResponse messageResponse = 7;
+ optional MessageNotification notification = 8;
+}
+
+
+

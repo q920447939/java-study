@@ -1,0 +1,98 @@
+//定义protobuf的包名称空间
+
+option java_package = "com.crazymakercircle.im.common.bean.msg";
+
+// 消息体名称
+option java_outer_classname = "ProtoMsg";
+
+
+enum HeadType
+{
+  LOGIN_REQUEST = 1;//登陆请求
+  LOGIN_RESPONSE = 2;//登录响应
+  LOGOUT_REQUEST = 3;//退出请求
+  LOGOUT_RESPONSE = 4;
+  KEEPALIVE_REQUEST = 5;//心跳请求PING;
+  KEEPALIVE_RESPONSE = 6;
+  MESSAGE_REQUEST = 7;//消息请求;
+  MESSAGE_RESPONSE = 8;//消息回执;
+  MESSAGE_NOTIFICATION = 9;//通知消息
+}
+
+/*登录信息*/
+// LoginRequest对应的HeadType为Login_Request
+// 消息名称去掉下划线，更加符合Java 的类名规范
+message LoginRequest{
+	required string uid = 1;        // 用户唯一id
+	required string deviceId = 2;     // 设备ID
+	required string token = 3;       // 用户token
+	optional uint32 platform = 4;      //客户端平台 windows、mac、android、ios、web
+	optional string app_version = 5;    // APP版本号
+}
+
+//token说明: 账号服务器登录时生成的Token
+
+/*登录响应*/
+message LoginResponse{
+    required bool  result = 1; //true 表示成功，false表示失败
+    required uint32 code = 2;	//错误码
+    required string info = 3;	//错误描述
+    required uint32 expose = 4;	//错误描述是否提示给用户:1 提示;0 不提示
+}
+
+
+
+/*聊天消息*/
+message MessageRequest{
+	 uint64 msg_id = 1;		//消息id
+	 string from = 2;		//发送方sessionId
+	 string to = 3;			//接收方sessionId
+	 uint64 time = 4;		//时间戳(单位:毫秒)
+	 required uint32 msg_type = 5;	//消息类型  1：纯文本  2：音频 3：视频 4：地理位置 5：其他
+	 string content = 6;	//消息内容
+	 string url = 7;		//多媒体地址
+	 string property = 8;	//附加属性
+	 string from_nick = 9;	//发送者昵称
+	 optional string json = 10;		//附加的json串
+}
+
+/*聊天响应*/
+message MessageResponse
+{
+    required bool result = 1; //true表示发送成功，false表示发送失败
+    required uint32 code = 2;	//错误码
+    required string info = 3;	//错误描述
+    required uint32 expose = 4; //错误描述是否提示给用户:1 提示;0 不提示
+    required bool last_block = 5;
+    required fixed32 block_index = 6;
+}
+
+/*通知消息*/
+message MessageNotification
+{
+ required uint32 msg_type = 1;	//通知类型 1 上线 2 下线 ...
+ required bytes sender = 2;
+ required string json = 3;
+ required string timestamp = 4;
+}
+
+/*顶层消息*/
+//顶层消息是一种嵌套消息，嵌套了各种类型消息
+//内部的消息类型，全部使用optional字段
+//根据消息类型 type的值，最多只有一个有效
+message Message
+{
+ required HeadType type = 1; //消息类型
+ required uint64   sequence = 2;//消息系列号
+ required string  session_id = 3;
+ optional LoginRequest loginRequest = 4;
+ optional LoginResponse loginResponse = 5;
+ optional MessageRequest messageRequest = 6;
+ optional MessageResponse messageResponse = 7;
+ optional MessageNotification notification = 8;
+}
+
+
+// sequence 消息系列号
+// 主要用于Request和Response，Response的值必须和Request相同，使得发送端可以进行事务匹配处理
+
