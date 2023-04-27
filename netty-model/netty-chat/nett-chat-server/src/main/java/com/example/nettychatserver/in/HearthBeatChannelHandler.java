@@ -1,38 +1,35 @@
 /**
  * @Project:
  * @Author: leegoo
- * @Date: 2023年03月29日
+ * @Date: 2023年04月27日
  */
-package com.example.nettychatserver.inbound;
+package com.example.nettychatserver.in;
 
 import com.example.nettychat.common.common.bean.msg.ProtoMsg;
 import com.example.nettychatserver.async.AsyncCallBack;
 import com.example.nettychatserver.async.CallBack;
-import com.example.nettychatserver.service.LoginServiceImpl;
 import com.example.nettychatserver.session.ServerSession;
 import io.netty.channel.ChannelHandlerContext;
-import io.netty.channel.ChannelInboundHandlerAdapter;
-import jakarta.annotation.Resource;
+import io.netty.handler.timeout.IdleStateEvent;
+import io.netty.handler.timeout.IdleStateHandler;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+import java.util.concurrent.TimeUnit;
+
 /**
- * ClassName: LoginRequestChannelHandler
+ * ClassName: HearthBeatChannelHandler
  * @Description:
  * @author leegoo
- * @date 2023年03月29日
+ * @date 2023年04月27日
  */
 @Service
 @Slf4j
-public class LoginRequestChannelHandler extends ChannelInboundHandlerAdapter {
+public class HearthBeatChannelHandler extends IdleStateHandler {
+    private static final int READ_IDLE_GAP = 150;
 
-    @Resource(name = "loginService")
-    private LoginServiceImpl loginService;
-
-    @Override
-    public void channelActive(ChannelHandlerContext ctx) throws Exception {
-        log.info("收到一个新连接，但是还没有登录 {}",ctx.channel().id());
-        super.channelActive(ctx);
+    public HearthBeatChannelHandler() {
+        super(READ_IDLE_GAP, 0, 0, TimeUnit.SECONDS);
     }
 
     @Override
@@ -43,19 +40,25 @@ public class LoginRequestChannelHandler extends ChannelInboundHandlerAdapter {
         }
         ProtoMsg.Message message = (ProtoMsg.Message) msg;
         ProtoMsg.HeadType messageType = message.getType();
-        if (!messageType.equals(ProtoMsg.HeadType.LOGIN_REQUEST)) {
+        if (!messageType.equals(ProtoMsg.HeadType.HEART_BEAT)) {
             super.channelRead(ctx,msg);
+            return;
         }
-        ServerSession serverSession = new ServerSession(ctx.channel());
+        log.debug("收到心跳包");
         AsyncCallBack.run(new CallBack() {
             @Override
             public boolean execute() {
-                return loginService.login(serverSession, message);
+                if (ctx.channel().isActive()){
+                    return true;
+                }
+                return false;
             }
 
             @Override
             public boolean onSuccess() {
-                return false;
+                ServerSession.getSession(ctx).writeAndFlush(msg);
+               //ctx.writeAndFlush(msg);
+                return true;
             }
 
             @Override
@@ -63,7 +66,11 @@ public class LoginRequestChannelHandler extends ChannelInboundHandlerAdapter {
                 return false;
             }
         });
+    }
 
-        super.channelRead(ctx, msg);
+    @Override
+    protected void channelIdle(ChannelHandlerContext ctx, IdleStateEvent evt) throws Exception {
+        log.info(READ_IDLE_GAP + "秒内未读到数据，关闭连接");
+        ServerSession.closeSession(ctx);
     }
 }

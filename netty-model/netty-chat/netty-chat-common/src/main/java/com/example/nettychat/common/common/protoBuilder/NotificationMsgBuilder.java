@@ -1,7 +1,7 @@
 package com.example.nettychat.common.common.protoBuilder;
 
 
-import com.crazymakercircle.im.common.bean.msg.ProtoMsg;
+import com.example.nettychat.common.common.bean.msg.ProtoMsg;
 
 public class NotificationMsgBuilder
 {

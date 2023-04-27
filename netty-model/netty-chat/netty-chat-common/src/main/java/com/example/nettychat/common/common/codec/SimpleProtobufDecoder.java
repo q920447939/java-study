@@ -1,14 +1,12 @@
 package com.example.nettychat.common.common.codec;
 
-import com.crazymakercircle.im.common.ProtoInstant;
-import com.crazymakercircle.im.common.bean.msg.ProtoMsg;
-import com.crazymakercircle.im.common.exception.InvalidFrameException;
-import com.crazymakercircle.util.Logger;
+import com.example.nettychat.common.ProtoInstant;
+import com.example.nettychat.common.common.bean.msg.ProtoMsg;
+import com.example.nettychat.common.common.exception.InvalidFrameException;
 import com.google.protobuf.InvalidProtocolBufferException;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.ByteToMessageDecoder;
-import lombok.extern.slf4j.Slf4j;
 
 import java.util.List;
 /**
@@ -22,7 +20,7 @@ import java.util.List;
  * 解码器
  */
 
-@Slf4j
+
 public class SimpleProtobufDecoder extends ByteToMessageDecoder {
 
     @Override
@@ -74,7 +72,7 @@ public class SimpleProtobufDecoder extends ByteToMessageDecoder {
             in.resetReaderIndex();
             return null;
         }
-        Logger.cfo("decoder length=" + in.readableBytes());
+        //Logger.cfo("decoder length=" + in.readableBytes());
 
 
         byte[] array;

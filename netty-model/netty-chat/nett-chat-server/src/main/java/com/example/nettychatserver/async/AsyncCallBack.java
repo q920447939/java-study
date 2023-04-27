@@ -8,6 +8,7 @@ package com.example.nettychatserver.async;
 import lombok.SneakyThrows;
 
 import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.Callable;
 import java.util.concurrent.Future;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
@@ -28,12 +29,7 @@ public class AsyncCallBack {
 
     @SneakyThrows
     public static void run (CallBack callBack){
-        Future<?> future = THREAD_POOL_EXECUTOR.submit(new Runnable() {
-            @Override
-            public void run() {
-                callBack.execute();
-            }
-        });
+        Future<?> future =  THREAD_POOL_EXECUTOR.submit(callBack::execute);
         Boolean result = (Boolean) future.get(10, TimeUnit.SECONDS);
         if (result){
             callBack.onSuccess();

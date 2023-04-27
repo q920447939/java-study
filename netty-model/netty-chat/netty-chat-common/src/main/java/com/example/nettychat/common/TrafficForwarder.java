@@ -4,9 +4,9 @@ import java.io.*;
 import java.net.*;
 
 public class TrafficForwarder {
-    private static final String REMOTE_HOST = "172.18.13.235";
-    private static final int REMOTE_PORT = 808;
-    private static final int LOCAL_PORT = 18999;
+    private static final String REMOTE_HOST = "172.18.200.172";
+    private static final int REMOTE_PORT = 7892;
+    private static final int LOCAL_PORT = 6666;
 
     public static void main(String[] args) throws IOException {
         ServerSocket serverSocket = new ServerSocket(LOCAL_PORT);

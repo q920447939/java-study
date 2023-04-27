@@ -3,7 +3,7 @@
  * @Author: leegoo
  * @Date: 2023年03月25日
  */
-package com.example.nettychatserver.inbound;
+package com.example.nettychatserver.in;
 
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;

@@ -4,12 +4,10 @@ package com.example.nettychat.common.common.bean;
 
 import com.example.nettychat.common.common.bean.msg.ProtoMsg;
 import lombok.Data;
-import lombok.extern.slf4j.Slf4j;
 
 import java.util.UUID;
 import java.util.concurrent.atomic.AtomicInteger;
 
-@Slf4j
 @Data
 public class User {
 

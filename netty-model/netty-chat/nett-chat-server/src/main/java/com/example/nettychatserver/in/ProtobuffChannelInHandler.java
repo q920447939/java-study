@@ -3,7 +3,7 @@
  * @Author: leegoo
  * @Date: 2023年03月25日
  */
-package com.example.nettychatserver.inbound;
+package com.example.nettychatserver.in;
 
 import com.example.nettychat.common.ProtoInstant;
 import com.example.nettychat.common.common.bean.msg.ProtoMsg;
@@ -11,6 +11,7 @@ import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.ByteToMessageDecoder;
 import lombok.SneakyThrows;
+import lombok.extern.slf4j.Slf4j;
 
 import java.util.List;
 
@@ -21,10 +22,12 @@ import java.util.List;
  * @Description:
  * @date 2023年03月25日
  */
-public class ProtobuffChannelHandler extends ByteToMessageDecoder {
+@Slf4j
+public class ProtobuffChannelInHandler extends ByteToMessageDecoder {
 
     @Override
     protected void decode(ChannelHandlerContext ctx, ByteBuf in, List<Object> out) throws Exception {
+        log.info("ProtobuffChannelInHandler  {}",ctx.channel().id());
         Object result = this.decode0(ctx, in);
         if (null != result) {
             out.add(result);

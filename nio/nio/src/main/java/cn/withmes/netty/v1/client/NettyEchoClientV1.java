@@ -54,7 +54,7 @@ public class NettyEchoClientV1 {
         EventLoopGroup workEventLoopGroup = new NioEventLoopGroup();
         try {
             bootstrap.group(workEventLoopGroup);
-            bootstrap.remoteAddress("127.0.0.1",18899);
+            bootstrap.remoteAddress("127.0.0.1",8081);
             bootstrap.option(ChannelOption.ALLOCATOR, PooledByteBufAllocator.DEFAULT);
             bootstrap.option(ChannelOption.CONNECT_TIMEOUT_MILLIS, 10000);
             bootstrap.channel(NioSocketChannel.class);

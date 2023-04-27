@@ -1,6 +1,6 @@
 package com.example.nettychatserver.session;
 
-import com.crazymakercircle.im.common.bean.User;
+import com.example.nettychat.common.common.bean.User;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelFutureListener;

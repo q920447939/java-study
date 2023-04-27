@@ -1,7 +1,6 @@
 package com.example.nettychatserver.session;
 
-import com.crazymakercircle.im.common.bean.User;
-import com.crazymakercircle.util.Logger;
+import com.example.nettychat.common.common.bean.User;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 
@@ -69,8 +68,8 @@ public final class SessionMap {
         }
         ServerSession s = map.get(sessionId);
         map.remove(sessionId);
-        Logger.tcfo("用户下线:id= " + s.getUser().getUid()
-                + "   在线总数: " + map.size());
+        //Logger.tcfo("用户下线:id= " + s.getUser().getUid()
+        //        + "   在线总数: " + map.size());
     }
 
 
