@@ -66,6 +66,7 @@ public class HearthBeatChannelHandler extends IdleStateHandler {
                 return false;
             }
         });
+        super.channelRead(ctx,msg);
     }
 
     @Override
