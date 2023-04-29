@@ -1,0 +1,79 @@
+syntax = "proto3";
+package com.crazymakercircle.im.common.bean.msg;
+message ProtoMsg {
+
+
+    enum HeadType {
+        LOGIN_REQUEST = 0;
+        LOGIN_RESPONSE = 1;
+        LOGOUT_REQUEST = 2;
+        LOGOUT_RESPONSE = 3;
+        KEEPALIVE_REQUEST = 4;
+        KEEPALIVE_RESPONSE = 5;
+        MESSAGE_REQUEST = 6;
+        MESSAGE_RESPONSE = 7;
+        MESSAGE_NOTIFICATION = 8;
+    }
+
+
+    message LoginRequest {
+        string uid = 1;
+        string deviceId = 2;
+        string token = 3;
+        uint32 platform = 4;
+        string app_version = 5;
+    }
+
+    message LoginResponse {
+        bool result = 1;
+        uint32 code = 2;
+        string info = 3;
+        uint32 expose = 4;
+    }
+
+
+    message MessageRequest {
+        uint64 msg_id = 1;
+        string from = 2;
+        string to = 3;
+        uint64 time = 4;
+        uint32 msg_type = 5;
+        string content = 6;
+        string url = 8;
+        string property = 9;
+        string from_nick = 10;
+        string json = 11;
+    }
+
+
+    message MessageResponse {
+        bool result = 1;
+        uint32 code = 2;
+        string info = 3;
+        uint32 expose = 4;
+        bool last_block = 5;
+        fixed32 block_index = 6;
+    }
+
+
+    message MessageNotification {
+        uint32 msg_type = 1;
+        bytes sender = 2;
+        string json = 3;
+        string timestamp = 4;
+    }
+
+
+    message Message {
+        HeadType type = 1;
+        uint64 sequence = 2;
+        string session_id = 3;
+        LoginRequest loginRequest = 4;
+        LoginResponse loginResponse = 5;
+        MessageRequest messageRequest = 6;
+        MessageResponse messageResponse = 7;
+        MessageNotification notification = 8;
+    }
+
+
+}

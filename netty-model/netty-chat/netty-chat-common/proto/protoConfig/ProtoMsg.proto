@@ -1,0 +1,86 @@
+syntax = "proto3";
+package com.crazymakercircle.im.common.bean.msg;
+
+/*消息的枚举类型*/
+enum HeadType {
+    LOGIN_REQUEST = 0;  //登录
+    LOGIN_RESPONSE = 1;
+    LOGOUT_REQUEST = 2;  //退出
+    LOGOUT_RESPONSE = 3;
+    HEART_BEAT = 4;      //心跳
+    MESSAGE_REQUEST = 5;    //IM
+    MESSAGE_RESPONSE = 6;
+    MESSAGE_NOTIFICATION = 7;  //通知
+}
+
+/*登录信息*/
+// LoginRequest对应的HeadType为LOGIN_REQUEST
+// 消息名称去掉下划线，更加符合Java 的类名规范
+message LoginRequest {
+    string uid = 1;   // 用户唯一id
+    string deviceId = 2;  // 设备ID
+    string token = 3;       // 用户token
+    uint32 platform = 4;  //客户端平台 windows、mac、android、ios、web
+    string app_version = 5;   // APP版本号
+}
+/*登录响应*/
+message LoginResponse {
+    bool result = 1;  //true表示发送成功，false表示发送失败
+    uint32 code = 2;  //错误码
+    string info = 3;  //错误描述
+    uint32 expose = 4;  //错误描述是否提示给用户:1 提示;0 不提示
+}
+
+/*聊天消息*/
+message MessageRequest {
+    uint64 msg_id = 1;
+    string from = 2;
+    string to = 3;
+    uint64 time = 4;
+    uint32 msg_type = 5;
+    string content = 6;
+    string url = 8;
+    string property = 9;
+    string from_nick = 10;
+    string json = 11;
+}
+
+/*聊天响应*/
+message MessageResponse {
+    bool result = 1;
+    uint32 code = 2;
+    string info = 3;
+    uint32 expose = 4;
+}
+
+/*通知*/
+message MessageNotification {
+    uint64 no_id = 1;
+    string json = 2;
+    string timestamp = 3;
+}
+
+/*心跳*/
+message MessageHeartBeat {
+    uint32   seq = 1;
+    string   uid = 2;
+    string   json =3;
+}
+
+
+/*顶层消息*/
+//顶层消息是一种嵌套消息，嵌套了各种类型消息
+//逻辑上：根据消息类型 type的值，最多只有一个有效
+message Message {
+    HeadType       type = 1; //通用字段: 消息类型
+    uint64         sequence = 2;  //通用字段：消息序列号
+    string         session_id = 3;   //通用字段：会话id
+    LoginRequest   loginRequest = 4;   //登录请求
+    LoginResponse  loginResponse = 5;   //登录响应
+    MessageRequest  messageRequest = 6;    //IM消息请求
+    MessageResponse  messageResponse = 7;      //IM消息响应
+    MessageNotification  notification = 8;        //系统通知
+    MessageHeartBeat     heartBeat = 9;  //心跳
+}
+
+

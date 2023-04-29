@@ -72,7 +72,7 @@ int _tmain(int argc, _TCHAR* argv[])
 
 
 
-![1659966005146](D:\work_space\java_work_space\java-study\img\ODImg\1659966005146.png)
+![1659966005146](../img/ODImg/1659966005146.png)
 
 正常来说应该打印 `chinaabc`。但是看内存里面的值可知  `0x00AFFBDB`后面指向的地址对应的值不是 0,而是cc(系统默认填充).所以会打印 ` chinaabc烫烫烫烫abc`
 

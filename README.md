@@ -22,18 +22,24 @@
   
 - [安装教程](#安装教程)
 
+- [JVM](#JVM)
+- [NIO](#NIO)
 
 - **运维**
 
   - [Linux常用命令和操作](shell/Linux常用命令和操作.md)
 
-
+ 
 - **其他**
 
     - [过vm检测](过vm检测.md)
     - [TP50以及TP99理解](TP50以及TP99理解.md)
+    - [MyPerf4J结合Grafana和InfluxDB采集JVM以及QPS指标](MyPerf4J结合Grafana和InfluxDB采集JVM以及QPS指标.md)
+    - [CentOS7环境下,Grafana9结合Prometheus,node_exporter,mysqld_exporter监控平台搭建](CentOS7环境下,Grafana9结合Prometheus,node_exporter,mysqld_exporter监控平台搭建.md)
+
+
 - [汇编](#汇编)
-  
+
 - [Python](#python) 
 
 
@@ -161,11 +167,53 @@
 
 4.堆栈图
 
-1. [C语言加法逆向](./assembler/C语言加法逆向.xlsx)
-2. [StackDemo](./assembler/StackDemo.xlsx)
+5.[C语言加法逆向](./assembler/C语言加法逆向.xlsx)
 
 
+6.[StackDemo](./assembler/StackDemo.xlsx)
 
+
+7.[vs学习](./assembler/vs学习.md)
+
+8.[C++中的引用学习](./assembler/C++中的引用学习.md)
+
+
+9.[给飞鸽传书增加一个节](./assembler/给飞鸽传书增加一个节.md)
+
+10.[飞鸽传书在启动时弹一个信息框](./assembler/飞鸽传书在启动时弹一个信息框.md)
+
+11.[PE文件结构1](./assembler/PE文件结构.md)
+
+1. ​	[打印PE结构](./assembler/打印PE结构信息.md)
+
+
+12.[PE文件结构网页版](./assembler/pe/index.HTM)
 
 ## **<a id="python">python</a>**
 1.[win7安装anaconda并且pycharm使用anaconda](./python/win7安装anaconda并且pycharm使用anaconda.md)
+
+
+## **<a id="JVM">JVM</a>**
+1.[（1）深入理解Java虚拟机-内存模型](./JVM/（1）深入理解Java虚拟机-内存模型.MD)
+
+2.[（2）深入理解Java虚拟机-内存溢出](./JVM/（2）深入理解Java虚拟机-内存溢出.MD)
+
+3.[（3）深入理解Java虚拟机-GC如何判断对象可以回收](./JVM/（3）深入理解Java虚拟机-GC如何判断对象可以回收.MD)
+
+4.[（4）深入理解Java虚拟机-GC的收集算法概念](./JVM/（4）深入理解Java虚拟机-GC的收集算法概念.MD)
+
+5.[（5）深入理解Java虚拟机-对象的生命周期](./JVM/（5）深入理解Java虚拟机-对象的生命周期.MD)
+
+6.[（6）深入理解Java虚拟机-类加载器](./JVM/（（6）深入理解Java虚拟机-类加载器.MD)
+
+## **<a id="NIO">NIO</a>**
+1.[NIO学习(IO模型)](./NIO学习(IO模型).md)
+
+2.[NIO学习(reactor模型客户端与服务端)](./NIO学习(reactor模型客户端与服务端).md)
+
+3.[Netty-概念](./Netty-概念.md)
+
+4.[Netty-简单客户端与服务端通讯](./Netty-简单客户端与服务端通讯.md)
+
+
+5.[Netty-粘包问题与自定义编码器](./Netty-粘包问题与自定义编码器.md)
