@@ -217,3 +217,5 @@
 
 
 5.[Netty-粘包问题与自定义编码器](./Netty-粘包问题与自定义编码器.md)
+
+6.[Netty简易HttpEcho服务器](netty-model/netty-echo-http/Netty简易HttpEcho服务器.md)
