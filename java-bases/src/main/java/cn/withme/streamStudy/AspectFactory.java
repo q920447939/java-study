@@ -5,7 +5,6 @@
  */
 package cn.withme.streamStudy;
 
-import com.sun.org.apache.bcel.internal.generic.NEW;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.InvocationHandler;
