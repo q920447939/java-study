@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="false" scan="true" scanPeriod="60 seconds">
+    <include resource="org/springframework/boot/logging/logback/base.xml"/>
+
+
+
+    <!--属性,配置日志的输出路径 -->
+    <property name="log_path" value="./logs"/>
+    <property name="appName" value="chat-room"></property>
+    <!-- 项目名称 -->
+    <contextName>${appName}</contextName>
+
+    <timestamp key="bySecond" datePattern="yyyy-MM-dd HH:mm:ss" timeReference="contextBirth"/>
+
+    <!-- ConsoleApperder意思是从console中打印出来 -->
+    <appender name="Console" class="ch.qos.logback.core.ConsoleAppender">
+        <!-- 过滤器，一个appender可以有多个 -->
+        <!-- 阈值过滤，就是log行为级别过滤，debug及debug以上的信息会被打印出来 -->
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>debug</level>
+            <!--<onMatch>ACCEPT</onMatch>-->
+            <!--<onMismatch>DENY</onMismatch>-->
+        </filter>
+        <encoder charset="UTF-8"> <!-- encoder 可以指定字符集，对于中文输出有意义 -->
+            <!--<pattern>%d{yyyy-MM-dd HH:mm:ss} %-5level %logger %caller{1} :[%msg]%n</pattern>-->
+            <pattern>%blue(%d{yyyy-MM-dd HH:mm:ss}) %yellow(%-5level) %cyan(%logger [%line] :) %green([%msg]%n)</pattern>
+        </encoder>
+    </appender>
+
+    <!-- FileAppender 输出到文件 -->
+    <!--<appender name="logFiles" class="ch.qos.logback.core.FileAppender">-->
+        <!--&lt;!&ndash; 文件存放位置 %{xxx} 就是之前定义的属性xxx &ndash;&gt;-->
+        <!--<file>${log_path}/${appName}.log</file>-->
+        <!--<encoder>-->
+            <!--&lt;!&ndash; %date和%d是一个意思 %file是所在文件 %line是所在行 &ndash;&gt;-->
+            <!--<pattern>%date %level [%thread] %logger{30} [%file:%line] %msg%n</pattern>-->
+        <!--</encoder>-->
+    <!--</appender>-->
+
+    <!-- 输出到HTML格式的文件 -->
+    <!--<appender name="htmlFiles" class="ch.qos.logback.core.FileAppender">-->
+        <!--&lt;!&ndash; 过滤器，这个过滤器是行为过滤器，直接过滤掉了除debug外所有的行为信息 &ndash;&gt;-->
+        <!--<filter class="ch.qos.logback.classic.filter.LevelFilter">-->
+            <!--<level>debug</level>-->
+            <!--<onMatch>ACCEPT</onMatch>-->
+            <!--<onMismatch>DENY</onMismatch>-->
+        <!--</filter>-->
+        <!--<encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">-->
+            <!--&lt;!&ndash; HTML输出格式 可以和上边差不多 &ndash;&gt;-->
+            <!--<layout class="ch.qos.logback.classic.html.HTMLLayout">-->
+                <!--<pattern>%relative%thread%mdc%level%logger%msg</pattern>-->
+            <!--</layout>-->
+        <!--</encoder>-->
+        <!--<file>${log_path}/${appName}.html</file>-->
+    <!--</appender>-->
+
+    <!-- 滚动日志文件，这个比较常用 -->
+    <appender name="rollingFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!-- 当project等于true的时候file就不会起效果-->
+        <!--<project>true</project>-->
+        <file>${log_path}/${appName}.log</file>
+        <!-- 按天新建log日志 -->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- daily rollover -->
+            <fileNamePattern>${log_path}/%d{yyyy-MM-dd}/${appName}.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <!-- 保留30天的历史日志 -->
+            <maxHistory>30</maxHistory>
+            <!-- 基于大小和时间，这个可以有，可以没有 -->
+            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <!-- or whenever the file size reaches 100MB -->
+                <!-- 当一个日志大小大于10KB，则换一个新的日志。日志名的%i从0开始，自动递增 -->
+                <maxFileSize>100MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+        <encoder charset="UTF-8">
+            <!-- %ex就是指抛出的异常，full是显示全部，如果在{}中写入数字，则表示展示多少行 -->
+            <pattern>%-4date [%thread] %-5level %logger{} [%line]: [%msg]%n%ex{full, DISPLAY_EX_EVAL}</pattern>
+        </encoder>
+    </appender>
+
+    <!-- 重点来了，上边都是appender输出源。这里开始就是looger了 -->
+    <!-- name意思是这个logger管的哪一片，像下面这个管的就是com/qgy包下的所有文件 level是只展示什么行为信息级别以上的，类似阈值过滤器 additivity表示是否再抛出事件，就是说如果有一个logger的name是log，如果这个属性是true，另一个logger就会在这个logger处理完后接着继续处理 -->
+    <!--<logger name="com.qgy" level="DEBUG" additivity="false">-->
+    <!--&lt;!&ndash; 连接输出源，也就是上边那几个输出源，你可以随便选几个appender &ndash;&gt;-->
+    <!--<appender-ref ref="stdout"/>-->
+    <!--<appender-ref ref="logFiles"/>-->
+    <!--&lt;!&ndash;<appender-ref ref="htmlFiels"/>&ndash;&gt;-->
+    <!--</logger>-->
+
+    <!-- 这个logger详细到了类 -->
+    <logger name="com.chaofan.websocket" level="debug" additivity="false">
+        <appender-ref ref="Console"/>
+        <!--<appender-ref ref="logFiles"/>-->
+        <!--<appender-ref ref="htmlFiles"/>-->
+        <appender-ref ref="rollingFile"/>
+    </logger>
+
+    <!-- 下面配置一些第三方包的日志过滤级别，用于避免刷屏 -->
+
+    <!--<logger name="org.springframework" level="ERROR" />-->
+    <!--<logger name="com.opensymphony" level="WARN" />-->
+    <!--<logger name="org.apache" level="WARN" />-->
+    <!--<logger name="org.quartz" level="WARN" />-->
+    <!--<logger name="net.bull.javamelody" level="WARN" />-->
+    <!--<logger name="org.apache.ibatis" level="WARN" />-->
+    <!--<logger name="ACP_SDK_LOG" level="WARN" />-->
+    <!--<logger name="SDK_MSG_LOG" level="WARN" />-->
+    <!--<logger name="SDK_ERR_LOG" level="WARN" />-->
+</configuration>

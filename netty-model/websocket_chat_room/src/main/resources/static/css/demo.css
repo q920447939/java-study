@@ -1,0 +1,40 @@
+body, html { font-size: 100%; 	padding: 0; margin: 0;}
+
+/* Reset */
+*,
+*:after,
+*:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:before,
+.clearfix:after {
+	content: " ";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+body{
+	color: rgba(0, 0, 0, 0.51);
+	font-weight: 500;
+	font-size: 1.05em;
+	font-family: "Microsoft YaHei","Segoe UI", "Lucida Grande", Helvetica, Arial,sans-serif;
+}
+.container{
+	margin:60px auto;
+}
+
+/*nav*/
+.demo a{color: #fff;text-decoration: none;}
+.demo{width: 100%;height: 500px;padding-bottom: 1.2em;}
+.demo a,button{display: inline-block;margin: 0.5em;padding: 0.6em 1em;border: 3px solid #fff;font-weight: 700;}
+.demo a:hover,button{opacity: 0.6;}
+.demo a.current{background:#1d7db1;color: #fff; }
+
+.center{text-align: center;}
